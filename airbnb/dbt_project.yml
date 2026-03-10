@@ -37,3 +37,6 @@ models:
     src:
       +materialized: ephemeral  # Config indicated by + and applies to all files under models/example/src/
     
+data_tests:
+  +store_failures: true  #  (if needed in production) Store failing rows are stored in Database  in a seperate auto-generated schema 
+  +schema: test_audit  # Schema where failing rows are stored by explicitly mentioning schema

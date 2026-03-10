@@ -63,3 +63,25 @@ UPDATE AIRBNB.RAW.RAW_HOSTS SET is_superhost='t',
     updated_at=CURRENT_TIMESTAMP() WHERE ID=12424;
 
 SELECT * FROM AIRBNB.DEV.SCD_RAW_HOSTS WHERE ID=12424;
+
+
+
+**Tests** ---> schema.yaml can have any other name.
+And also models folder/subfolders can have many yaml files as you wish with any names as long as every property for a certian model/source is listed in a single yaml file.
+
+
+**Generic tests : ** unique and not null are present in Snowflake but are not generally present in DWH to impose the constraints.
+dbt test
+dbt test -x --> Stops the execution after the first failure.
+Tests should not return the value for that to get PASS, else it FAILS.
+
+Below is the compiled code for tests stored in the locations:
+compiled code at target/compiled/airbnb/models/schema.yml/accepted_values_dim_listings_c_402144aa50808b935742aaf3d361f5bf.sql  ----> This gave the values. So test fails.
+
+**Singular tests** are the custom tests mentioned as normal sql in a seperate file which should be such that it should not return any value to get **PASSED**.
+elementary-data.com ---> Service for tests monitoring with open source components to integrate with dbt.
+
+dbt test -s dim_listings_minimum_nights  --> Only specific test executes
+
+**unit tests** are best for single step functionality tests which work on dummy data and expected data output. can be present under tests folder or the models folder.
+dbt test -s mart_fullmoon_reviews ---> mentioning the model name((instead of test name given)) in the command will test for all the tests present for that particular table
