@@ -13,3 +13,36 @@ Have fun! :)
 dbt run --full-refresh   --- for incrementing table full refresh ex: when schema change happened
 
 code target/run/airbnb/models/dim/dim_listings_cleansed.sql  ----> CHeck target folders when you are using the ephermnal tables to see what was actually passed to snowflake for execution
+
+
+dbt seed ---> seeds (i.e., present in seeds folder which are manual files from your local)  will be populated to snowflake tables 
+
+Sources are abstraction on top of the input data. with few features like checking data-freshness
+
+
+dbt compile---> checks references and template tags are correct.
+
+In production, sources are majorly controlled by other teams.So we are not sure of format or fresh. loaded_at_field in the yaml file is used to check if the data is recent or stale to find the freshness.
+dbt source freshness  ---->  Can be used in CICD pipeline to check and fail the pipeline if data is old.
+
+
+Snapshots help you keep the history as your data changes. Like Type2 SCD handling.
+3rd type can be done by advanced dbt using the macros to check the data and  perform those checks.
+By default dbt ignores the deleted records.
+No change in data but some one deleted the data : 
+    **hard_deletes** config helps if any one deletes the record. invalidate means when records is deleted then dbt takes a look at snapshot reocrd and updates  the END column indicating the lifecycle of this column has been completed.
+    **new_record** --> your snapshot table will have an extra column "dbt_is_deleted", and when original record is delted , that flag will be flipped to true.
+dbt snapshot -----> creates the SCD table mentioned in YAML with original records and some additional metadata columns(DBT_SCD_ID, DBT_UPDATED_AT, DBT_VALID_FROM, DBT_VALID_TO) . Every next time it will update this SCD table
+dbt build ---> executes seed,run and snapshot and tests as full package.
+
+
+UPDATE AIRBNB.RAW.RAW_LISTINGS SET MINIMUM_NIGHTS=30,
+    updated_at=CURRENT_TIMESTAMP() WHERE ID=3176;
+
+SELECT * FROM AIRBNB.DEV.SCD_RAW_LISTINGS WHERE ID=3176;
+
+
+UPDATE AIRBNB.RAW.RAW_HOSTS SET is_superhost='t',
+    updated_at=CURRENT_TIMESTAMP() WHERE ID=12424;
+
+SELECT * FROM AIRBNB.DEV.SCD_RAW_HOSTS WHERE ID=12424;
