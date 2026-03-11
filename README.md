@@ -78,14 +78,17 @@ dbt test -x --> Stops the execution after the first failure.
 Tests should not return the value for that to get PASS, else it FAILS.
 
 Below is the compiled code for tests stored in the locations:
+
 compiled code at target/compiled/airbnb/models/schema.yml/accepted_values_dim_listings_c_402144aa50808b935742aaf3d361f5bf.sql  ----> This gave the values. So test fails.
 
 **Singular tests** are the custom tests mentioned as normal sql in a seperate file which should be such that it should not return any value to get **PASSED**.
+
 elementary-data.com ---> Service for tests monitoring with open source components to integrate with dbt.
 
 dbt test -s dim_listings_minimum_nights  --> Only specific test executes
 
 **unit tests** are best for single step functionality tests which work on dummy data and expected data output. can be present under tests folder or the models folder.
+
 dbt test -s mart_fullmoon_reviews ---> mentioning the model name((instead of test name given)) in the command will test for all the tests present for that particular table.
 
 **Contracts**  enable you to hardcode the schema of a model in yaml file. (in schema.yml file)
@@ -96,4 +99,48 @@ dbt test -s mart_fullmoon_reviews ---> mentioning the model name((instead of tes
 ## Jinja and Macros
 
 Jinja will help to do actual programming in DBT Sqls.
+
 Macros help in creating reusable components that can be used as tests or custom blocks.
+
+
+To check what is being rendered from Jinja using dbt command:
+
+dbt compile --inline "{# This is a comment #}{% set my_name = 'Zoltan' %}{{ my_name }}" 
+
+
+Doesnt work as we have to inform dbt that we are passing a jinja template:
+
+dbt compile --inline "select_positive_values('dim_listings_cleansed', 'price')"
+
+
+Works and displays the command formed by rendering:
+
+dbt compile --inline "{{ select_positive_values('dim_listings_cleansed', 'price') }}"
+
+
+Compiles and also show the output of the rendered command:
+
+dbt show --inline "{{ select_positive_values('dim_listings_cleansed', 'price') }}"
+
+
+
+**Adapter**(allows us to go down to db level) Documentation: https://docs.getdbt.com/reference/dbt-jinja-functions/adapter?version=1.12
+
+
+dbt compile --inline "{{ no_empty_strings(ref('dim_listings_cleansed')) }}"
+
+
+dbt compile --inline "SELECT * FROM {{ ref('dim_listings_cleansed') }} WHERE {{ no_empty_strings(ref('dim_listings_cleansed')) }}"
+
+
+dbt show --inline "SELECT * FROM {{ ref('dim_listings_cleansed') }} WHERE {{ no_empty_strings(ref('dim_listings_cleansed')) }}"
+
+
+**Dbt packages **(3rd party packages) for functionalities for any addl requirements where you find several functions, macros, tests etc:  
+hub.getdbt.com
+
+dbt deps  --> establishes connection to DBT HUB which might fail bcoz of corporate proxies and lack of certificates
+
+dbt run --select fct_reviews --> Fails bcoz schema changed and we have earlier set "on_schema_change = 'fail'"
+
+dbt run --select fct_reviews --full-refresh 
