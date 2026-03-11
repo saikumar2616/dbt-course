@@ -140,3 +140,25 @@ hub.getdbt.com
     dbt run --select fct_reviews --> Fails bcoz schema changed and we have earlier set "on_schema_change = 'fail'"
 
     dbt run --select fct_reviews --full-refresh 
+
+
+## Documentation
+
+smiple documenattion is by using description tags.
+
+used to generate the model diagrams, HTMl overviews etc
+
+    dbt docs generate  ---> Generates a json saying "Catalog written to /workspaces/dbt-course/airbnb/target/catalog.json"
+
+
+Execute a documentation server to view on a HTML page:
+
+    dbt docs serve
+
+1. more sophisticated marddown page: using docs.md file
+2. Redesign the overview page : using overview.md file with additional image file stored in s3
+3. How to include own assests like images into documentation: assets folder and overview.md file
+
+DAG gets generated and is accessible in the bottom right corner.
+
+    dbt run --select src_hosts+
