@@ -218,4 +218,18 @@ You can use the dbt fusion in enterprise projects but cannot be sold as a softwa
 
 Installing the dbt vs code extension upgrades the whole project to fusion compatible.
 
-DBT fusion has strict YAML schema checks
+DBT fusion has strict YAML schema checks.
+
+
+    dbtf
+
+
+https://github.com/dbt-labs/dbt-autofix  ---> used to upgrade the dbt when needed and fix compatability issues b/w core and any upgrade like fusion.
+    dbt-autofix 
+    dbt-autofix deprecations ---> makes the fixes needed
+    dbtf build 
+
+DBT fusion also 
+1. adds intellisense to the code to pop-up errors and also list columns 
+2. provides  functionalities(build,sql compile,data preview) on top right corner when writing the code
+    

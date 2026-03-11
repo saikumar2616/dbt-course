@@ -8,8 +8,8 @@ exposures:
 
 
     depends_on:
-      - ref('dim_listings_w_hosts')
-      - ref('mart_fullmoon_reviews')
+      - ref('dim_listings_with_hosts')
+      - ref('mart_full_moon_reviews')
 
     owner:
       name: Sai Kumar
