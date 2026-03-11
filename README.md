@@ -28,7 +28,8 @@ dbt source freshness  ---->  Can be used in CICD pipeline to check and fail the 
 
 
 
-**Snapshots** help you keep the history as your data changes. Like Type2 SCD handling.
+## **Snapshots** 
+help you keep the history as your data changes. Like Type2 SCD handling.
 3rd type can be done by advanced dbt using the macros to check the data and  perform those checks.
 By default dbt ignores the deleted records.
 No change in data but some one deleted the data : 
@@ -66,7 +67,8 @@ SELECT * FROM AIRBNB.DEV.SCD_RAW_HOSTS WHERE ID=12424;
 
 
 
-**Tests** ---> schema.yaml can have any other name.
+## **Tests** 
+schema.yaml can have any other name to accommodate  tests.
 And also models folder/subfolders can have many yaml files as you wish with any names as long as every property for a certian model/source is listed in a single yaml file.
 
 
@@ -89,3 +91,9 @@ dbt test -s mart_fullmoon_reviews ---> mentioning the model name((instead of tes
 **Contracts**  enable you to hardcode the schema of a model in yaml file. (in schema.yml file)
 
 **generic tests** are placed under tests/generic folder. In older projects , generic tests will be found in the macros folder.
+
+
+## Jinja and Macros
+
+Jinja will help to do actual programming in DBT Sqls.
+Macros help in creating reusable components that can be used as tests or custom blocks.
