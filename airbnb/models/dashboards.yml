@@ -1,0 +1,16 @@
+exposures:
+  - name: executive_dashboard
+    label: Full Moon Reviews
+    type: dashboard
+    maturity: low
+    url: https://4e956d2f.us2a.app.preset.io/superset/dashboard/8/?edit=true&native_filters_key=TmyHtgo7FSM
+    description: Executive Dashboard about Airbnb listings and hosts
+
+
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('mart_fullmoon_reviews')
+
+    owner:
+      name: Sai Kumar
+      email: dbtstudent@gmail.com

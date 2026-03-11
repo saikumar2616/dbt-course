@@ -162,3 +162,47 @@ Execute a documentation server to view on a HTML page:
 DAG gets generated and is accessible in the bottom right corner.
 
     dbt run --select src_hosts+
+
+
+
+## Analyses
+
+Execute an ad-hoc query but still use dbt, macros, templating system, model referencing tag system.
+These queries will not be materialized but can version control.
+    dbt compile
+
+compiled file can be found in target/airbnb/analyses/full_moon_no_sleep.sql . This sql can be executed on Snowflake and can be set up a dashboard.
+
+
+## Hooks
+
+Lets customize what sqls does dbt executes i.e., injects sqls or macros which are executed when dbt starts/ends/model create start/model create end/...
+
+Can configure on project subfolder/ model level..((Ex: on-run-start and post-hook in dbt_project.yml))
+    dbt run
+
+**Use cases:** Event/Audit logging, delivery status tracking
+
+
+## Grants
+
+Common technical problem in DWH and DBT :  Permissions into DWH can be created but cannot read newly accessed models/tables/views.
+
+Here Grants can be done/executed in post-hook for self/other/tool.
+
+In modern way, we use GRANTS for this accesses granting after each model creation to grant the access to selected role/users.
+    dbt run --debug
+
+
+## Exposures
+
+Configurations that can  point to external resources like reports and dashboards. And they will be integrated and compiled into the documentation. They will direct to dashboard and also integrated into the DAG.
+
+    dbt docs generate
+    dbt docs serve
+
+
+
+## DBT Fusion
+
+is a faster new engine return in rust. consists parser and compiler.
