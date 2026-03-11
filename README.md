@@ -84,4 +84,8 @@ elementary-data.com ---> Service for tests monitoring with open source component
 dbt test -s dim_listings_minimum_nights  --> Only specific test executes
 
 **unit tests** are best for single step functionality tests which work on dummy data and expected data output. can be present under tests folder or the models folder.
-dbt test -s mart_fullmoon_reviews ---> mentioning the model name((instead of test name given)) in the command will test for all the tests present for that particular table
+dbt test -s mart_fullmoon_reviews ---> mentioning the model name((instead of test name given)) in the command will test for all the tests present for that particular table.
+
+**Contracts**  enable you to hardcode the schema of a model in yaml file. (in schema.yml file)
+
+**generic tests** are placed under tests/generic folder. In older projects , generic tests will be found in the macros folder.

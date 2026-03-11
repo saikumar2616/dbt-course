@@ -1,6 +1,6 @@
 unit_tests:
   - name: unittest_fullmoon_matcher
-    model: mart_fullmoon_reviews
+    model: mart_full_moon_reviews
     given:
       - input: ref('fct_reviews')
         rows:
