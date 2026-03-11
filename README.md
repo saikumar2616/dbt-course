@@ -205,4 +205,17 @@ Configurations that can  point to external resources like reports and dashboards
 
 ## DBT Fusion
 
-is a faster new engine return in rust. consists parser and compiler.
+is a faster new engine return in rust. consists parser and compiler with in dbt which will compile and parse without sending the sql query to DWH improving the efficiency.
+
+
+Earlier in dbt core, the jinja was parsed and sql query was formed which was then sent to DWH to commpile and run i.e., where errors if any will be found out.
+
+https://docs.getdbt.com/docs/fusion/supported-features?version=2.0
+
+Major cloud based DWH without any additional dbt logging can migrate easily to the fusion from core.
+
+You can use the dbt fusion in enterprise projects but cannot be sold as a software. Doesnt stop for individual use.
+
+Installing the dbt vs code extension upgrades the whole project to fusion compatible.
+
+DBT fusion has strict YAML schema checks
