@@ -249,3 +249,6 @@ https://github.com/calogica/dbt-expectations#table-shape
 https://github.com/metaplane/dbt-expectations  ---> updated in the packages.yml
 
 https://github.com/metaplane/dbt-expectations#available-tests
+
+
+dbt test --select dim_listings_w_hosts

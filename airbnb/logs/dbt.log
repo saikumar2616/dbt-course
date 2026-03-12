@@ -31953,3 +31953,51 @@ Finished 'system' successfully [8.0s]
 [0m03:01:06.652029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716dd4c34f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716dd4ad5b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716dd4c622b0>]}
 [0m03:01:06.652502 [debug] [MainThread]: Flushing usage events
 [0m03:01:07.487754 [debug] [MainThread]: An error was encountered while trying to flush usage events
+==================== 2026-03-12T21:16:28.152710Z | 019ce3e8-743f-73a1-b5c2-e1047d4af746 ====================
+21:16:28.346255 [info ]: dbt-fusion 2.0.0-preview.149
+21:16:28.571116 [info ]: Started loading project
+21:16:29.436406 [info ]: Loading profiles.yml
+21:16:30.671836 [info ]:    Started resolving packages from packages.yml
+21:16:31.216868 [info ]:   Finished [  0.55s] resolving packages from packages.yml (3 items)
+21:16:31.408318 [debug]:    Started loading packages
+21:16:31.506847 [debug]:     Loaded [  0.10s] packages
+21:16:31.570178 [info ]: Finished loading project [  3.00s]
+21:16:31.840264 [info ]: Started parsing
+21:16:32.308587 [debug]: Finished parsing models/dashboards.yml [  0.09s]
+21:16:32.336742 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.03s]
+21:16:32.337190 [debug]: Finished parsing models/schema.yml [  0.00s]
+21:16:32.337911 [debug]: Finished parsing models/sources.yaml [  0.00s]
+21:16:32.339348 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+21:16:32.339780 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+21:16:32.340146 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+21:16:32.386641 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+21:16:32.387482 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+21:16:32.390973 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+21:16:32.393363 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+21:16:32.394193 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+21:16:32.396708 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.00s]
+21:16:32.397593 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+21:16:32.398387 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+21:16:32.399189 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+21:16:32.399985 [debug]: Finished parsing models/src/src_reviews.sql [  0.00s]
+21:16:32.409537 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+21:16:32.411952 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+21:16:32.412795 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+21:16:32.413596 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+21:16:32.414278 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+21:16:32.414985 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+21:16:32.415682 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+21:16:32.416357 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+21:16:32.417003 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+21:16:32.417683 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+21:16:32.547224 [info ]: Finished parsing [  0.71s]
+21:16:32.732410 [info ]: Started scheduling
+21:16:32.768687 [info ]: Finished scheduling [  0.04s]
+21:16:32.768762 [warn ]: dbt1600: The selection criterion 'fqn:dim_listings_w_hosts' does not match any enabled nodes
+21:16:32.768804 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+21:16:33.392136 [info ]: Started deferring state
+21:16:33.392211 [info ]: Finished deferring state [  0.00s]
+21:16:35.278121 [info ]: New version available 2.0.0-preview.151 (run `dbt system update`)
+21:16:35.293814 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 2 warnings for target 'dev' [7.1s]
