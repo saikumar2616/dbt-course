@@ -1,0 +1,1 @@
+{{ test_positive_values(column_name="minimum_nights", model=get_where_subquery(ref('dim_listings_cleansed'))) }}
