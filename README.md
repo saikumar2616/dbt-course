@@ -242,6 +242,10 @@ DBT fusion also
 
 https://github.com/great-expectations/great_expectations  ---> Data Testing library
 
-https://github.com/calogica/dbt-expectations
+https://github.com/calogica/dbt-expectations    ----> Older maintained by calogica
 
-https://github.com/calogica/dbt-expectations#table-shape  ---> updated in the packages.yml
+https://github.com/calogica/dbt-expectations#table-shape 
+
+https://github.com/metaplane/dbt-expectations  ---> updated in the packages.yml
+
+https://github.com/metaplane/dbt-expectations#available-tests
