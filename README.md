@@ -233,3 +233,15 @@ DBT fusion also
 1. adds intellisense to the code to pop-up errors and also list columns 
 2. provides  functionalities(build,sql compile,data preview) on top right corner when writing the code
     
+    dbtf system install-drivers ---> install arrow based db connectors ((adbc)
+    dbtf system update
+
+
+
+# Advanced Topics:
+
+https://github.com/great-expectations/great_expectations  ---> Data Testing library
+
+https://github.com/calogica/dbt-expectations
+
+https://github.com/calogica/dbt-expectations#table-shape  ---> updated in the packages.yml

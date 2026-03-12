@@ -3,7 +3,7 @@ models:
     description: "This is the dimension table for AIRBNB listings. It contains the cleansed data for listings."
     data_tests:
       - minimum_row_count:
-          arguments:
+          arguments:            #arguments line might be missing sometimes in versions 1.10+
             min_row_count: 1000000
           config:
             severity: error
