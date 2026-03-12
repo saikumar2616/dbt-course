@@ -1412,3 +1412,166 @@ CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIME
 20:04:40.838936 [debug]: Finished analyzing [  0.04s] analysis DEV.full_moon_no_sleep [success]
 20:04:40.838949 [info ]: Finished analyzing [  0.38s] (12 nodes, 0 skipped, 0 errors)
 20:04:40.847200 [info ]: Cached model count updated: 8 models (accurate)
+==================== 2026-03-12T22:00:07.238784Z | b39b58bf-edb7-458f-a5d5-8b2683413b4b ====================
+22:00:07.255661 [info ]: Starting dbt LSP server
+22:00:07.255694 [info ]: Connecting to LSP client on port 8000
+22:00:07.258210 [info ]: Successfully connected to LSP client
+22:00:07.258226 [info ]: Creating LSP service...
+22:00:07.371678 [info ]: Creating LSP server...
+22:00:07.372021 [info ]: Starting LSP server...
+22:00:07.460414 [info ]: Loading profiles.yml
+22:00:07.616309 [info ]: Started loading project
+22:00:07.616963 [info ]: Loading profiles.yml
+22:00:07.662944 [info ]:    Started resolving packages from packages.yml
+22:00:07.883935 [info ]:   Finished [  0.22s] resolving packages from packages.yml (3 items)
+22:00:07.888956 [debug]:    Started loading packages
+22:00:07.896389 [debug]:     Loaded [  0.01s] packages
+22:00:07.901980 [info ]: Finished loading project [  0.29s]
+22:00:07.918738 [info ]: Started parsing
+22:00:08.167845 [debug]: Finished parsing models/dashboards.yml [  0.04s]
+22:00:08.169892 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+22:00:08.170371 [debug]: Finished parsing models/schema.yml [  0.00s]
+22:00:08.170664 [debug]: Finished parsing models/sources.yaml [  0.00s]
+22:00:08.170792 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+22:00:08.170915 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+22:00:08.170980 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+22:00:08.206581 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.01s]
+22:00:08.211469 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.01s]
+22:00:08.230301 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+22:00:08.241438 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.03s]
+22:00:08.241510 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.01s]
+22:00:08.247927 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.02s]
+22:00:08.249649 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.01s]
+22:00:08.257857 [debug]: Finished parsing models/src/src_hosts.sql [  0.01s]
+22:00:08.261281 [debug]: Finished parsing models/src/src_listings.sql [  0.01s]
+22:00:08.287352 [debug]: Finished parsing models/src/src_reviews.sql [  0.03s]
+22:00:08.287579 [warn ]: dbt1005: Unused schema.yml entry for model 'dim_listings_w_hosts'
+  --> models/schema.yml
+22:00:08.298288 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.01s]
+22:00:08.298869 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+22:00:08.299474 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+22:00:08.300613 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+22:00:08.301750 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+22:00:08.302152 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+22:00:08.304726 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+22:00:08.305320 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+22:00:08.305975 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+22:00:08.316400 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.01s]
+22:00:08.326833 [info ]: Finished parsing [  0.41s]
+22:00:08.331574 [info ]: Cached model count updated: 8 models (estimate)
+22:00:08.332201 [info ]: Cached model count updated: 8 models (accurate)
+22:00:08.343953 [info ]: Started scheduling
+22:00:08.374404 [info ]: Finished scheduling [  0.03s]
+22:00:08.374641 [info ]: Started scheduling
+22:00:08.374798 [info ]: Finished scheduling [  0.00s]
+22:00:08.419322 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_listings") and interval: None
+22:00:08.419429 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_hosts") and interval: None
+22:00:08.419454 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_REVIEWS" }) and interval: None
+22:00:08.419473 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_HOSTS" }) and interval: None
+22:00:08.419511 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_LISTINGS" }) and interval: None
+22:00:08.433638 [info ]: Started deferring state
+22:00:08.433721 [info ]: Finished deferring state [  0.00s]
+22:00:08.604153 [debug]:    Started downloading relations (1 items)
+22:00:09.649411 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "AIRBNB"."DEV" LIMIT 10000
+22:00:10.298352 [debug]:   Finished [  1.69s] downloading relations (1 items)
+22:00:10.298395 [info ]: Started downloading schemas
+22:00:10.546465 [debug]: Query executed on node unknown:
+describe table "AIRBNB"."DEV"."FCT_REVIEWS"
+22:00:10.640752 [info ]: Downloaded AIRBNB.DEV.fct_reviews (schema)
+22:00:10.895535 [info ]: Started building task graph
+22:00:10.901016 [info ]: Finished building task graph [  0.01s]
+22:00:10.905258 [info ]: Started on-run-start hooks (1 nodes)
+22:00:11.168599 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+22:00:11.169055 [info ]: Finished downloading schemas [  0.87s]
+22:00:11.169818 [info ]: Finished on-run-start hooks [  0.26s] (1 nodes, 0 skipped, 0 errors)
+22:00:11.180477 [info ]: Started rendering (12 nodes)
+22:00:11.180677 [info ]: Started snapshot DEV.scd_raw_listings
+22:00:11.180703 [debug]: Started rendering snapshot DEV.scd_raw_listings
+22:00:11.180743 [info ]: Started snapshot DEV.scd_raw_hosts
+22:00:11.180758 [debug]: Started rendering snapshot DEV.scd_raw_hosts
+22:00:11.180838 [info ]: Started model DEV.dim_listings_with_hosts
+22:00:11.180852 [debug]: Started rendering model DEV.dim_listings_with_hosts
+22:00:11.180870 [info ]: Started model DEV.src_listings
+22:00:11.180879 [debug]: Started rendering model DEV.src_listings
+22:00:11.180895 [info ]: Started model DEV.src_hosts
+22:00:11.180904 [debug]: Started rendering model DEV.src_hosts
+22:00:11.180918 [info ]: Started analysis DEV.full_moon_no_sleep
+22:00:11.180927 [debug]: Started rendering analysis DEV.full_moon_no_sleep
+22:00:11.180941 [info ]: Started model DEV.mart_full_moon_reviews
+22:00:11.180949 [debug]: Started rendering model DEV.mart_full_moon_reviews
+22:00:11.180962 [info ]: Started seed DEV.seed_full_moon_dates
+22:00:11.180971 [debug]: Started rendering seed DEV.seed_full_moon_dates
+22:00:11.180986 [info ]: Started model DEV.src_reviews
+22:00:11.180994 [debug]: Started rendering model DEV.src_reviews
+22:00:11.193806 [debug]: Compiled SQL for node snapshot.airbnb.scd_raw_hosts at target/.lsp/compiled/snapshots/scd_raw_hosts.sql
+22:00:11.194001 [info ]: Started analyzing (12 nodes)
+22:00:11.194016 [debug]: Started analyzing snapshot DEV.scd_raw_hosts
+22:00:11.194418 [debug]: Finished rendering [  0.01s] snapshot DEV.scd_raw_hosts [success]
+22:00:11.258266 [debug]: Finished rendering [  0.08s] seed DEV.seed_full_moon_dates [success]
+22:00:11.258370 [debug]: Started analyzing seed DEV.seed_full_moon_dates
+22:00:11.258610 [info ]:  Succeeded [  0.08s] seed  DEV.seed_full_moon_dates (table)
+22:00:11.258678 [debug]: Finished analyzing [  0.00s] seed DEV.seed_full_moon_dates [success]
+22:00:11.259525 [debug]: Compiled SQL for node model.airbnb.mart_full_moon_reviews at target/.lsp/compiled/models/mart/mart_full_moon_reviews.sql
+22:00:11.260721 [debug]: Compiled SQL for node model.airbnb.dim_listings_with_hosts at target/.lsp/compiled/models/dim/dim_listings_with_hosts.sql
+22:00:11.260811 [debug]: Compiled SQL for node model.airbnb.src_reviews at target/.lsp/compiled/models/src/src_reviews.sql
+22:00:11.260860 [info ]: Started model DEV.fct_reviews
+22:00:11.260872 [debug]: Started rendering model DEV.fct_reviews
+22:00:11.260886 [debug]: Started analyzing model DEV.src_reviews
+22:00:11.261057 [debug]: Finished rendering [  0.08s] model DEV.mart_full_moon_reviews [success]
+22:00:11.261302 [debug]: Finished rendering [  0.08s] model DEV.dim_listings_with_hosts [success]
+22:00:11.261420 [debug]: Finished rendering [  0.08s] model DEV.src_reviews [success]
+22:00:11.263371 [debug]: Compiled SQL for node analysis.airbnb.full_moon_no_sleep at target/.lsp/compiled/analyses/full_moon_no_sleep.sql
+22:00:11.263917 [debug]: Finished rendering [  0.08s] analysis DEV.full_moon_no_sleep [success]
+22:00:11.301007 [info ]:  Succeeded [  0.12s] snapshot DEV.scd_raw_hosts (table)
+22:00:11.301059 [debug]: Finished analyzing [  0.11s] snapshot DEV.scd_raw_hosts [success]
+22:00:11.301410 [debug]: Compiled SQL for node model.airbnb.src_hosts at target/.lsp/compiled/models/src/src_hosts.sql
+22:00:11.301520 [debug]: Started analyzing model DEV.src_hosts
+22:00:11.301611 [info ]: Started model DEV.dim_hosts_cleansed
+22:00:11.301664 [debug]: Started rendering model DEV.dim_hosts_cleansed
+22:00:11.301961 [debug]: Finished rendering [  0.12s] model DEV.src_hosts [success]
+22:00:11.302109 [debug]: Compiled SQL for node snapshot.airbnb.scd_raw_listings at target/.lsp/compiled/snapshots/scd_raw_listings.sql
+22:00:11.302220 [debug]: Started analyzing snapshot DEV.scd_raw_listings
+22:00:11.304582 [info ]:  Succeeded [  0.12s] model DEV.src_reviews (ephemeral)
+22:00:11.304604 [debug]: Finished analyzing [  0.04s] model DEV.src_reviews [success]
+22:00:11.304858 [debug]: Compiled SQL for node model.airbnb.fct_reviews at target/.lsp/compiled/models/fct/fct_reviews.sql
+22:00:11.305064 [debug]: Started analyzing model DEV.fct_reviews
+22:00:11.305100 [debug]: Finished rendering [  0.04s] model DEV.fct_reviews [success]
+22:00:11.305118 [debug]: Compiled SQL for node model.airbnb.src_listings at target/.lsp/compiled/models/src/src_listings.sql
+22:00:11.305153 [info ]: Started model DEV.dim_listings_cleansed
+22:00:11.305162 [debug]: Started rendering model DEV.dim_listings_cleansed
+22:00:11.305173 [debug]: Started analyzing model DEV.src_listings
+22:00:11.308373 [info ]:  Succeeded [  0.13s] model DEV.src_hosts (ephemeral)
+22:00:11.308529 [debug]: Finished analyzing [  0.01s] model DEV.src_hosts [success]
+22:00:11.310962 [debug]: Finished rendering [  0.13s] snapshot DEV.scd_raw_listings [success]
+22:00:11.316534 [info ]:  Succeeded [  0.14s] snapshot DEV.scd_raw_listings (table)
+22:00:11.316672 [debug]: Finished analyzing [  0.01s] snapshot DEV.scd_raw_listings [success]
+22:00:11.317973 [debug]: Finished rendering [  0.14s] model DEV.src_listings [success]
+22:00:11.318431 [debug]: Compiled SQL for node model.airbnb.dim_hosts_cleansed at target/.lsp/compiled/models/dim/dim_hosts_cleansed.sql
+22:00:11.318803 [debug]: Started analyzing model DEV.dim_hosts_cleansed
+22:00:11.319023 [debug]: Finished rendering [  0.02s] model DEV.dim_hosts_cleansed [success]
+22:00:11.380888 [info ]:  Succeeded [  0.08s] model DEV.dim_hosts_cleansed (view)
+22:00:11.381062 [debug]: Finished analyzing [  0.06s] model DEV.dim_hosts_cleansed [success]
+22:00:11.381646 [debug]: Compiled SQL for node model.airbnb.dim_listings_cleansed at target/.lsp/compiled/models/dim/dim_listings_cleansed.sql
+22:00:11.383709 [debug]: Finished rendering [  0.08s] model DEV.dim_listings_cleansed [success]
+22:00:11.383838 [info ]: Finished rendering [  0.20s] (12 nodes, 0 skipped, 0 errors)
+22:00:11.391365 [info ]:  Succeeded [  0.21s] model DEV.src_listings (ephemeral)
+22:00:11.391614 [debug]: Finished analyzing [  0.09s] model DEV.src_listings [success]
+22:00:11.391636 [debug]: Started analyzing model DEV.dim_listings_cleansed
+22:00:11.428396 [info ]:  Succeeded [  0.11s] model DEV.dim_listings_cleansed (view)
+22:00:11.428442 [debug]: Finished analyzing [  0.04s] model DEV.dim_listings_cleansed [success]
+22:00:11.428503 [debug]: Started analyzing model DEV.dim_listings_with_hosts
+22:00:11.440702 [info ]:  Succeeded [  0.18s] model DEV.fct_reviews (incremental)
+22:00:11.440796 [debug]: Finished analyzing [  0.14s] model DEV.fct_reviews [success]
+22:00:11.440857 [debug]: Started analyzing model DEV.mart_full_moon_reviews
+22:00:11.473232 [info ]:  Succeeded [  0.12s] model DEV.dim_listings_with_hosts (table)
+22:00:11.473353 [debug]: Finished analyzing [  0.04s] model DEV.dim_listings_with_hosts [success]
+22:00:11.486738 [info ]:  Succeeded [  0.12s] model DEV.mart_full_moon_reviews (table)
+22:00:11.486816 [debug]: Finished analyzing [  0.05s] model DEV.mart_full_moon_reviews [success]
+22:00:11.486878 [debug]: Started analyzing analysis DEV.full_moon_no_sleep
+22:00:11.528337 [info ]:  Succeeded [  0.12s] analysis DEV.full_moon_no_sleep (analysis)
+22:00:11.528384 [debug]: Finished analyzing [  0.04s] analysis DEV.full_moon_no_sleep [success]
+22:00:11.528394 [info ]: Finished analyzing [  0.33s] (12 nodes, 0 skipped, 0 errors)
+22:00:11.571524 [info ]: Cached model count updated: 8 models (accurate)
