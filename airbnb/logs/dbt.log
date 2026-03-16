@@ -32001,3 +32001,1489 @@ Finished 'system' successfully [8.0s]
 21:16:35.293814 [info ]: 
 ==================== Execution Summary =====================
 Finished 'test' with 2 warnings for target 'dev' [7.1s]
+[0m03:47:26.386673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7699489efa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76994a154050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x769947657c50>]}
+
+
+============================== 03:47:26.399588 | 651b7e2c-521b-4c68-bc27-e696ee050ef1 ==============================
+[0m03:47:26.399588 [info ] [MainThread]: Running with dbt=1.11.2
+[0m03:47:26.401012 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'target_path': 'None', 'static_parser': 'True', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'partial_parse': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt test --select dim_listings_w_hosts', 'printer_width': '80', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'introspect': 'True', 'write_json': 'True', 'log_format': 'default', 'debug': 'False', 'no_print': 'None', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'use_experimental_parser': 'False', 'warn_error': 'None'}
+[0m03:47:27.874404 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m03:47:27.875190 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m03:47:27.875949 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m03:47:28.238260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '651b7e2c-521b-4c68-bc27-e696ee050ef1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76994836ba80>]}
+[0m03:47:28.328813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '651b7e2c-521b-4c68-bc27-e696ee050ef1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7699478479b0>]}
+[0m03:47:28.329882 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m03:47:29.000439 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m03:47:29.227539 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m03:47:29.228119 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m03:47:29.228660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '651b7e2c-521b-4c68-bc27-e696ee050ef1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x769944e40350>]}
+[0m03:47:31.953215 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'dim_listings_w_hosts' in the 'models' section of file 'models/schema.yml'
+[0m03:47:32.124073 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test
+`dbt_expectations.expect_column_quantile_values_to_be_between` defined on
+'dim_listings_w_hosts' in package 'airbnb' (models/schema.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m03:47:32.124707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '651b7e2c-521b-4c68-bc27-e696ee050ef1', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76994444fc50>]}
+[0m03:47:32.713804 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_w_hosts_price__100__50__0_95.219c72a8dc' (models/schema.yml) depends on a node named 'dim_listings_w_hosts' in package '' which was not found
+[0m03:47:32.714474 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_w_hosts_source_airbnb_listings_.6f138f77c0' (models/schema.yml) depends on a node named 'dim_listings_w_hosts' in package '' which was not found
+[0m03:47:33.068136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '651b7e2c-521b-4c68-bc27-e696ee050ef1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76993ffd8130>]}
+[0m03:47:33.258591 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:47:33.261312 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:47:33.408942 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '651b7e2c-521b-4c68-bc27-e696ee050ef1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x769944b48940>]}
+[0m03:47:33.409537 [info ] [MainThread]: Found 8 models, 1 analysis, 9 data tests, 1 seed, 1 operation, 2 snapshots, 3 sources, 1 exposure, 918 macros, 1 unit test
+[0m03:47:33.410080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '651b7e2c-521b-4c68-bc27-e696ee050ef1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76994471ee10>]}
+[0m03:47:33.410835 [warn ] [MainThread]: The selection criterion 'dim_listings_w_hosts' does not match any enabled nodes
+[0m03:47:33.412337 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m03:47:33.412993 [debug] [MainThread]: Command end result
+[0m03:47:33.460187 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:47:33.462199 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:47:33.465259 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/dbt-course/airbnb/target/run_results.json
+[0m03:47:33.465853 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m03:47:33.466921 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 7.178829, "process_in_blocks": "34040", "process_kernel_time": 0.50248, "process_mem_max_rss": "164508", "process_out_blocks": "6528", "process_user_time": 6.461733}
+[0m03:47:33.467486 [debug] [MainThread]: Command `dbt test` succeeded at 03:47:33.467379 after 7.18 seconds
+[0m03:47:33.467904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7699447e3800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7699446ef750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7699446efbb0>]}
+[0m03:47:33.468321 [debug] [MainThread]: Flushing usage events
+[0m03:47:34.380271 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:49:46.535205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc76e3a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc8eb4050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc6397c50>]}
+
+
+============================== 03:49:46.547750 | 5ba15db5-11d9-4853-9950-8dff11fd9d1b ==============================
+[0m03:49:46.547750 [info ] [MainThread]: Running with dbt=1.11.2
+[0m03:49:46.549164 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'empty': 'None', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'partial_parse': 'True', 'no_print': 'None', 'version_check': 'True', 'write_json': 'True', 'indirect_selection': 'eager', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'introspect': 'True', 'invocation_command': 'dbt test --select dim_listings_w_hosts', 'log_cache_events': 'False', 'static_parser': 'True', 'debug': 'False', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'log_format': 'default', 'printer_width': '80'}
+[0m03:49:46.956072 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m03:49:46.956800 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m03:49:46.957499 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m03:49:47.243844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5ba15db5-11d9-4853-9950-8dff11fd9d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc705fa80>]}
+[0m03:49:47.335076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5ba15db5-11d9-4853-9950-8dff11fd9d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc653b9b0>]}
+[0m03:49:47.335872 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m03:49:47.514836 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m03:49:47.743668 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m03:49:47.744756 [debug] [MainThread]: Partial parsing: updated file: airbnb://models/schema.yml
+[0m03:49:47.939925 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5ba15db5-11d9-4853-9950-8dff11fd9d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc3b3ef50>]}
+[0m03:49:48.140836 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:49:48.143081 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:49:48.169979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5ba15db5-11d9-4853-9950-8dff11fd9d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc3a7a030>]}
+[0m03:49:48.170681 [info ] [MainThread]: Found 8 models, 1 analysis, 9 data tests, 1 seed, 1 operation, 2 snapshots, 3 sources, 1 exposure, 918 macros, 1 unit test
+[0m03:49:48.171909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5ba15db5-11d9-4853-9950-8dff11fd9d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc3a6be70>]}
+[0m03:49:48.174210 [warn ] [MainThread]: The selection criterion 'dim_listings_w_hosts' does not match any enabled nodes
+[0m03:49:48.179229 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m03:49:48.183435 [debug] [MainThread]: Command end result
+[0m03:49:48.261370 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:49:48.263528 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:49:48.266685 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/dbt-course/airbnb/target/run_results.json
+[0m03:49:48.267680 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.8068378, "process_in_blocks": "32", "process_kernel_time": 0.424754, "process_mem_max_rss": "144000", "process_out_blocks": "6520", "process_user_time": 3.183185}
+[0m03:49:48.268402 [debug] [MainThread]: Command `dbt test` succeeded at 03:49:48.268288 after 1.81 seconds
+[0m03:49:48.268823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc3643d40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc633cf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7cc3a713d0>]}
+[0m03:49:48.269274 [debug] [MainThread]: Flushing usage events
+[0m03:49:49.262799 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:50:36.916922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837f28e7a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837f425c050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837f1897c50>]}
+
+
+============================== 03:50:36.928797 | 23d0e935-166e-4503-b4ca-fe562b865053 ==============================
+[0m03:50:36.928797 [info ] [MainThread]: Running with dbt=1.11.2
+[0m03:50:36.930649 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'introspect': 'True', 'printer_width': '80', 'fail_fast': 'False', 'indirect_selection': 'eager', 'target_path': 'None', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'log_cache_events': 'False', 'write_json': 'True', 'quiet': 'False', 'empty': 'None', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'invocation_command': 'dbt test --select dim_listings_w_hosts', 'log_format': 'default', 'use_experimental_parser': 'False', 'version_check': 'True', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'debug': 'False'}
+[0m03:50:37.338221 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m03:50:37.341170 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m03:50:37.341780 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m03:50:37.635531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '23d0e935-166e-4503-b4ca-fe562b865053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837f2437a80>]}
+[0m03:50:37.768360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '23d0e935-166e-4503-b4ca-fe562b865053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837f193b9b0>]}
+[0m03:50:37.769268 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m03:50:37.950412 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m03:50:38.187384 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:50:38.187910 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m03:50:38.188284 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:50:38.287609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '23d0e935-166e-4503-b4ca-fe562b865053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837eef1b850>]}
+[0m03:50:38.487111 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:50:38.489018 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:50:38.511532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '23d0e935-166e-4503-b4ca-fe562b865053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837eea56210>]}
+[0m03:50:38.512031 [info ] [MainThread]: Found 8 models, 1 analysis, 9 data tests, 1 seed, 1 operation, 2 snapshots, 3 sources, 1 exposure, 918 macros, 1 unit test
+[0m03:50:38.512517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23d0e935-166e-4503-b4ca-fe562b865053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837eea5bbd0>]}
+[0m03:50:38.513282 [warn ] [MainThread]: The selection criterion 'dim_listings_w_hosts' does not match any enabled nodes
+[0m03:50:38.514719 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m03:50:38.516652 [debug] [MainThread]: Command end result
+[0m03:50:38.559820 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:50:38.561633 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:50:38.564673 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/dbt-course/airbnb/target/run_results.json
+[0m03:50:38.565689 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.7251083, "process_in_blocks": "16", "process_kernel_time": 0.428781, "process_mem_max_rss": "142512", "process_out_blocks": "4336", "process_user_time": 3.003454}
+[0m03:50:38.566417 [debug] [MainThread]: Command `dbt test` succeeded at 03:50:38.566305 after 1.73 seconds
+[0m03:50:38.566837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837f2a7bd40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837f1878f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7837eea3bd10>]}
+[0m03:50:38.567282 [debug] [MainThread]: Flushing usage events
+[0m03:50:39.426108 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:52:35.253465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c8fce3a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c91478050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c8e997c50>]}
+
+
+============================== 03:52:35.266501 | 75c81f55-793e-49d4-98c5-36a0fef33ea2 ==============================
+[0m03:52:35.266501 [info ] [MainThread]: Running with dbt=1.11.2
+[0m03:52:35.267820 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'printer_width': '80', 'version_check': 'True', 'quiet': 'False', 'partial_parse': 'True', 'invocation_command': 'dbt test --select dim_listings_with_hosts', 'introspect': 'True', 'cache_selected_only': 'False', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'use_experimental_parser': 'False', 'target_path': 'None', 'log_cache_events': 'False', 'write_json': 'True', 'use_colors': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'indirect_selection': 'eager', 'empty': 'None', 'log_format': 'default'}
+[0m03:52:35.672952 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m03:52:35.673770 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m03:52:35.674455 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m03:52:35.934752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '75c81f55-793e-49d4-98c5-36a0fef33ea2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c8f65fa80>]}
+[0m03:52:36.027805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '75c81f55-793e-49d4-98c5-36a0fef33ea2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c8eb3b9b0>]}
+[0m03:52:36.028624 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m03:52:36.212871 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m03:52:36.450910 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:52:36.451400 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m03:52:36.451758 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:52:36.552835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '75c81f55-793e-49d4-98c5-36a0fef33ea2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c8c13b850>]}
+[0m03:52:36.753367 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:52:36.755612 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:52:36.778773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '75c81f55-793e-49d4-98c5-36a0fef33ea2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c87c5e210>]}
+[0m03:52:36.779370 [info ] [MainThread]: Found 8 models, 1 analysis, 9 data tests, 1 seed, 1 operation, 2 snapshots, 3 sources, 1 exposure, 918 macros, 1 unit test
+[0m03:52:36.779897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '75c81f55-793e-49d4-98c5-36a0fef33ea2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c87c8bbd0>]}
+[0m03:52:36.782093 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m03:52:36.784656 [debug] [MainThread]: Command end result
+[0m03:52:36.872240 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:52:36.874262 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:52:36.877466 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/dbt-course/airbnb/target/run_results.json
+[0m03:52:36.878472 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.7000686, "process_in_blocks": "0", "process_kernel_time": 0.429173, "process_mem_max_rss": "142540", "process_out_blocks": "4344", "process_user_time": 3.016105}
+[0m03:52:36.879204 [debug] [MainThread]: Command `dbt test` succeeded at 03:52:36.879088 after 1.70 seconds
+[0m03:52:36.879630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c87f8fd40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c8e93cf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x760c87c4fd10>]}
+[0m03:52:36.880066 [debug] [MainThread]: Flushing usage events
+[0m03:52:37.866776 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:52:46.621353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c3173dfa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c318ae8050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c316097c50>]}
+
+
+============================== 03:52:46.634097 | 84cca53d-6f68-4288-ab27-40eb2277e3a9 ==============================
+[0m03:52:46.634097 [info ] [MainThread]: Running with dbt=1.11.2
+[0m03:52:46.635423 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'empty': 'None', 'warn_error': 'None', 'log_cache_events': 'False', 'target_path': 'None', 'write_json': 'True', 'fail_fast': 'False', 'debug': 'False', 'no_print': 'None', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'static_parser': 'True', 'printer_width': '80', 'quiet': 'False', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'introspect': 'True', 'invocation_command': 'dbt test --select dim_listings_with_hosts'}
+[0m03:52:47.073363 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m03:52:47.076002 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m03:52:47.076944 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m03:52:47.396178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '84cca53d-6f68-4288-ab27-40eb2277e3a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c316d5ba80>]}
+[0m03:52:47.523445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '84cca53d-6f68-4288-ab27-40eb2277e3a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c31623b9b0>]}
+[0m03:52:47.524571 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m03:52:47.701476 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m03:52:47.936435 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m03:52:47.937262 [debug] [MainThread]: Partial parsing: updated file: airbnb://models/schema.yml
+[0m03:52:48.027408 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test
+`dbt_expectations.expect_column_quantile_values_to_be_between` defined on
+'dim_listings_with_hosts' in package 'airbnb' (models/schema.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m03:52:48.028034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '84cca53d-6f68-4288-ab27-40eb2277e3a9', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c31382fb50>]}
+[0m03:52:48.443034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '84cca53d-6f68-4288-ab27-40eb2277e3a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c3134a28a0>]}
+[0m03:52:48.666596 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:52:48.668796 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:52:48.692819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '84cca53d-6f68-4288-ab27-40eb2277e3a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c313bcce50>]}
+[0m03:52:48.693364 [info ] [MainThread]: Found 8 models, 1 analysis, 11 data tests, 1 seed, 1 operation, 2 snapshots, 3 sources, 1 exposure, 918 macros, 1 unit test
+[0m03:52:48.693803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84cca53d-6f68-4288-ab27-40eb2277e3a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c313377e10>]}
+[0m03:52:48.695738 [info ] [MainThread]: 
+[0m03:52:48.696228 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:52:48.696650 [info ] [MainThread]: 
+[0m03:52:48.697293 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m03:52:48.703327 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB'
+[0m03:52:49.027844 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB"
+[0m03:52:49.028416 [debug] [ThreadPool]: On list_AIRBNB: show terse schemas in database AIRBNB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB"} */
+[0m03:52:49.028792 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:52:50.401576 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.373 seconds
+[0m03:52:50.408907 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB, now list_AIRBNB_DEV)
+[0m03:52:50.432369 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m03:52:50.433281 [debug] [ThreadPool]: On list_AIRBNB_DEV: show objects in AIRBNB.DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */;
+[0m03:52:50.536929 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.103 seconds
+[0m03:52:50.539359 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now list_AIRBNB_DEV_test_audit)
+[0m03:52:50.543008 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV_test_audit"
+[0m03:52:50.543414 [debug] [ThreadPool]: On list_AIRBNB_DEV_test_audit: show objects in AIRBNB.DEV_test_audit
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV_test_audit"} */;
+[0m03:52:50.643972 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 0.100 seconds
+[0m03:52:50.649036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84cca53d-6f68-4288-ab27-40eb2277e3a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c31327b950>]}
+[0m03:52:50.657132 [debug] [MainThread]: Writing injected SQL for node "operation.airbnb.airbnb-on-run-start-0"
+[0m03:52:50.662383 [info ] [MainThread]: 1 of 1 START hook: airbnb.on-run-start.0 ....................................... [RUN]
+[0m03:52:50.663150 [debug] [MainThread]: Using snowflake connection "master"
+[0m03:52:50.663586 [debug] [MainThread]: On master: CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "master"} */
+[0m03:52:50.664005 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:52:50.925612 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.262 seconds
+[0m03:52:50.926917 [info ] [MainThread]: 1 of 1 OK hook: airbnb.on-run-start.0 .......................................... [[32mOK[0m in 0.28s]
+[0m03:52:50.927444 [info ] [MainThread]: 
+[0m03:52:50.932236 [debug] [Thread-2 (]: Began running node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9
+[0m03:52:50.932740 [info ] [Thread-2 (]: 1 of 2 START test dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95  [RUN]
+[0m03:52:50.933456 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV_test_audit, now test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9)
+[0m03:52:50.933937 [debug] [Thread-2 (]: Began compiling node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9
+[0m03:52:50.939989 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9"
+[0m03:52:50.940830 [debug] [Thread-2 (]: Began executing node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9
+[0m03:52:50.967743 [debug] [Thread-2 (]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_column_da16c9c97feba6d95b304088914e1dcf
+[0m03:52:50.994734 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9"
+[0m03:52:50.995271 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9: create or replace transient table AIRBNB.DEV_test_audit.dbt_expectations_expect_column_da16c9c97feba6d95b304088914e1dcf
+    
+    
+    
+    as (
+    
+  
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and percentile_cont(0.95) within group (order by price) >= 50 and percentile_cont(0.95) within group (order by price) <= 100
+)
+ as expression
+
+
+    from AIRBNB.DEV.dim_listings_with_hosts
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9"} */;
+[0m03:52:52.410922 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.415 seconds
+[0m03:52:52.418084 [debug] [Thread-2 (]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9"
+[0m03:52:52.419779 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9"
+[0m03:52:52.420526 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_da16c9c97feba6d95b304088914e1dcf
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9"} */
+[0m03:52:52.567534 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.146 seconds
+[0m03:52:52.576079 [error] [Thread-2 (]: 1 of 2 FAIL 1 dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95  [[31mFAIL 1[0m in 1.64s]
+[0m03:52:52.576930 [debug] [Thread-2 (]: Finished running node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9
+[0m03:52:52.577483 [debug] [Thread-2 (]: Began running node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:52:52.578010 [info ] [Thread-2 (]: 2 of 2 START test dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [RUN]
+[0m03:52:52.578586 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95.feafbd0ad9, now test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9)
+[0m03:52:52.579028 [debug] [Thread-2 (]: Began compiling node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:52:52.588943 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:52:52.589695 [debug] [Thread-2 (]: Began executing node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:52:52.592249 [debug] [Thread-2 (]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+[0m03:52:52.594090 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:52:52.594594 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: create or replace transient table AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+    
+    
+    as (
+    
+  
+    with a as (
+        
+    select
+        
+        count(*) as expression
+    from
+        AIRBNB.DEV.dim_listings_with_hosts
+    
+
+    ),
+    b as (
+        
+    select
+        
+        count(*) * 1 as expression
+    from
+        AIRBNB.raw.raw_listings
+    
+
+    ),
+    final as (
+
+        select
+            
+            a.expression,
+            b.expression as compare_expression,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0)) as expression_difference,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0))/
+                nullif(a.expression * 1.0, 0) as expression_difference_percent
+        from
+        
+            a cross join b
+        
+    )
+    -- DEBUG:
+    -- select * from final
+    select
+        *
+    from final
+    where
+        
+        expression_difference > 0.0
+        
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */;
+[0m03:52:53.420391 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.825 seconds
+[0m03:52:53.430651 [debug] [Thread-2 (]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:52:53.433866 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:52:53.434559 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */
+[0m03:52:53.554553 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.119 seconds
+[0m03:52:53.556793 [info ] [Thread-2 (]: 2 of 2 PASS dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [[32mPASS[0m in 0.98s]
+[0m03:52:53.557595 [debug] [Thread-2 (]: Finished running node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:52:53.558956 [debug] [MainThread]: Connection 'master' was left open.
+[0m03:52:53.559375 [debug] [MainThread]: On master: Close
+[0m03:52:53.636578 [debug] [MainThread]: Connection 'test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9' was left open.
+[0m03:52:53.637274 [debug] [MainThread]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: Close
+[0m03:52:53.675475 [info ] [MainThread]: 
+[0m03:52:53.676840 [info ] [MainThread]: Finished running 1 project hook, 2 data tests in 0 hours 0 minutes and 4.98 seconds (4.98s).
+[0m03:52:53.678285 [debug] [MainThread]: Command end result
+[0m03:52:53.724523 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:52:53.726389 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:52:53.732825 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/dbt-course/airbnb/target/run_results.json
+[0m03:52:53.733205 [info ] [MainThread]: 
+[0m03:52:53.733704 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m03:52:53.734154 [info ] [MainThread]: 
+[0m03:52:53.734708 [error] [MainThread]: [31mFailure in test dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_95 (models/schema.yml)[0m
+[0m03:52:53.735244 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m03:52:53.735641 [info ] [MainThread]: 
+[0m03:52:53.736180 [info ] [MainThread]:   compiled code at target/compiled/airbnb/models/schema.yml/dbt_expectations_expect_column_da16c9c97feba6d95b304088914e1dcf.sql
+[0m03:52:53.736573 [info ] [MainThread]: 
+[0m03:52:53.737116 [info ] [MainThread]:   See test failures:
+  ---------------------------------------------------------------------------------------------------
+  select * from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_da16c9c97feba6d95b304088914e1dcf
+  ---------------------------------------------------------------------------------------------------
+[0m03:52:53.737529 [info ] [MainThread]: 
+[0m03:52:53.738003 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=3
+[0m03:52:53.738710 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m03:52:53.739923 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 7.1940017, "process_in_blocks": "8872", "process_kernel_time": 0.778403, "process_mem_max_rss": "162404", "process_out_blocks": "8728", "process_user_time": 4.194069}
+[0m03:52:53.740667 [debug] [MainThread]: Command `dbt test` failed at 03:52:53.740521 after 7.19 seconds
+[0m03:52:53.741298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c3129a68e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c312b2ca50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c312b2e7b0>]}
+[0m03:52:53.741993 [debug] [MainThread]: Flushing usage events
+[0m03:52:54.601869 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:53:23.351460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b4dce7a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b4f478050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b4c95fc50>]}
+
+
+============================== 03:53:23.363699 | 500131ed-3946-46b6-a0f5-cb14ec3058e8 ==============================
+[0m03:53:23.363699 [info ] [MainThread]: Running with dbt=1.11.2
+[0m03:53:23.364551 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'debug': 'False', 'invocation_command': 'dbt test --select dim_listings_with_hosts', 'empty': 'None', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'version_check': 'True', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'static_parser': 'True', 'write_json': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'log_format': 'default', 'printer_width': '80', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'no_print': 'None', 'introspect': 'True'}
+[0m03:53:23.760100 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m03:53:23.761516 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m03:53:23.762293 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m03:53:24.060654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '500131ed-3946-46b6-a0f5-cb14ec3058e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b4d663a80>]}
+[0m03:53:24.158464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '500131ed-3946-46b6-a0f5-cb14ec3058e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b4cb3f9b0>]}
+[0m03:53:24.159377 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m03:53:24.336025 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m03:53:24.623060 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m03:53:24.623967 [debug] [MainThread]: Partial parsing: updated file: airbnb://models/schema.yml
+[0m03:53:25.001036 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test
+`dbt_expectations.expect_column_quantile_values_to_be_between` defined on
+'dim_listings_with_hosts' in package 'airbnb' (models/schema.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m03:53:25.001722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '500131ed-3946-46b6-a0f5-cb14ec3058e8', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b4a143c50>]}
+[0m03:53:25.312817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '500131ed-3946-46b6-a0f5-cb14ec3058e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b49c55040>]}
+[0m03:53:25.506770 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:53:25.508884 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:53:25.531107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '500131ed-3946-46b6-a0f5-cb14ec3058e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b4948cd70>]}
+[0m03:53:25.531596 [info ] [MainThread]: Found 8 models, 1 analysis, 11 data tests, 1 seed, 1 operation, 2 snapshots, 3 sources, 1 exposure, 918 macros, 1 unit test
+[0m03:53:25.532062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '500131ed-3946-46b6-a0f5-cb14ec3058e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b494721a0>]}
+[0m03:53:25.533963 [info ] [MainThread]: 
+[0m03:53:25.534449 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:53:25.534872 [info ] [MainThread]: 
+[0m03:53:25.535515 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m03:53:25.541302 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB'
+[0m03:53:25.582398 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB"
+[0m03:53:25.582856 [debug] [ThreadPool]: On list_AIRBNB: show terse schemas in database AIRBNB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB"} */
+[0m03:53:25.583262 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:53:25.944391 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.361 seconds
+[0m03:53:25.948215 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB, now list_AIRBNB_DEV)
+[0m03:53:25.960832 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m03:53:25.961277 [debug] [ThreadPool]: On list_AIRBNB_DEV: show objects in AIRBNB.DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */;
+[0m03:53:26.045183 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.083 seconds
+[0m03:53:26.047320 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now list_AIRBNB_DEV_test_audit)
+[0m03:53:26.051075 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV_test_audit"
+[0m03:53:26.051496 [debug] [ThreadPool]: On list_AIRBNB_DEV_test_audit: show objects in AIRBNB.DEV_test_audit
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV_test_audit"} */;
+[0m03:53:26.157497 [debug] [ThreadPool]: SQL status: SUCCESS 12 in 0.106 seconds
+[0m03:53:26.161874 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '500131ed-3946-46b6-a0f5-cb14ec3058e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b49c737d0>]}
+[0m03:53:26.169222 [debug] [MainThread]: Writing injected SQL for node "operation.airbnb.airbnb-on-run-start-0"
+[0m03:53:26.173868 [info ] [MainThread]: 1 of 1 START hook: airbnb.on-run-start.0 ....................................... [RUN]
+[0m03:53:26.174616 [debug] [MainThread]: Using snowflake connection "master"
+[0m03:53:26.175061 [debug] [MainThread]: On master: CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "master"} */
+[0m03:53:26.175487 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:53:26.467562 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.292 seconds
+[0m03:53:26.469232 [info ] [MainThread]: 1 of 1 OK hook: airbnb.on-run-start.0 .......................................... [[32mOK[0m in 0.31s]
+[0m03:53:26.469733 [info ] [MainThread]: 
+[0m03:53:26.477995 [debug] [Thread-2 (]: Began running node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m03:53:26.478719 [info ] [Thread-2 (]: 1 of 2 START test dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99  [RUN]
+[0m03:53:26.479462 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV_test_audit, now test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9)
+[0m03:53:26.480184 [debug] [Thread-2 (]: Began compiling node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m03:53:26.486664 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m03:53:26.487506 [debug] [Thread-2 (]: Began executing node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m03:53:26.544815 [debug] [Thread-2 (]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+[0m03:53:26.576724 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m03:53:26.577333 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9: create or replace transient table AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+    
+    
+    
+    as (
+    
+  
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and percentile_cont(0.99) within group (order by price) >= 50 and percentile_cont(0.99) within group (order by price) <= 100
+)
+ as expression
+
+
+    from AIRBNB.DEV.dim_listings_with_hosts
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"} */;
+[0m03:53:27.156472 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.579 seconds
+[0m03:53:27.161000 [debug] [Thread-2 (]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m03:53:27.162061 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m03:53:27.162518 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"} */
+[0m03:53:27.281598 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.119 seconds
+[0m03:53:27.289895 [error] [Thread-2 (]: 1 of 2 FAIL 1 dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99  [[31mFAIL 1[0m in 0.81s]
+[0m03:53:27.290710 [debug] [Thread-2 (]: Finished running node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m03:53:27.291211 [debug] [Thread-2 (]: Began running node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:53:27.291727 [info ] [Thread-2 (]: 2 of 2 START test dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [RUN]
+[0m03:53:27.292321 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9, now test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9)
+[0m03:53:27.292766 [debug] [Thread-2 (]: Began compiling node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:53:27.298532 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:53:27.299435 [debug] [Thread-2 (]: Began executing node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:53:27.308214 [debug] [Thread-2 (]: Applying DROP to: "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_TABLE__7A4A6E23A5BE67B48DC8BEC7D8738D1F"
+[0m03:53:27.320779 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:53:27.321264 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: drop table if exists "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_TABLE__7A4A6E23A5BE67B48DC8BEC7D8738D1F" cascade
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */
+[0m03:53:27.430917 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.109 seconds
+[0m03:53:27.432195 [debug] [Thread-2 (]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+[0m03:53:27.434080 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:53:27.434596 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: create or replace transient table AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+    
+    
+    as (
+    
+  
+    with a as (
+        
+    select
+        
+        count(*) as expression
+    from
+        AIRBNB.DEV.dim_listings_with_hosts
+    
+
+    ),
+    b as (
+        
+    select
+        
+        count(*) * 1 as expression
+    from
+        AIRBNB.raw.raw_listings
+    
+
+    ),
+    final as (
+
+        select
+            
+            a.expression,
+            b.expression as compare_expression,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0)) as expression_difference,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0))/
+                nullif(a.expression * 1.0, 0) as expression_difference_percent
+        from
+        
+            a cross join b
+        
+    )
+    -- DEBUG:
+    -- select * from final
+    select
+        *
+    from final
+    where
+        
+        expression_difference > 0.0
+        
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */;
+[0m03:53:28.036701 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.602 seconds
+[0m03:53:28.038325 [debug] [Thread-2 (]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:53:28.039414 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:53:28.039878 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */
+[0m03:53:28.144160 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.104 seconds
+[0m03:53:28.147328 [info ] [Thread-2 (]: 2 of 2 PASS dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [[32mPASS[0m in 0.85s]
+[0m03:53:28.148347 [debug] [Thread-2 (]: Finished running node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:53:28.152578 [debug] [MainThread]: Connection 'master' was left open.
+[0m03:53:28.153821 [debug] [MainThread]: On master: Close
+[0m03:53:28.199512 [debug] [MainThread]: Connection 'test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9' was left open.
+[0m03:53:28.199994 [debug] [MainThread]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: Close
+[0m03:53:28.270826 [info ] [MainThread]: 
+[0m03:53:28.271749 [info ] [MainThread]: Finished running 1 project hook, 2 data tests in 0 hours 0 minutes and 2.74 seconds (2.74s).
+[0m03:53:28.273415 [debug] [MainThread]: Command end result
+[0m03:53:28.353340 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:53:28.355376 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:53:28.361919 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/dbt-course/airbnb/target/run_results.json
+[0m03:53:28.362339 [info ] [MainThread]: 
+[0m03:53:28.362847 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m03:53:28.363361 [info ] [MainThread]: 
+[0m03:53:28.364084 [error] [MainThread]: [31mFailure in test dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99 (models/schema.yml)[0m
+[0m03:53:28.364661 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m03:53:28.365072 [info ] [MainThread]: 
+[0m03:53:28.365625 [info ] [MainThread]:   compiled code at target/compiled/airbnb/models/schema.yml/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql
+[0m03:53:28.366031 [info ] [MainThread]: 
+[0m03:53:28.366586 [info ] [MainThread]:   See test failures:
+  ---------------------------------------------------------------------------------------------------
+  select * from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+  ---------------------------------------------------------------------------------------------------
+[0m03:53:28.366997 [info ] [MainThread]: 
+[0m03:53:28.367522 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=3
+[0m03:53:28.368335 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m03:53:28.371433 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 5.094573, "process_in_blocks": "0", "process_kernel_time": 0.503394, "process_mem_max_rss": "165376", "process_out_blocks": "6672", "process_user_time": 4.089705}
+[0m03:53:28.372320 [debug] [MainThread]: Command `dbt test` failed at 03:53:28.372173 after 5.10 seconds
+[0m03:53:28.372786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b4865a990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b4882cd70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734b4882cc30>]}
+[0m03:53:28.373230 [debug] [MainThread]: Flushing usage events
+[0m03:53:29.334252 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:58:11.835224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a73ef3a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a756ac050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a72b53c50>]}
+
+
+============================== 03:58:11.846967 | f17f4102-3aa0-4627-936f-1105c45bbb34 ==============================
+[0m03:58:11.846967 [info ] [MainThread]: Running with dbt=1.11.2
+[0m03:58:11.847808 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'empty': 'None', 'static_parser': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'no_print': 'None', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'use_colors': 'True', 'warn_error': 'None', 'partial_parse': 'True', 'quiet': 'False', 'version_check': 'True', 'printer_width': '80', 'use_experimental_parser': 'False', 'target_path': 'None', 'debug': 'False', 'invocation_command': 'dbt test --select dim_listings_with_hosts', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m03:58:12.279713 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m03:58:12.280461 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m03:58:12.281011 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m03:58:12.542132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f17f4102-3aa0-4627-936f-1105c45bbb34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a7386fa80>]}
+[0m03:58:12.642302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f17f4102-3aa0-4627-936f-1105c45bbb34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a72d479b0>]}
+[0m03:58:12.643160 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m03:58:12.816944 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m03:58:13.098692 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m03:58:13.099644 [debug] [MainThread]: Partial parsing: updated file: airbnb://models/schema.yml
+[0m03:58:13.461506 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test
+`dbt_expectations.expect_table_row_count_to_equal_other_table` defined on
+'dim_listings_with_hosts' in package 'airbnb' (models/schema.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m03:58:13.462205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f17f4102-3aa0-4627-936f-1105c45bbb34', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a7034e850>]}
+[0m03:58:13.763766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f17f4102-3aa0-4627-936f-1105c45bbb34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a6bd69d60>]}
+[0m03:58:13.959490 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:58:13.961760 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:58:13.985927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f17f4102-3aa0-4627-936f-1105c45bbb34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a73d2cad0>]}
+[0m03:58:13.986468 [info ] [MainThread]: Found 8 models, 1 analysis, 10 data tests, 1 seed, 1 operation, 2 snapshots, 3 sources, 1 exposure, 918 macros, 1 unit test
+[0m03:58:13.986912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f17f4102-3aa0-4627-936f-1105c45bbb34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a6b643ba0>]}
+[0m03:58:13.988822 [info ] [MainThread]: 
+[0m03:58:13.989302 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:58:13.989725 [info ] [MainThread]: 
+[0m03:58:13.990387 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m03:58:13.991295 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB'
+[0m03:58:14.033498 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB"
+[0m03:58:14.033919 [debug] [ThreadPool]: On list_AIRBNB: show terse schemas in database AIRBNB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB"} */
+[0m03:58:14.034309 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:58:14.420362 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.386 seconds
+[0m03:58:14.428494 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB, now list_AIRBNB_DEV)
+[0m03:58:14.440827 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m03:58:14.441249 [debug] [ThreadPool]: On list_AIRBNB_DEV: show objects in AIRBNB.DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */;
+[0m03:58:14.526710 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.085 seconds
+[0m03:58:14.528884 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now list_AIRBNB_DEV_test_audit)
+[0m03:58:14.532615 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV_test_audit"
+[0m03:58:14.533031 [debug] [ThreadPool]: On list_AIRBNB_DEV_test_audit: show objects in AIRBNB.DEV_test_audit
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV_test_audit"} */;
+[0m03:58:14.583605 [debug] [ThreadPool]: SQL status: SUCCESS 13 in 0.050 seconds
+[0m03:58:14.587750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f17f4102-3aa0-4627-936f-1105c45bbb34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a6b60f4d0>]}
+[0m03:58:14.596458 [debug] [MainThread]: Writing injected SQL for node "operation.airbnb.airbnb-on-run-start-0"
+[0m03:58:14.601098 [info ] [MainThread]: 1 of 1 START hook: airbnb.on-run-start.0 ....................................... [RUN]
+[0m03:58:14.601804 [debug] [MainThread]: Using snowflake connection "master"
+[0m03:58:14.602259 [debug] [MainThread]: On master: CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "master"} */
+[0m03:58:14.602683 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:58:14.840847 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.238 seconds
+[0m03:58:14.842130 [info ] [MainThread]: 1 of 1 OK hook: airbnb.on-run-start.0 .......................................... [[32mOK[0m in 0.25s]
+[0m03:58:14.842604 [info ] [MainThread]: 
+[0m03:58:14.846421 [debug] [Thread-2 (]: Began running node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:58:14.846906 [info ] [Thread-2 (]: 1 of 1 START test dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [RUN]
+[0m03:58:14.847540 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV_test_audit, now test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9)
+[0m03:58:14.848024 [debug] [Thread-2 (]: Began compiling node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:58:14.854361 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:58:14.855109 [debug] [Thread-2 (]: Began executing node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:58:14.882068 [debug] [Thread-2 (]: Applying DROP to: "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_TABLE__7A4A6E23A5BE67B48DC8BEC7D8738D1F"
+[0m03:58:14.895674 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:58:14.896201 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: drop table if exists "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_TABLE__7A4A6E23A5BE67B48DC8BEC7D8738D1F" cascade
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */
+[0m03:58:14.971283 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.075 seconds
+[0m03:58:14.974339 [debug] [Thread-2 (]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+[0m03:58:15.045659 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:58:15.046571 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: create or replace transient table AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+    
+    
+    as (
+    
+  
+    with a as (
+        
+    select
+        
+        count(*) as expression
+    from
+        AIRBNB.DEV.dim_listings_with_hosts
+    
+
+    ),
+    b as (
+        
+    select
+        
+        count(*) * 1 as expression
+    from
+        AIRBNB.raw.raw_listings
+    
+
+    ),
+    final as (
+
+        select
+            
+            a.expression,
+            b.expression as compare_expression,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0)) as expression_difference,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0))/
+                nullif(a.expression * 1.0, 0) as expression_difference_percent
+        from
+        
+            a cross join b
+        
+    )
+    -- DEBUG:
+    -- select * from final
+    select
+        *
+    from final
+    where
+        
+        expression_difference > 0.0
+        
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */;
+[0m03:58:15.826620 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.779 seconds
+[0m03:58:15.831514 [debug] [Thread-2 (]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:58:15.832601 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m03:58:15.833097 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */
+[0m03:58:15.961570 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.128 seconds
+[0m03:58:15.973587 [info ] [Thread-2 (]: 1 of 1 PASS dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [[32mPASS[0m in 1.13s]
+[0m03:58:15.974651 [debug] [Thread-2 (]: Finished running node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m03:58:15.976840 [debug] [MainThread]: Connection 'master' was left open.
+[0m03:58:15.977454 [debug] [MainThread]: On master: Close
+[0m03:58:16.029828 [debug] [MainThread]: Connection 'test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9' was left open.
+[0m03:58:16.030339 [debug] [MainThread]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: Close
+[0m03:58:16.063661 [info ] [MainThread]: 
+[0m03:58:16.064187 [info ] [MainThread]: Finished running 1 project hook, 1 test in 0 hours 0 minutes and 2.07 seconds (2.07s).
+[0m03:58:16.065177 [debug] [MainThread]: Command end result
+[0m03:58:16.136784 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m03:58:16.139196 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m03:58:16.147871 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/dbt-course/airbnb/target/run_results.json
+[0m03:58:16.148360 [info ] [MainThread]: 
+[0m03:58:16.149018 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:58:16.149464 [info ] [MainThread]: 
+[0m03:58:16.149911 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m03:58:16.157277 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m03:58:16.170850 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 4.4091883, "process_in_blocks": "0", "process_kernel_time": 0.494996, "process_mem_max_rss": "165376", "process_out_blocks": "6624", "process_user_time": 4.097302}
+[0m03:58:16.176163 [debug] [MainThread]: Command `dbt test` succeeded at 03:58:16.175995 after 4.41 seconds
+[0m03:58:16.177623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a6a75e410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a6a8db9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x732a6a8d93b0>]}
+[0m03:58:16.180273 [debug] [MainThread]: Flushing usage events
+[0m03:58:17.292875 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:02:45.100763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7814692e3a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78146aa58050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781467f5fc50>]}
+
+
+============================== 04:02:45.113443 | bb153962-41d9-4de6-a64f-6880a6da81b2 ==============================
+[0m04:02:45.113443 [info ] [MainThread]: Running with dbt=1.11.2
+[0m04:02:45.114378 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'use_experimental_parser': 'False', 'introspect': 'True', 'use_colors': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'log_format': 'default', 'static_parser': 'True', 'printer_width': '80', 'invocation_command': 'dbt test --select dim_listings_with_hosts', 'write_json': 'True', 'no_print': 'None', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'target_path': 'None'}
+[0m04:02:45.582106 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m04:02:45.582855 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m04:02:45.583444 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m04:02:45.861907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bb153962-41d9-4de6-a64f-6880a6da81b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781468c5fa80>]}
+[0m04:02:45.979319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bb153962-41d9-4de6-a64f-6880a6da81b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78146813b9b0>]}
+[0m04:02:45.980194 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m04:02:46.156379 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m04:02:46.396943 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m04:02:46.397898 [debug] [MainThread]: Partial parsing: updated file: airbnb://models/schema.yml
+[0m04:02:46.763556 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test
+`dbt_expectations.expect_column_quantile_values_to_be_between` defined on
+'dim_listings_with_hosts' in package 'airbnb' (models/schema.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m04:02:46.764224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'bb153962-41d9-4de6-a64f-6880a6da81b2', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7814655e4f50>]}
+[0m04:02:47.081732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bb153962-41d9-4de6-a64f-6880a6da81b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781465218e60>]}
+[0m04:02:47.278684 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m04:02:47.280895 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m04:02:47.303645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bb153962-41d9-4de6-a64f-6880a6da81b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781464a88ad0>]}
+[0m04:02:47.304166 [info ] [MainThread]: Found 8 models, 1 analysis, 11 data tests, 1 seed, 1 operation, 2 snapshots, 3 sources, 1 exposure, 918 macros, 1 unit test
+[0m04:02:47.304613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb153962-41d9-4de6-a64f-6880a6da81b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781464a6e1a0>]}
+[0m04:02:47.306551 [info ] [MainThread]: 
+[0m04:02:47.307008 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m04:02:47.307454 [info ] [MainThread]: 
+[0m04:02:47.308185 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m04:02:47.314392 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB'
+[0m04:02:47.353692 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB"
+[0m04:02:47.354104 [debug] [ThreadPool]: On list_AIRBNB: show terse schemas in database AIRBNB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB"} */
+[0m04:02:47.354471 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:02:47.741958 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.387 seconds
+[0m04:02:47.745710 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB, now list_AIRBNB_DEV_test_audit)
+[0m04:02:47.758000 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV_test_audit"
+[0m04:02:47.758421 [debug] [ThreadPool]: On list_AIRBNB_DEV_test_audit: show objects in AIRBNB.DEV_test_audit
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV_test_audit"} */;
+[0m04:02:47.847676 [debug] [ThreadPool]: SQL status: SUCCESS 13 in 0.089 seconds
+[0m04:02:47.850198 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV_test_audit, now list_AIRBNB_DEV)
+[0m04:02:47.854741 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m04:02:47.855140 [debug] [ThreadPool]: On list_AIRBNB_DEV: show objects in AIRBNB.DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */;
+[0m04:02:47.976713 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.121 seconds
+[0m04:02:48.008203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb153962-41d9-4de6-a64f-6880a6da81b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781465263710>]}
+[0m04:02:48.046166 [debug] [MainThread]: Writing injected SQL for node "operation.airbnb.airbnb-on-run-start-0"
+[0m04:02:48.071698 [info ] [MainThread]: 1 of 1 START hook: airbnb.on-run-start.0 ....................................... [RUN]
+[0m04:02:48.072878 [debug] [MainThread]: Using snowflake connection "master"
+[0m04:02:48.073539 [debug] [MainThread]: On master: CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "master"} */
+[0m04:02:48.074155 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:02:48.345165 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.271 seconds
+[0m04:02:48.346480 [info ] [MainThread]: 1 of 1 OK hook: airbnb.on-run-start.0 .......................................... [[32mOK[0m in 0.34s]
+[0m04:02:48.346966 [info ] [MainThread]: 
+[0m04:02:48.350846 [debug] [Thread-2 (]: Began running node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m04:02:48.351374 [info ] [Thread-2 (]: 1 of 2 START test dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99  [RUN]
+[0m04:02:48.352037 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9)
+[0m04:02:48.352514 [debug] [Thread-2 (]: Began compiling node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m04:02:48.357995 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m04:02:48.358825 [debug] [Thread-2 (]: Began executing node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m04:02:48.388691 [debug] [Thread-2 (]: Applying DROP to: "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_COLUMN_40C6AE472EF424D2FF9E6CC57F00B936"
+[0m04:02:48.401550 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m04:02:48.402251 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9: drop table if exists "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_COLUMN_40C6AE472EF424D2FF9E6CC57F00B936" cascade
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"} */
+[0m04:02:48.487636 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.085 seconds
+[0m04:02:48.490380 [debug] [Thread-2 (]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+[0m04:02:48.518447 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m04:02:48.518965 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9: create or replace transient table AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+    
+    
+    
+    as (
+    
+  
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and percentile_cont(0.99) within group (order by price) >= 50 and percentile_cont(0.99) within group (order by price) <= 100
+)
+ as expression
+
+
+    from AIRBNB.DEV.dim_listings_with_hosts
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"} */;
+[0m04:02:49.100202 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.581 seconds
+[0m04:02:49.107766 [debug] [Thread-2 (]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m04:02:49.109172 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m04:02:49.109846 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"} */
+[0m04:02:49.270295 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.160 seconds
+[0m04:02:49.278861 [error] [Thread-2 (]: 1 of 2 FAIL 1 dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99  [[31mFAIL 1[0m in 0.93s]
+[0m04:02:49.279734 [debug] [Thread-2 (]: Finished running node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m04:02:49.280233 [debug] [Thread-2 (]: Began running node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m04:02:49.280742 [info ] [Thread-2 (]: 2 of 2 START test dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [RUN]
+[0m04:02:49.281319 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9, now test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9)
+[0m04:02:49.281761 [debug] [Thread-2 (]: Began compiling node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m04:02:49.288093 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m04:02:49.288993 [debug] [Thread-2 (]: Began executing node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m04:02:49.293399 [debug] [Thread-2 (]: Applying DROP to: "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_TABLE__7A4A6E23A5BE67B48DC8BEC7D8738D1F"
+[0m04:02:49.294368 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m04:02:49.294836 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: drop table if exists "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_TABLE__7A4A6E23A5BE67B48DC8BEC7D8738D1F" cascade
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */
+[0m04:02:49.363452 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.068 seconds
+[0m04:02:49.364592 [debug] [Thread-2 (]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+[0m04:02:49.366971 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m04:02:49.367635 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: create or replace transient table AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+    
+    
+    as (
+    
+  
+    with a as (
+        
+    select
+        
+        count(*) as expression
+    from
+        AIRBNB.DEV.dim_listings_with_hosts
+    
+
+    ),
+    b as (
+        
+    select
+        
+        count(*) * 1 as expression
+    from
+        AIRBNB.raw.raw_listings
+    
+
+    ),
+    final as (
+
+        select
+            
+            a.expression,
+            b.expression as compare_expression,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0)) as expression_difference,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0))/
+                nullif(a.expression * 1.0, 0) as expression_difference_percent
+        from
+        
+            a cross join b
+        
+    )
+    -- DEBUG:
+    -- select * from final
+    select
+        *
+    from final
+    where
+        
+        expression_difference > 0.0
+        
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */;
+[0m04:02:49.697791 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.329 seconds
+[0m04:02:49.699616 [debug] [Thread-2 (]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m04:02:49.700838 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m04:02:49.701544 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */
+[0m04:02:49.804123 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.102 seconds
+[0m04:02:49.806236 [info ] [Thread-2 (]: 2 of 2 PASS dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [[32mPASS[0m in 0.52s]
+[0m04:02:49.806998 [debug] [Thread-2 (]: Finished running node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m04:02:49.808417 [debug] [MainThread]: Connection 'master' was left open.
+[0m04:02:49.808809 [debug] [MainThread]: On master: Close
+[0m04:02:49.853005 [debug] [MainThread]: Connection 'test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9' was left open.
+[0m04:02:49.853499 [debug] [MainThread]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: Close
+[0m04:02:49.915980 [info ] [MainThread]: 
+[0m04:02:49.916498 [info ] [MainThread]: Finished running 1 project hook, 2 data tests in 0 hours 0 minutes and 2.61 seconds (2.61s).
+[0m04:02:49.917606 [debug] [MainThread]: Command end result
+[0m04:02:49.967350 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m04:02:49.969249 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m04:02:49.975711 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/dbt-course/airbnb/target/run_results.json
+[0m04:02:49.976103 [info ] [MainThread]: 
+[0m04:02:49.976613 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m04:02:49.977078 [info ] [MainThread]: 
+[0m04:02:49.977641 [error] [MainThread]: [31mFailure in test dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99 (models/schema.yml)[0m
+[0m04:02:49.978189 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m04:02:49.978584 [info ] [MainThread]: 
+[0m04:02:49.979154 [info ] [MainThread]:   compiled code at target/compiled/airbnb/models/schema.yml/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql
+[0m04:02:49.979625 [info ] [MainThread]: 
+[0m04:02:49.980212 [info ] [MainThread]:   See test failures:
+  ---------------------------------------------------------------------------------------------------
+  select * from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+  ---------------------------------------------------------------------------------------------------
+[0m04:02:49.980626 [info ] [MainThread]: 
+[0m04:02:49.981201 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=3
+[0m04:02:49.981988 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m04:02:49.983426 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 4.9672804, "process_in_blocks": "0", "process_kernel_time": 0.495634, "process_mem_max_rss": "165432", "process_out_blocks": "6672", "process_user_time": 4.173656}
+[0m04:02:49.984153 [debug] [MainThread]: Command `dbt test` failed at 04:02:49.983988 after 4.97 seconds
+[0m04:02:49.984739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781457c1eaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781457ce7570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781457ce7a70>]}
+[0m04:02:49.985311 [debug] [MainThread]: Flushing usage events
+[0m04:02:50.865460 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:07:51.192475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f743e3a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f75b7c050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f7305fc50>]}
+
+
+============================== 04:07:51.205467 | d3c8fe4c-283a-4723-8acf-d85eae304704 ==============================
+[0m04:07:51.205467 [info ] [MainThread]: Running with dbt=1.11.2
+[0m04:07:51.206347 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'empty': 'None', 'use_colors': 'True', 'write_json': 'True', 'no_print': 'None', 'partial_parse': 'True', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'debug': 'False', 'static_parser': 'True', 'invocation_command': 'dbt test --select dim_listings_w_hosts', 'indirect_selection': 'eager', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'printer_width': '80', 'quiet': 'False', 'log_format': 'default'}
+[0m04:07:51.656146 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m04:07:51.656942 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m04:07:51.657651 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m04:07:51.914993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd3c8fe4c-283a-4723-8acf-d85eae304704', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f73d5fa80>]}
+[0m04:07:52.005579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd3c8fe4c-283a-4723-8acf-d85eae304704', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f7323b9b0>]}
+[0m04:07:52.006461 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m04:07:52.179467 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m04:07:52.413438 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m04:07:52.414372 [debug] [MainThread]: Partial parsing: updated file: airbnb://models/schema.yml
+[0m04:07:52.815693 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test
+`dbt_expectations.expect_column_quantile_values_to_be_between` defined on
+'dim_listings_with_hosts' in package 'airbnb' (models/schema.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m04:07:52.816482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd3c8fe4c-283a-4723-8acf-d85eae304704', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f70836850>]}
+[0m04:07:53.130399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd3c8fe4c-283a-4723-8acf-d85eae304704', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f70349040>]}
+[0m04:07:53.328201 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m04:07:53.330333 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m04:07:53.352971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd3c8fe4c-283a-4723-8acf-d85eae304704', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f6ba94c90>]}
+[0m04:07:53.353508 [info ] [MainThread]: Found 8 models, 1 analysis, 11 data tests, 1 seed, 1 operation, 2 snapshots, 3 sources, 1 exposure, 918 macros, 1 unit test
+[0m04:07:53.353959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd3c8fe4c-283a-4723-8acf-d85eae304704', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f6ba761a0>]}
+[0m04:07:53.354759 [warn ] [MainThread]: The selection criterion 'dim_listings_w_hosts' does not match any enabled nodes
+[0m04:07:53.356228 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m04:07:53.356880 [debug] [MainThread]: Command end result
+[0m04:07:53.402496 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m04:07:53.404270 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m04:07:53.407314 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/dbt-course/airbnb/target/run_results.json
+[0m04:07:53.407910 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m04:07:53.408977 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.2903552, "process_in_blocks": "0", "process_kernel_time": 0.413967, "process_mem_max_rss": "150556", "process_out_blocks": "6576", "process_user_time": 3.607858}
+[0m04:07:53.409669 [debug] [MainThread]: Command `dbt test` succeeded at 04:07:53.409563 after 2.29 seconds
+[0m04:07:53.410084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f7303cf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f6bade570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1f6bade410>]}
+[0m04:07:53.410488 [debug] [MainThread]: Flushing usage events
+[0m04:07:54.513543 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:09:36.664417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7422d50f3a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7422d6848050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7422d3d53c50>]}
+
+
+============================== 04:09:36.676423 | a9b2da9d-bf69-4054-9877-cc7354fbcda7 ==============================
+[0m04:09:36.676423 [info ] [MainThread]: Running with dbt=1.11.2
+[0m04:09:36.677390 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'introspect': 'True', 'version_check': 'True', 'no_print': 'None', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'static_parser': 'True', 'debug': 'False', 'log_cache_events': 'False', 'log_format': 'default', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'quiet': 'False', 'fail_fast': 'False', 'cache_selected_only': 'False', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'empty': 'None', 'use_colors': 'True', 'target_path': 'None', 'invocation_command': 'dbt test --select dim_listings_w_hosts', 'printer_width': '80', 'indirect_selection': 'eager'}
+[0m04:09:37.190252 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m04:09:37.191113 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m04:09:37.191744 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m04:09:37.466941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a9b2da9d-bf69-4054-9877-cc7354fbcda7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7422d4a6fa80>]}
+[0m04:09:37.558587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a9b2da9d-bf69-4054-9877-cc7354fbcda7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7422d3f479b0>]}
+[0m04:09:37.559396 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m04:09:37.742633 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m04:09:37.977254 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m04:09:37.978172 [debug] [MainThread]: Partial parsing: updated file: airbnb://models/schema.yml
+[0m04:09:38.353087 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Invalid test config given in models/schema.yml:
+  	test definition dictionary must have exactly one key, got [('dbt_expectations.expect_column_quantile_values_to_be_between', None), ('arguments', {'quantile': 0.99, 'min_value': 50, 'max_value': 100})] instead (2 keys)
+  	@: UnparsedModelUpdate(original_file_path='mode...ne)
+[0m04:09:38.354320 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 1.7738488, "process_in_blocks": "0", "process_kernel_time": 0.419856, "process_mem_max_rss": "146204", "process_out_blocks": "16", "process_user_time": 2.992597}
+[0m04:09:38.355391 [debug] [MainThread]: Command `dbt test` failed at 04:09:38.355276 after 1.78 seconds
+[0m04:09:38.355875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7422d1011250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7422d1011350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7422d1060b90>]}
+[0m04:09:38.356321 [debug] [MainThread]: Flushing usage events
+[0m04:09:39.343210 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:09:46.331162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786111be3a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7861132fc050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786110897c50>]}
+
+
+============================== 04:09:46.343081 | 7c3169eb-c2af-49e9-8e3b-5132c399f9e6 ==============================
+[0m04:09:46.343081 [info ] [MainThread]: Running with dbt=1.11.2
+[0m04:09:46.343903 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/workspaces/dbt-course/airbnb', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'quiet': 'False', 'invocation_command': 'dbt test --select dim_listings_with_hosts', 'log_format': 'default', 'static_parser': 'True', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'fail_fast': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'version_check': 'True', 'partial_parse': 'True', 'empty': 'None', 'use_experimental_parser': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'write_json': 'True', 'no_print': 'None', 'use_colors': 'True'}
+[0m04:09:46.781433 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m04:09:46.782233 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m04:09:46.783003 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m04:09:47.113714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7c3169eb-c2af-49e9-8e3b-5132c399f9e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78611155fa80>]}
+[0m04:09:47.202091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7c3169eb-c2af-49e9-8e3b-5132c399f9e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x786110a3b9b0>]}
+[0m04:09:47.202848 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m04:09:47.378306 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m04:09:47.611062 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m04:09:47.611930 [debug] [MainThread]: Partial parsing: updated file: airbnb://models/schema.yml
+[0m04:09:48.034070 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Invalid test config given in models/schema.yml:
+  	test definition dictionary must have exactly one key, got [('dbt_expectations.expect_column_quantile_values_to_be_between', None), ('arguments', {'quantile': 0.99, 'min_value': 50, 'max_value': 100})] instead (2 keys)
+  	@: UnparsedModelUpdate(original_file_path='mode...ne)
+[0m04:09:48.038725 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 1.7830226, "process_in_blocks": "0", "process_kernel_time": 0.417246, "process_mem_max_rss": "146652", "process_out_blocks": "8", "process_user_time": 3.039652}
+[0m04:09:48.039900 [debug] [MainThread]: Command `dbt test` failed at 04:09:48.039746 after 1.78 seconds
+[0m04:09:48.040431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78610db01250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78610db01350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78610db48b90>]}
+[0m04:09:48.040847 [debug] [MainThread]: Flushing usage events
+[0m04:09:49.003860 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:10:13.988390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26d91eba10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26daaf8050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26d8197c50>]}
+
+
+============================== 04:10:13.999954 | 740f6df7-ffca-4993-9d9a-dca46088b4be ==============================
+[0m04:10:13.999954 [info ] [MainThread]: Running with dbt=1.11.2
+[0m04:10:14.000792 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'warn_error': 'None', 'write_json': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'debug': 'False', 'empty': 'None', 'fail_fast': 'False', 'static_parser': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'printer_width': '80', 'log_format': 'default', 'use_experimental_parser': 'False', 'profiles_dir': '/workspaces/dbt-course/airbnb', 'invocation_command': 'dbt test --select dim_listings_with_hosts', 'log_path': '/workspaces/dbt-course/airbnb/logs', 'target_path': 'None', 'introspect': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'partial_parse': 'True'}
+[0m04:10:14.393726 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m04:10:14.394481 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m04:10:14.395022 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m04:10:14.705633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '740f6df7-ffca-4993-9d9a-dca46088b4be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26d8d3fa80>]}
+[0m04:10:14.795977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '740f6df7-ffca-4993-9d9a-dca46088b4be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26d823b9b0>]}
+[0m04:10:14.796869 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m04:10:15.022939 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m04:10:15.276508 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m04:10:15.277467 [debug] [MainThread]: Partial parsing: updated file: airbnb://models/schema.yml
+[0m04:10:15.858599 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test
+`dbt_expectations.expect_table_row_count_to_equal_other_table` defined on
+'dim_listings_with_hosts' in package 'airbnb' (models/schema.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m04:10:15.859256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '740f6df7-ffca-4993-9d9a-dca46088b4be', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26d54e1550>]}
+[0m04:10:16.017607 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '740f6df7-ffca-4993-9d9a-dca46088b4be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26d531d040>]}
+[0m04:10:16.249612 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m04:10:16.251788 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m04:10:16.274478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '740f6df7-ffca-4993-9d9a-dca46088b4be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26d4b68c90>]}
+[0m04:10:16.274975 [info ] [MainThread]: Found 8 models, 1 analysis, 11 data tests, 1 seed, 1 operation, 2 snapshots, 3 sources, 1 exposure, 918 macros, 1 unit test
+[0m04:10:16.275437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '740f6df7-ffca-4993-9d9a-dca46088b4be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26d4b521a0>]}
+[0m04:10:16.277317 [info ] [MainThread]: 
+[0m04:10:16.277768 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m04:10:16.278200 [info ] [MainThread]: 
+[0m04:10:16.278818 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m04:10:16.283969 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB'
+[0m04:10:16.325724 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB"
+[0m04:10:16.326158 [debug] [ThreadPool]: On list_AIRBNB: show terse schemas in database AIRBNB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB"} */
+[0m04:10:16.326536 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:10:16.633056 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.306 seconds
+[0m04:10:16.636743 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB, now list_AIRBNB_DEV)
+[0m04:10:16.649066 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m04:10:16.649453 [debug] [ThreadPool]: On list_AIRBNB_DEV: show objects in AIRBNB.DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */;
+[0m04:10:16.703448 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.054 seconds
+[0m04:10:16.705635 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now list_AIRBNB_DEV_test_audit)
+[0m04:10:16.709296 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV_test_audit"
+[0m04:10:16.709686 [debug] [ThreadPool]: On list_AIRBNB_DEV_test_audit: show objects in AIRBNB.DEV_test_audit
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV_test_audit"} */;
+[0m04:10:16.770805 [debug] [ThreadPool]: SQL status: SUCCESS 13 in 0.061 seconds
+[0m04:10:16.775152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '740f6df7-ffca-4993-9d9a-dca46088b4be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26d533f7d0>]}
+[0m04:10:16.783679 [debug] [MainThread]: Writing injected SQL for node "operation.airbnb.airbnb-on-run-start-0"
+[0m04:10:16.788408 [info ] [MainThread]: 1 of 1 START hook: airbnb.on-run-start.0 ....................................... [RUN]
+[0m04:10:16.789167 [debug] [MainThread]: Using snowflake connection "master"
+[0m04:10:16.789611 [debug] [MainThread]: On master: CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "connection_name": "master"} */
+[0m04:10:16.790026 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:10:17.033348 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.243 seconds
+[0m04:10:17.034620 [info ] [MainThread]: 1 of 1 OK hook: airbnb.on-run-start.0 .......................................... [[32mOK[0m in 0.26s]
+[0m04:10:17.035122 [info ] [MainThread]: 
+[0m04:10:17.038905 [debug] [Thread-2 (]: Began running node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m04:10:17.039428 [info ] [Thread-2 (]: 1 of 2 START test dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99  [RUN]
+[0m04:10:17.040064 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV_test_audit, now test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9)
+[0m04:10:17.040522 [debug] [Thread-2 (]: Began compiling node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m04:10:17.045944 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m04:10:17.046827 [debug] [Thread-2 (]: Began executing node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m04:10:17.074040 [debug] [Thread-2 (]: Applying DROP to: "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_COLUMN_40C6AE472EF424D2FF9E6CC57F00B936"
+[0m04:10:17.088851 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m04:10:17.089619 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9: drop table if exists "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_COLUMN_40C6AE472EF424D2FF9E6CC57F00B936" cascade
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"} */
+[0m04:10:17.184235 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.094 seconds
+[0m04:10:17.187165 [debug] [Thread-2 (]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+[0m04:10:17.214618 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m04:10:17.215162 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9: create or replace transient table AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+    
+    
+    
+    as (
+    
+  
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and percentile_cont(0.99) within group (order by price) >= 50 and percentile_cont(0.99) within group (order by price) <= 100
+)
+ as expression
+
+
+    from AIRBNB.DEV.dim_listings_with_hosts
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"} */;
+[0m04:10:18.148322 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.931 seconds
+[0m04:10:18.159662 [debug] [Thread-2 (]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m04:10:18.161149 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"
+[0m04:10:18.161844 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9"} */
+[0m04:10:18.284460 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.122 seconds
+[0m04:10:18.293219 [error] [Thread-2 (]: 1 of 2 FAIL 1 dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99  [[31mFAIL 1[0m in 1.25s]
+[0m04:10:18.294077 [debug] [Thread-2 (]: Finished running node test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9
+[0m04:10:18.294584 [debug] [Thread-2 (]: Began running node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m04:10:18.295138 [info ] [Thread-2 (]: 2 of 2 START test dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [RUN]
+[0m04:10:18.295717 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.airbnb.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99.6eab38aeb9, now test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9)
+[0m04:10:18.296182 [debug] [Thread-2 (]: Began compiling node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m04:10:18.303505 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m04:10:18.304388 [debug] [Thread-2 (]: Began executing node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m04:10:18.309819 [debug] [Thread-2 (]: Applying DROP to: "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_TABLE__7A4A6E23A5BE67B48DC8BEC7D8738D1F"
+[0m04:10:18.310797 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m04:10:18.311304 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: drop table if exists "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_TABLE__7A4A6E23A5BE67B48DC8BEC7D8738D1F" cascade
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */
+[0m04:10:18.402261 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.091 seconds
+[0m04:10:18.403388 [debug] [Thread-2 (]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+[0m04:10:18.405517 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m04:10:18.406024 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: create or replace transient table AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+    
+    
+    as (
+    
+  
+    with a as (
+        
+    select
+        
+        count(*) as expression
+    from
+        AIRBNB.DEV.dim_listings_with_hosts
+    
+
+    ),
+    b as (
+        
+    select
+        
+        count(*) * 1 as expression
+    from
+        AIRBNB.raw.raw_listings
+    
+
+    ),
+    final as (
+
+        select
+            
+            a.expression,
+            b.expression as compare_expression,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0)) as expression_difference,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0))/
+                nullif(a.expression * 1.0, 0) as expression_difference_percent
+        from
+        
+            a cross join b
+        
+    )
+    -- DEBUG:
+    -- select * from final
+    select
+        *
+    from final
+    where
+        
+        expression_difference > 0.0
+        
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */;
+[0m04:10:18.759182 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.353 seconds
+[0m04:10:18.760587 [debug] [Thread-2 (]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m04:10:18.761652 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"
+[0m04:10:18.762139 [debug] [Thread-2 (]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9"} */
+[0m04:10:18.834400 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.072 seconds
+[0m04:10:18.836564 [info ] [Thread-2 (]: 2 of 2 PASS dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [[32mPASS[0m in 0.54s]
+[0m04:10:18.837344 [debug] [Thread-2 (]: Finished running node test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9
+[0m04:10:18.838693 [debug] [MainThread]: Connection 'master' was left open.
+[0m04:10:18.839111 [debug] [MainThread]: On master: Close
+[0m04:10:18.902326 [debug] [MainThread]: Connection 'test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9' was left open.
+[0m04:10:18.902823 [debug] [MainThread]: On test.airbnb.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_.425c5c95c9: Close
+[0m04:10:18.935516 [info ] [MainThread]: 
+[0m04:10:18.936058 [info ] [MainThread]: Finished running 1 project hook, 2 data tests in 0 hours 0 minutes and 2.66 seconds (2.66s).
+[0m04:10:18.937218 [debug] [MainThread]: Command end result
+[0m04:10:18.990241 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/dbt-course/airbnb/target/manifest.json
+[0m04:10:18.992183 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/dbt-course/airbnb/target/semantic_manifest.json
+[0m04:10:18.998698 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/dbt-course/airbnb/target/run_results.json
+[0m04:10:18.999098 [info ] [MainThread]: 
+[0m04:10:18.999611 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m04:10:19.000151 [info ] [MainThread]: 
+[0m04:10:19.000810 [error] [MainThread]: [31mFailure in test dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__100__50__0_99 (models/schema.yml)[0m
+[0m04:10:19.001454 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m04:10:19.001965 [info ] [MainThread]: 
+[0m04:10:19.002700 [info ] [MainThread]:   compiled code at target/compiled/airbnb/models/schema.yml/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql
+[0m04:10:19.003245 [info ] [MainThread]: 
+[0m04:10:19.003895 [info ] [MainThread]:   See test failures:
+  ---------------------------------------------------------------------------------------------------
+  select * from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936
+  ---------------------------------------------------------------------------------------------------
+[0m04:10:19.004456 [info ] [MainThread]: 
+[0m04:10:19.005035 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=3
+[0m04:10:19.005865 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m04:10:19.007381 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 5.094101, "process_in_blocks": "0", "process_kernel_time": 0.481763, "process_mem_max_rss": "165356", "process_out_blocks": "6672", "process_user_time": 4.076613}
+[0m04:10:19.008130 [debug] [MainThread]: Command `dbt test` failed at 04:10:19.007967 after 5.10 seconds
+[0m04:10:19.008731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26c7eeaaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26c7db3610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b26c7db3b10>]}
+[0m04:10:19.009334 [debug] [MainThread]: Flushing usage events
+[0m04:10:19.969558 [debug] [MainThread]: An error was encountered while trying to flush usage events

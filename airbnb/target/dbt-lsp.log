@@ -1575,3 +1575,1173 @@ CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIME
 22:00:11.528384 [debug]: Finished analyzing [  0.04s] analysis DEV.full_moon_no_sleep [success]
 22:00:11.528394 [info ]: Finished analyzing [  0.33s] (12 nodes, 0 skipped, 0 errors)
 22:00:11.571524 [info ]: Cached model count updated: 8 models (accurate)
+==================== 2026-03-16T03:18:32.100118Z | 299a3689-bbb0-4ebe-9f7e-ff2da1176aed ====================
+03:18:32.299512 [info ]: Starting dbt LSP server
+03:18:32.299555 [info ]: Connecting to LSP client on port 8000
+03:18:32.303065 [info ]: Successfully connected to LSP client
+03:18:32.303086 [info ]: Creating LSP service...
+03:18:32.893873 [info ]: Creating LSP server...
+03:18:32.893905 [info ]: Starting LSP server...
+03:18:33.755982 [info ]: Loading profiles.yml
+03:18:34.908744 [info ]: Started loading project
+03:18:34.909306 [info ]: Loading profiles.yml
+03:18:35.243430 [info ]:    Started resolving packages from packages.yml
+03:18:35.436952 [info ]:   Finished [  0.19s] resolving packages from packages.yml (3 items)
+03:18:35.504827 [debug]:    Started loading packages
+03:18:35.512398 [debug]:     Loaded [  0.01s] packages
+03:18:35.518135 [info ]: Finished loading project [  0.61s]
+03:18:35.901852 [info ]: Started parsing
+03:18:36.398616 [debug]: Finished parsing models/dashboards.yml [  0.09s]
+03:18:36.399810 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+03:18:36.400256 [debug]: Finished parsing models/schema.yml [  0.00s]
+03:18:36.400486 [debug]: Finished parsing models/sources.yaml [  0.00s]
+03:18:36.400615 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+03:18:36.400741 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+03:18:36.400784 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+03:18:36.450577 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+03:18:36.451809 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+03:18:36.455029 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+03:18:36.455769 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+03:18:36.456419 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+03:18:36.459297 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.00s]
+03:18:36.460037 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+03:18:36.460650 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+03:18:36.461272 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+03:18:36.467293 [warn ]: dbt1005: Unused schema.yml entry for model 'dim_listings_w_hosts'
+  --> models/schema.yml
+03:18:36.467314 [debug]: Finished parsing models/src/src_reviews.sql [  0.01s]
+03:18:36.471910 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+03:18:36.473137 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+03:18:36.473648 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+03:18:36.474396 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+03:18:36.475034 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+03:18:36.475633 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+03:18:36.476233 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:18:36.476836 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:18:36.478060 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+03:18:36.536391 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.06s]
+03:18:36.549711 [info ]: Finished parsing [  0.65s]
+03:18:36.551868 [info ]: Cached model count updated: 8 models (estimate)
+03:18:36.552526 [info ]: Cached model count updated: 8 models (accurate)
+03:18:36.736994 [info ]: Started scheduling
+03:18:36.816534 [info ]: Finished scheduling [  0.08s]
+03:18:36.816612 [info ]: Started scheduling
+03:18:36.816773 [info ]: Finished scheduling [  0.00s]
+03:18:37.355485 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_hosts") and interval: None
+03:18:37.355646 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_listings") and interval: None
+03:18:37.355668 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_REVIEWS" }) and interval: None
+03:18:37.355689 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_LISTINGS" }) and interval: None
+03:18:37.355707 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_HOSTS" }) and interval: None
+03:18:37.366476 [info ]: Started deferring state
+03:18:37.366517 [info ]: Finished deferring state [  0.00s]
+03:18:38.587320 [debug]:    Started downloading relations (1 items)
+03:18:42.833064 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "AIRBNB"."DEV" LIMIT 10000
+03:18:43.394999 [debug]:   Finished [  4.81s] downloading relations (1 items)
+03:18:43.395067 [info ]: Started downloading schemas
+03:18:43.684489 [debug]: Query executed on node unknown:
+describe table "AIRBNB"."DEV"."FCT_REVIEWS"
+03:18:44.509446 [info ]: Downloaded AIRBNB.DEV.fct_reviews (schema)
+03:18:44.805829 [info ]: Started building task graph
+03:18:44.855822 [info ]: Finished building task graph [  0.05s]
+03:18:44.859979 [info ]: Started on-run-start hooks (1 nodes)
+03:18:45.386971 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+03:18:45.387981 [info ]: Finished downloading schemas [  1.99s]
+03:18:45.388733 [info ]: Finished on-run-start hooks [  0.53s] (1 nodes, 0 skipped, 0 errors)
+03:18:45.479473 [info ]: Started rendering (12 nodes)
+03:18:45.479653 [info ]: Started snapshot DEV.scd_raw_listings
+03:18:45.479670 [debug]: Started rendering snapshot DEV.scd_raw_listings
+03:18:45.479712 [info ]: Started snapshot DEV.scd_raw_hosts
+03:18:45.479721 [debug]: Started rendering snapshot DEV.scd_raw_hosts
+03:18:45.480108 [info ]: Started model DEV.dim_listings_with_hosts
+03:18:45.480124 [debug]: Started rendering model DEV.dim_listings_with_hosts
+03:18:45.480143 [info ]: Started model DEV.src_listings
+03:18:45.480154 [debug]: Started rendering model DEV.src_listings
+03:18:45.480169 [info ]: Started model DEV.src_hosts
+03:18:45.480176 [debug]: Started rendering model DEV.src_hosts
+03:18:45.480190 [info ]: Started analysis DEV.full_moon_no_sleep
+03:18:45.480198 [debug]: Started rendering analysis DEV.full_moon_no_sleep
+03:18:45.480210 [info ]: Started model DEV.mart_full_moon_reviews
+03:18:45.480218 [debug]: Started rendering model DEV.mart_full_moon_reviews
+03:18:45.480231 [info ]: Started seed DEV.seed_full_moon_dates
+03:18:45.480239 [debug]: Started rendering seed DEV.seed_full_moon_dates
+03:18:45.480251 [info ]: Started model DEV.src_reviews
+03:18:45.480259 [debug]: Started rendering model DEV.src_reviews
+03:18:45.495501 [debug]: Compiled SQL for node snapshot.airbnb.scd_raw_hosts at target/.lsp/compiled/snapshots/scd_raw_hosts.sql
+03:18:45.496237 [info ]: Started analyzing (12 nodes)
+03:18:45.496427 [debug]: Started analyzing snapshot DEV.scd_raw_hosts
+03:18:45.497107 [debug]: Finished rendering [  0.02s] snapshot DEV.scd_raw_hosts [success]
+03:18:46.282690 [debug]: Finished rendering [  0.80s] seed DEV.seed_full_moon_dates [success]
+03:18:46.282903 [debug]: Started analyzing seed DEV.seed_full_moon_dates
+03:18:46.283836 [info ]:  Succeeded [  0.80s] seed  DEV.seed_full_moon_dates (table)
+03:18:46.283873 [debug]: Finished analyzing [  0.00s] seed DEV.seed_full_moon_dates [success]
+03:18:46.284078 [debug]: Compiled SQL for node model.airbnb.mart_full_moon_reviews at target/.lsp/compiled/models/mart/mart_full_moon_reviews.sql
+03:18:46.284149 [debug]: Compiled SQL for node analysis.airbnb.full_moon_no_sleep at target/.lsp/compiled/analyses/full_moon_no_sleep.sql
+03:18:46.284181 [debug]: Finished rendering [  0.80s] analysis DEV.full_moon_no_sleep [success]
+03:18:46.284771 [debug]: Finished rendering [  0.80s] model DEV.mart_full_moon_reviews [success]
+03:18:46.284892 [debug]: Compiled SQL for node model.airbnb.src_listings at target/.lsp/compiled/models/src/src_listings.sql
+03:18:46.284980 [info ]: Started model DEV.dim_listings_cleansed
+03:18:46.285024 [debug]: Started rendering model DEV.dim_listings_cleansed
+03:18:46.285082 [debug]: Started analyzing model DEV.src_listings
+03:18:46.285570 [debug]: Compiled SQL for node model.airbnb.src_reviews at target/.lsp/compiled/models/src/src_reviews.sql
+03:18:46.285642 [info ]: Started model DEV.fct_reviews
+03:18:46.285678 [debug]: Started rendering model DEV.fct_reviews
+03:18:46.285693 [debug]: Started analyzing model DEV.src_reviews
+03:18:46.285739 [debug]: Finished rendering [  0.81s] model DEV.src_listings [success]
+03:18:46.285959 [debug]: Compiled SQL for node model.airbnb.dim_listings_with_hosts at target/.lsp/compiled/models/dim/dim_listings_with_hosts.sql
+03:18:46.286011 [debug]: Compiled SQL for node snapshot.airbnb.scd_raw_listings at target/.lsp/compiled/snapshots/scd_raw_listings.sql
+03:18:46.286063 [debug]: Started analyzing snapshot DEV.scd_raw_listings
+03:18:46.290758 [info ]:  Succeeded [  0.81s] snapshot DEV.scd_raw_hosts (table)
+03:18:46.290792 [debug]: Finished analyzing [  0.79s] snapshot DEV.scd_raw_hosts [success]
+03:18:46.290837 [debug]: Compiled SQL for node model.airbnb.src_hosts at target/.lsp/compiled/models/src/src_hosts.sql
+03:18:46.290881 [info ]: Started model DEV.dim_hosts_cleansed
+03:18:46.290892 [debug]: Started rendering model DEV.dim_hosts_cleansed
+03:18:46.290915 [debug]: Started analyzing model DEV.src_hosts
+03:18:46.290932 [debug]: Finished rendering [  0.81s] model DEV.src_hosts [success]
+03:18:46.305733 [info ]:  Succeeded [  0.82s] model DEV.src_hosts (ephemeral)
+03:18:46.305756 [debug]: Finished analyzing [  0.01s] model DEV.src_hosts [success]
+03:18:46.305796 [debug]: Compiled SQL for node model.airbnb.dim_hosts_cleansed at target/.lsp/compiled/models/dim/dim_hosts_cleansed.sql
+03:18:46.305824 [debug]: Started analyzing model DEV.dim_hosts_cleansed
+03:18:46.305969 [debug]: Finished rendering [  0.02s] model DEV.dim_hosts_cleansed [success]
+03:18:46.306566 [info ]:  Succeeded [  0.82s] model DEV.src_listings (ephemeral)
+03:18:46.306584 [debug]: Finished analyzing [  0.02s] model DEV.src_listings [success]
+03:18:46.306864 [debug]: Finished rendering [  0.83s] model DEV.src_reviews [success]
+03:18:46.309451 [info ]:  Succeeded [  0.83s] model DEV.src_reviews (ephemeral)
+03:18:46.309478 [debug]: Finished analyzing [  0.02s] model DEV.src_reviews [success]
+03:18:46.309513 [debug]: Finished rendering [  0.83s] model DEV.dim_listings_with_hosts [success]
+03:18:46.309536 [debug]: Compiled SQL for node model.airbnb.dim_listings_cleansed at target/.lsp/compiled/models/dim/dim_listings_cleansed.sql
+03:18:46.309572 [debug]: Started analyzing model DEV.dim_listings_cleansed
+03:18:46.309601 [debug]: Finished rendering [  0.83s] snapshot DEV.scd_raw_listings [success]
+03:18:46.313448 [info ]:  Succeeded [  0.83s] snapshot DEV.scd_raw_listings (table)
+03:18:46.313476 [debug]: Finished analyzing [  0.03s] snapshot DEV.scd_raw_listings [success]
+03:18:46.313529 [debug]: Finished rendering [  0.03s] model DEV.dim_listings_cleansed [success]
+03:18:46.533813 [info ]:  Succeeded [  0.25s] model DEV.dim_listings_cleansed (view)
+03:18:46.533871 [debug]: Finished analyzing [  0.22s] model DEV.dim_listings_cleansed [success]
+03:18:46.534838 [debug]: Compiled SQL for node model.airbnb.fct_reviews at target/.lsp/compiled/models/fct/fct_reviews.sql
+03:18:46.535086 [debug]: Started analyzing model DEV.fct_reviews
+03:18:46.535192 [debug]: Finished rendering [  0.25s] model DEV.fct_reviews [success]
+03:18:46.535207 [info ]: Finished rendering [  1.06s] (12 nodes, 0 skipped, 0 errors)
+03:18:46.624110 [info ]:  Succeeded [  0.33s] model DEV.dim_hosts_cleansed (view)
+03:18:46.624157 [debug]: Finished analyzing [  0.32s] model DEV.dim_hosts_cleansed [success]
+03:18:46.624183 [debug]: Started analyzing model DEV.dim_listings_with_hosts
+03:18:46.789325 [info ]:  Succeeded [  0.97s] model DEV.dim_listings_with_hosts (table)
+03:18:46.789467 [debug]: Finished analyzing [  0.17s] model DEV.dim_listings_with_hosts [success]
+03:18:46.791859 [info ]:  Succeeded [  0.51s] model DEV.fct_reviews (incremental)
+03:18:46.791897 [debug]: Finished analyzing [  0.26s] model DEV.fct_reviews [success]
+03:18:46.791921 [debug]: Started analyzing model DEV.mart_full_moon_reviews
+03:18:46.829110 [info ]:  Succeeded [  0.84s] model DEV.mart_full_moon_reviews (table)
+03:18:46.829154 [debug]: Finished analyzing [  0.04s] model DEV.mart_full_moon_reviews [success]
+03:18:46.829180 [debug]: Started analyzing analysis DEV.full_moon_no_sleep
+03:18:47.350590 [info ]:  Succeeded [  1.32s] analysis DEV.full_moon_no_sleep (analysis)
+03:18:47.350640 [debug]: Finished analyzing [  0.52s] analysis DEV.full_moon_no_sleep [success]
+03:18:47.350651 [info ]: Finished analyzing [  1.85s] (12 nodes, 0 skipped, 0 errors)
+03:18:47.410168 [info ]: Cached model count updated: 8 models (accurate)
+03:45:56.201004 [info ]: Started loading project
+03:45:56.201402 [info ]: Loading profiles.yml
+03:45:56.217315 [info ]: Started parsing
+03:45:56.262779 [info ]: Finished loading project [  0.06s]
+03:45:56.263673 [debug]: Finished parsing models/schema.yml [  0.00s]
+03:45:56.265915 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+03:45:56.268818 [warn ]: dbt1005: Unused schema.yml entry for model 'dim_listings_w_hosts'
+  --> models/schema.yml
+03:45:56.269022 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+03:45:56.270064 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+03:45:56.270722 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+03:45:56.271215 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+03:45:56.271732 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:45:56.272229 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:45:56.272673 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+03:45:56.275145 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+03:45:56.275735 [info ]: Finished parsing [  0.06s]
+03:45:56.277180 [info ]: Cached model count updated: 8 models (estimate)
+03:45:56.277196 [info ]: Cached model count updated: 8 models (accurate)
+03:45:56.277242 [info ]: Started scheduling
+03:45:56.277430 [info ]: Finished scheduling [  0.00s]
+03:45:56.277451 [debug]: Incremental compilation - 0 nodes selected: {}
+03:45:56.277468 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+03:45:56.277474 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+03:45:56.277989 [info ]: Started deferring state
+03:45:56.278009 [info ]: Finished deferring state [  0.00s]
+03:45:56.516143 [info ]: Started building task graph
+03:45:56.516256 [info ]: Finished building task graph [  0.00s]
+03:45:56.516379 [info ]: Started on-run-start hooks (1 nodes)
+03:45:56.959430 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+03:45:56.960353 [info ]: Finished on-run-start hooks [  0.44s] (1 nodes, 0 skipped, 0 errors)
+03:45:56.970724 [info ]: Cached model count updated: 8 models (accurate)
+03:49:42.448252 [info ]: Started loading project
+03:49:42.448663 [info ]: Loading profiles.yml
+03:49:42.454241 [info ]: Started parsing
+03:49:42.483005 [info ]: Finished loading project [  0.03s]
+03:49:42.483791 [debug]: Finished parsing models/schema.yml [  0.00s]
+03:49:42.486154 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+03:49:42.489355 [warn ]: dbt1005: Unused schema.yml entry for model 'dim_listings_w_hosts'
+  --> models/schema.yml
+03:49:42.489776 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+03:49:42.491831 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+03:49:42.492571 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+03:49:42.493749 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+03:49:42.494239 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:49:42.497189 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:49:42.497211 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+03:49:42.500382 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+03:49:42.500586 [info ]: Finished parsing [  0.05s]
+03:49:42.502244 [info ]: Cached model count updated: 8 models (estimate)
+03:49:42.502259 [info ]: Cached model count updated: 8 models (accurate)
+03:49:42.502307 [info ]: Started scheduling
+03:49:42.502378 [info ]: Finished scheduling [  0.00s]
+03:49:42.502394 [debug]: Incremental compilation - 0 nodes selected: {}
+03:49:42.502428 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+03:49:42.502442 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+03:49:42.503007 [info ]: Started deferring state
+03:49:42.503026 [info ]: Finished deferring state [  0.00s]
+03:49:42.737963 [info ]: Started building task graph
+03:49:42.738078 [info ]: Finished building task graph [  0.00s]
+03:49:42.738199 [info ]: Started on-run-start hooks (1 nodes)
+03:49:43.034857 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+03:49:43.035635 [info ]: Finished on-run-start hooks [  0.30s] (1 nodes, 0 skipped, 0 errors)
+03:49:43.046794 [info ]: Cached model count updated: 8 models (accurate)
+03:52:43.022157 [info ]: Started loading project
+03:52:43.022562 [info ]: Loading profiles.yml
+03:52:43.037740 [info ]: Started parsing
+03:52:43.063290 [info ]: Finished loading project [  0.04s]
+03:52:43.064237 [debug]: Finished parsing models/schema.yml [  0.00s]
+03:52:43.066429 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+03:52:43.067319 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+03:52:43.072117 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+03:52:43.072389 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.01s]
+03:52:43.072437 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+03:52:43.074262 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+03:52:43.075604 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+03:52:43.075629 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+03:52:43.076612 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:52:43.077101 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:52:43.077598 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+03:52:43.078129 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+03:52:43.078781 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+03:52:43.081983 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_da16c9c97feba6d95b304088914e1dcf.sql [  0.00s]
+03:52:43.082781 [info ]: Finished parsing [  0.05s]
+03:52:43.084516 [info ]: Cached model count updated: 8 models (estimate)
+03:52:43.084533 [info ]: Cached model count updated: 8 models (accurate)
+03:52:43.084713 [info ]: Started scheduling
+03:52:43.084793 [info ]: Finished scheduling [  0.00s]
+03:52:43.084838 [debug]: Incremental compilation - 0 nodes selected: {}
+03:52:43.084854 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+03:52:43.084860 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+03:52:43.085640 [info ]: Started deferring state
+03:52:43.085660 [info ]: Finished deferring state [  0.00s]
+03:52:43.310604 [info ]: Started building task graph
+03:52:43.310719 [info ]: Finished building task graph [  0.00s]
+03:52:43.310848 [info ]: Started on-run-start hooks (1 nodes)
+03:52:46.738676 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+03:52:46.739957 [info ]: Finished on-run-start hooks [  3.43s] (1 nodes, 0 skipped, 0 errors)
+03:52:46.767265 [info ]: Cached model count updated: 8 models (accurate)
+03:53:19.497038 [info ]: Started loading project
+03:53:19.497478 [info ]: Loading profiles.yml
+03:53:19.502997 [info ]: Started parsing
+03:53:19.523873 [info ]: Finished loading project [  0.03s]
+03:53:19.524518 [debug]: Finished parsing models/schema.yml [  0.00s]
+03:53:19.526611 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+03:53:19.527216 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+03:53:19.530488 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+03:53:19.530797 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+03:53:19.531713 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+03:53:19.532650 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+03:53:19.533453 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+03:53:19.534345 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+03:53:19.535142 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:53:19.536135 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:53:19.536520 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+03:53:19.536983 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+03:53:19.537620 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+03:53:19.540740 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+03:53:19.541335 [info ]: Finished parsing [  0.04s]
+03:53:19.542876 [info ]: Cached model count updated: 8 models (estimate)
+03:53:19.542891 [info ]: Cached model count updated: 8 models (accurate)
+03:53:19.542938 [info ]: Started scheduling
+03:53:19.543005 [info ]: Finished scheduling [  0.00s]
+03:53:19.543015 [debug]: Incremental compilation - 0 nodes selected: {}
+03:53:19.543031 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+03:53:19.543038 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+03:53:19.543584 [info ]: Started deferring state
+03:53:19.543603 [info ]: Finished deferring state [  0.00s]
+03:53:19.780257 [info ]: Started building task graph
+03:53:19.780362 [info ]: Finished building task graph [  0.00s]
+03:53:19.780483 [info ]: Started on-run-start hooks (1 nodes)
+03:53:19.841121 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+03:53:19.841853 [info ]: Finished on-run-start hooks [  0.06s] (1 nodes, 0 skipped, 0 errors)
+03:53:19.851360 [info ]: Cached model count updated: 8 models (accurate)
+03:58:08.102646 [info ]: Started loading project
+03:58:08.103064 [info ]: Loading profiles.yml
+03:58:08.109868 [info ]: Started parsing
+03:58:08.134909 [info ]: Finished loading project [  0.03s]
+03:58:08.135595 [debug]: Finished parsing models/schema.yml [  0.00s]
+03:58:08.137728 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+03:58:08.138309 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+03:58:08.141480 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+03:58:08.141586 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+03:58:08.142899 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+03:58:08.143550 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+03:58:08.144060 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+03:58:08.144542 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:58:08.144986 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+03:58:08.145390 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+03:58:08.145831 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+03:58:08.148700 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+03:58:08.149416 [info ]: Finished parsing [  0.04s]
+03:58:08.151111 [info ]: Cached model count updated: 8 models (estimate)
+03:58:08.151125 [info ]: Cached model count updated: 8 models (accurate)
+03:58:08.151176 [info ]: Started scheduling
+03:58:08.151242 [info ]: Finished scheduling [  0.00s]
+03:58:08.151252 [debug]: Incremental compilation - 0 nodes selected: {}
+03:58:08.151268 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+03:58:08.151275 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+03:58:08.151865 [info ]: Started deferring state
+03:58:08.151884 [info ]: Finished deferring state [  0.00s]
+03:58:08.378003 [info ]: Started building task graph
+03:58:08.378102 [info ]: Finished building task graph [  0.00s]
+03:58:08.378217 [info ]: Started on-run-start hooks (1 nodes)
+03:58:08.527033 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+03:58:08.527849 [info ]: Finished on-run-start hooks [  0.15s] (1 nodes, 0 skipped, 0 errors)
+03:58:08.538720 [info ]: Cached model count updated: 8 models (accurate)
+04:00:22.686170 [info ]: Started loading project
+04:00:22.687969 [info ]: Loading profiles.yml
+04:00:22.696984 [info ]: Started parsing
+04:00:22.719610 [info ]: Finished loading project [  0.03s]
+04:00:22.720227 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:00:22.722255 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:00:22.722836 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:00:22.726547 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:00:22.726874 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:00:22.727815 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.01s]
+04:00:22.729224 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:00:22.730152 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:00:22.731469 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:00:22.731580 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:00:22.732948 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:00:22.733485 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:00:22.734206 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:00:22.735022 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:00:22.738636 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:00:22.739342 [info ]: Finished parsing [  0.04s]
+04:00:22.740965 [info ]: Cached model count updated: 8 models (estimate)
+04:00:22.740980 [info ]: Cached model count updated: 8 models (accurate)
+04:00:22.741036 [info ]: Started scheduling
+04:00:22.741125 [info ]: Finished scheduling [  0.00s]
+04:00:22.741144 [debug]: Incremental compilation - 0 nodes selected: {}
+04:00:22.741162 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:00:22.741169 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:00:22.742019 [info ]: Started deferring state
+04:00:22.742038 [info ]: Finished deferring state [  0.00s]
+04:00:22.972369 [info ]: Started building task graph
+04:00:22.972517 [info ]: Finished building task graph [  0.00s]
+04:00:22.972653 [info ]: Started on-run-start hooks (1 nodes)
+04:00:23.093204 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:00:23.094071 [info ]: Finished on-run-start hooks [  0.12s] (1 nodes, 0 skipped, 0 errors)
+04:00:23.106294 [info ]: Cached model count updated: 8 models (accurate)
+04:01:33.556205 [info ]: Started loading project
+04:01:33.556616 [info ]: Loading profiles.yml
+04:01:33.562598 [info ]: Started parsing
+04:01:33.584375 [info ]: Finished loading project [  0.03s]
+04:01:33.585007 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:01:33.587160 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:01:33.587759 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:01:33.590987 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:01:33.591378 [error]: dbt0102: Deprecated test arguments: ["quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:63:25
+04:01:33.592439 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:01:33.593839 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:01:33.594426 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:01:33.595403 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:01:33.596438 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:01:33.596661 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:01:33.597582 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:01:33.597970 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:01:33.598653 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:01:33.599454 [error]: dbt1501: Failed to render SQL invalid operation: Compilation Error: You have to provide either a min_value, max_value or both.
+(in target/generic_tests/dbt_expectations_expect_column_9cfdf09048c0914f9a380e86e447df6e.sql:1:1)
+(in dbt_packages/dbt_expectations/macros/schema_tests/aggregate_functions/expect_column_quantile_values_to_be_between.sql:13:1)
+(in dbt_packages/dbt_expectations/macros/schema_tests/_generalized/expression_between.sql:24:1)
+  --> target/generic_tests/dbt_expectations_expect_column_9cfdf09048c0914f9a380e86e447df6e.sql:1:1
+04:01:33.602185 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_9cfdf09048c0914f9a380e86e447df6e.sql [  0.00s]
+04:01:33.602659 [info ]: Finished parsing [  0.04s]
+04:01:33.604578 [info ]: Cached model count updated: 8 models (estimate)
+04:01:33.604594 [info ]: Cached model count updated: 8 models (accurate)
+04:01:33.604648 [info ]: Started scheduling
+04:01:33.604714 [info ]: Finished scheduling [  0.00s]
+04:01:33.604724 [debug]: Incremental compilation - 0 nodes selected: {}
+04:01:33.604738 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:01:33.604745 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:01:33.605433 [info ]: Started deferring state
+04:01:33.605452 [info ]: Finished deferring state [  0.00s]
+04:01:33.836683 [info ]: Started building task graph
+04:01:33.836771 [info ]: Finished building task graph [  0.00s]
+04:01:33.836887 [info ]: Started on-run-start hooks (1 nodes)
+04:01:34.027365 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:01:34.028088 [info ]: Finished on-run-start hooks [  0.19s] (1 nodes, 0 skipped, 0 errors)
+04:01:34.038300 [info ]: Cached model count updated: 8 models (accurate)
+04:02:18.176148 [info ]: Started loading project
+04:02:18.176578 [info ]: Loading profiles.yml
+04:02:18.182014 [info ]: Started parsing
+04:02:18.206276 [info ]: Finished loading project [  0.03s]
+04:02:18.206948 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:02:18.209020 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:02:18.209637 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:02:18.212829 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:02:18.212926 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:02:18.213168 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:02:18.214572 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:02:18.215270 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:02:18.215919 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:02:18.216535 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:02:18.217015 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:02:18.217489 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:02:18.217986 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:02:18.218658 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:02:18.221990 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:02:18.222578 [info ]: Finished parsing [  0.04s]
+04:02:18.224270 [info ]: Cached model count updated: 8 models (estimate)
+04:02:18.224286 [info ]: Cached model count updated: 8 models (accurate)
+04:02:18.224390 [info ]: Started scheduling
+04:02:18.224464 [info ]: Finished scheduling [  0.00s]
+04:02:18.224506 [debug]: Incremental compilation - 0 nodes selected: {}
+04:02:18.224546 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:02:18.224554 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:02:18.225401 [info ]: Started deferring state
+04:02:18.225421 [info ]: Finished deferring state [  0.00s]
+04:02:18.492489 [info ]: Started building task graph
+04:02:18.492627 [info ]: Finished building task graph [  0.00s]
+04:02:18.492763 [info ]: Started on-run-start hooks (1 nodes)
+04:02:18.571977 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:02:18.572855 [info ]: Finished on-run-start hooks [  0.08s] (1 nodes, 0 skipped, 0 errors)
+04:02:18.582614 [info ]: Cached model count updated: 8 models (accurate)
+04:02:20.085463 [info ]: Started loading project
+04:02:20.085986 [info ]: Loading profiles.yml
+04:02:20.094800 [info ]: Started parsing
+04:02:20.118093 [info ]: Finished loading project [  0.03s]
+04:02:20.118777 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:02:20.121130 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:02:20.122086 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:02:20.127343 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:02:20.127480 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.01s]
+04:02:20.127785 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:02:20.130346 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:02:20.131014 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:02:20.131219 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:02:20.131839 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:02:20.132480 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:02:20.133074 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:02:20.133747 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:02:20.134699 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:02:20.139699 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.01s]
+04:02:20.140881 [info ]: Finished parsing [  0.05s]
+04:02:20.143735 [info ]: Cached model count updated: 8 models (estimate)
+04:02:20.143832 [info ]: Cached model count updated: 8 models (accurate)
+04:02:20.143947 [info ]: Started scheduling
+04:02:20.144077 [info ]: Finished scheduling [  0.00s]
+04:02:20.144136 [debug]: Incremental compilation - 0 nodes selected: {}
+04:02:20.144201 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:02:20.144255 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:02:20.145419 [info ]: Started deferring state
+04:02:20.145493 [info ]: Finished deferring state [  0.00s]
+04:02:20.362727 [info ]: Started building task graph
+04:02:20.362842 [info ]: Finished building task graph [  0.00s]
+04:02:20.362961 [info ]: Started on-run-start hooks (1 nodes)
+04:02:20.421104 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:02:20.422085 [info ]: Finished on-run-start hooks [  0.06s] (1 nodes, 0 skipped, 0 errors)
+04:02:20.431491 [info ]: Cached model count updated: 8 models (accurate)
+04:02:31.032186 [info ]: Started loading project
+04:02:31.032605 [info ]: Loading profiles.yml
+04:02:31.038744 [info ]: Started parsing
+04:02:31.063088 [info ]: Finished loading project [  0.03s]
+04:02:31.063213 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:02:31.065384 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:02:31.065983 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:02:31.069252 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:02:31.069420 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:02:31.069593 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:02:31.070930 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:02:31.071432 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:02:31.071902 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:02:31.072383 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:02:31.072838 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:02:31.073270 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:02:31.073704 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:02:31.074368 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:02:31.077485 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:02:31.078655 [info ]: Finished parsing [  0.04s]
+04:02:31.081261 [info ]: Cached model count updated: 8 models (estimate)
+04:02:31.081280 [info ]: Cached model count updated: 8 models (accurate)
+04:02:31.081332 [info ]: Started scheduling
+04:02:31.081401 [info ]: Finished scheduling [  0.00s]
+04:02:31.081410 [debug]: Incremental compilation - 0 nodes selected: {}
+04:02:31.081427 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:02:31.081434 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:02:31.082429 [info ]: Started deferring state
+04:02:31.082458 [info ]: Finished deferring state [  0.00s]
+04:02:31.314916 [info ]: Started building task graph
+04:02:31.315008 [info ]: Finished building task graph [  0.00s]
+04:02:31.315145 [info ]: Started on-run-start hooks (1 nodes)
+04:02:31.442111 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:02:31.443106 [info ]: Finished on-run-start hooks [  0.13s] (1 nodes, 0 skipped, 0 errors)
+04:02:31.455242 [info ]: Cached model count updated: 8 models (accurate)
+04:02:36.548962 [info ]: Started loading project
+04:02:36.549362 [info ]: Loading profiles.yml
+04:02:36.554874 [info ]: Started parsing
+04:02:36.577407 [info ]: Finished loading project [  0.03s]
+04:02:36.578113 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:02:36.580138 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:02:36.580721 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:02:36.583850 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:02:36.583950 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:02:36.584191 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:02:36.585509 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:02:36.585968 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:02:36.586434 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:02:36.586880 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:02:36.587302 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:02:36.587727 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:02:36.588207 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:02:36.588810 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:02:36.591884 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:02:36.592421 [info ]: Finished parsing [  0.04s]
+04:02:36.593743 [info ]: Cached model count updated: 8 models (estimate)
+04:02:36.593759 [info ]: Cached model count updated: 8 models (accurate)
+04:02:36.593806 [info ]: Started scheduling
+04:02:36.593867 [info ]: Finished scheduling [  0.00s]
+04:02:36.593877 [debug]: Incremental compilation - 0 nodes selected: {}
+04:02:36.593909 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:02:36.593917 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:02:36.594468 [info ]: Started deferring state
+04:02:36.594487 [info ]: Finished deferring state [  0.00s]
+04:02:36.815097 [info ]: Started building task graph
+04:02:36.815252 [info ]: Finished building task graph [  0.00s]
+04:02:36.815380 [info ]: Started on-run-start hooks (1 nodes)
+04:02:36.886710 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:02:36.887481 [info ]: Finished on-run-start hooks [  0.07s] (1 nodes, 0 skipped, 0 errors)
+04:02:36.897839 [info ]: Cached model count updated: 8 models (accurate)
+04:02:40.470481 [info ]: Started loading project
+04:02:40.470933 [info ]: Loading profiles.yml
+04:02:40.478854 [info ]: Started parsing
+04:02:40.505349 [info ]: Finished loading project [  0.03s]
+04:02:40.505968 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:02:40.507950 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:02:40.508560 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:02:40.511901 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:02:40.512023 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:02:40.512265 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:02:40.514231 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:02:40.515071 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:02:40.516551 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:02:40.518067 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:02:40.518265 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:02:40.518656 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:02:40.519265 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:02:40.519973 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:02:40.523369 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:02:40.523789 [info ]: Finished parsing [  0.04s]
+04:02:40.525276 [info ]: Cached model count updated: 8 models (estimate)
+04:02:40.525292 [info ]: Cached model count updated: 8 models (accurate)
+04:02:40.525338 [info ]: Started scheduling
+04:02:40.525399 [info ]: Finished scheduling [  0.00s]
+04:02:40.525408 [debug]: Incremental compilation - 0 nodes selected: {}
+04:02:40.525430 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:02:40.525436 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:02:40.525988 [info ]: Started deferring state
+04:02:40.526007 [info ]: Finished deferring state [  0.00s]
+04:02:40.738645 [info ]: Started building task graph
+04:02:40.738753 [info ]: Finished building task graph [  0.00s]
+04:02:40.738866 [info ]: Started on-run-start hooks (1 nodes)
+04:02:40.817989 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:02:40.818859 [info ]: Finished on-run-start hooks [  0.08s] (1 nodes, 0 skipped, 0 errors)
+04:02:40.827911 [info ]: Cached model count updated: 8 models (accurate)
+04:06:45.199214 [info ]: Started loading project
+04:06:45.199607 [info ]: Loading profiles.yml
+04:06:45.206192 [info ]: Started parsing
+04:06:45.231181 [info ]: Finished loading project [  0.03s]
+04:06:45.231729 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:06:45.234824 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:06:45.235664 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:06:45.238980 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:06:45.239093 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:06:45.239324 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:06:45.240826 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:06:45.241334 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:06:45.241809 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:06:45.242466 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:06:45.242971 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:06:45.243777 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:06:45.244477 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:06:45.245322 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:06:45.248595 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:06:45.249377 [info ]: Finished parsing [  0.04s]
+04:06:45.250982 [info ]: Cached model count updated: 8 models (estimate)
+04:06:45.250998 [info ]: Cached model count updated: 8 models (accurate)
+04:06:45.251061 [info ]: Started scheduling
+04:06:45.251124 [info ]: Finished scheduling [  0.00s]
+04:06:45.251133 [debug]: Incremental compilation - 0 nodes selected: {}
+04:06:45.251150 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:06:45.251156 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:06:45.251793 [info ]: Started deferring state
+04:06:45.251812 [info ]: Finished deferring state [  0.00s]
+04:06:45.476950 [info ]: Started building task graph
+04:06:45.477040 [info ]: Finished building task graph [  0.00s]
+04:06:45.477178 [info ]: Started on-run-start hooks (1 nodes)
+04:06:45.697022 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:06:45.697966 [info ]: Finished on-run-start hooks [  0.22s] (1 nodes, 0 skipped, 0 errors)
+04:06:45.709255 [info ]: Cached model count updated: 8 models (accurate)
+04:06:46.342233 [info ]: Started loading project
+04:06:46.342638 [info ]: Loading profiles.yml
+04:06:46.348865 [info ]: Started parsing
+04:06:46.371855 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:06:46.372983 [info ]: Finished loading project [  0.03s]
+04:06:46.375137 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:06:46.376005 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:06:46.379322 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:06:46.379416 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:06:46.379663 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:06:46.381330 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:06:46.382116 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:06:46.383311 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:06:46.385305 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:06:46.386251 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:06:46.387265 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:06:46.387838 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:06:46.388559 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:06:46.391787 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:06:46.392667 [info ]: Finished parsing [  0.04s]
+04:06:46.394539 [info ]: Cached model count updated: 8 models (estimate)
+04:06:46.394555 [info ]: Cached model count updated: 8 models (accurate)
+04:06:46.394603 [info ]: Started scheduling
+04:06:46.394668 [info ]: Finished scheduling [  0.00s]
+04:06:46.394678 [debug]: Incremental compilation - 0 nodes selected: {}
+04:06:46.394695 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:06:46.394702 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:06:46.395288 [info ]: Started deferring state
+04:06:46.395307 [info ]: Finished deferring state [  0.00s]
+04:06:46.610859 [info ]: Started building task graph
+04:06:46.610967 [info ]: Finished building task graph [  0.00s]
+04:06:46.611092 [info ]: Started on-run-start hooks (1 nodes)
+04:06:46.684091 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:06:46.684798 [info ]: Finished on-run-start hooks [  0.07s] (1 nodes, 0 skipped, 0 errors)
+04:06:46.694774 [info ]: Cached model count updated: 8 models (accurate)
+04:06:47.035475 [info ]: Started loading project
+04:06:47.035872 [info ]: Loading profiles.yml
+04:06:47.041107 [info ]: Started parsing
+04:06:47.062272 [info ]: Finished loading project [  0.03s]
+04:06:47.062909 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:06:47.064917 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:06:47.065518 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:06:47.068828 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:06:47.069012 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:06:47.069182 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:06:47.070495 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:06:47.071158 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:06:47.071612 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:06:47.072087 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:06:47.072575 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:06:47.073011 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:06:47.073516 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:06:47.074187 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:06:47.078735 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:06:47.080564 [info ]: Finished parsing [  0.04s]
+04:06:47.081294 [info ]: Cached model count updated: 8 models (estimate)
+04:06:47.081309 [info ]: Cached model count updated: 8 models (accurate)
+04:06:47.081357 [info ]: Started scheduling
+04:06:47.081427 [info ]: Finished scheduling [  0.00s]
+04:06:47.081438 [debug]: Incremental compilation - 0 nodes selected: {}
+04:06:47.081454 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:06:47.081466 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:06:47.082002 [info ]: Started deferring state
+04:06:47.082021 [info ]: Finished deferring state [  0.00s]
+04:06:47.306535 [info ]: Started building task graph
+04:06:47.306641 [info ]: Finished building task graph [  0.00s]
+04:06:47.306764 [info ]: Started on-run-start hooks (1 nodes)
+04:06:47.414315 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:06:47.415065 [info ]: Finished on-run-start hooks [  0.11s] (1 nodes, 0 skipped, 0 errors)
+04:06:47.425919 [info ]: Cached model count updated: 8 models (accurate)
+04:06:47.951111 [info ]: Started loading project
+04:06:47.951492 [info ]: Loading profiles.yml
+04:06:47.957211 [info ]: Started parsing
+04:06:47.981756 [info ]: Finished loading project [  0.03s]
+04:06:47.982562 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:06:47.984731 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:06:47.985345 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:06:47.988548 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:06:47.988658 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:06:47.988899 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:06:47.990445 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:06:47.991315 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:06:47.992028 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:06:47.992795 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:06:47.994007 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:06:47.994815 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:06:47.995422 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:06:47.996636 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:06:48.001339 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:06:48.002140 [info ]: Finished parsing [  0.04s]
+04:06:48.003619 [info ]: Cached model count updated: 8 models (estimate)
+04:06:48.003636 [info ]: Cached model count updated: 8 models (accurate)
+04:06:48.003684 [info ]: Started scheduling
+04:06:48.003744 [info ]: Finished scheduling [  0.00s]
+04:06:48.003753 [debug]: Incremental compilation - 0 nodes selected: {}
+04:06:48.003777 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:06:48.003784 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:06:48.004355 [info ]: Started deferring state
+04:06:48.004374 [info ]: Finished deferring state [  0.00s]
+04:06:48.225702 [info ]: Started building task graph
+04:06:48.225777 [info ]: Finished building task graph [  0.00s]
+04:06:48.225896 [info ]: Started on-run-start hooks (1 nodes)
+04:06:48.547572 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:06:48.548452 [info ]: Finished on-run-start hooks [  0.32s] (1 nodes, 0 skipped, 0 errors)
+04:06:48.559968 [info ]: Cached model count updated: 8 models (accurate)
+04:06:48.766387 [info ]: Waiting for lease on 'target' directory
+04:06:49.014186 [info ]: Started loading project
+04:06:49.014604 [info ]: Loading profiles.yml
+04:06:49.021117 [info ]: Started parsing
+04:06:49.046118 [info ]: Finished loading project [  0.03s]
+04:06:49.046740 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:06:49.050191 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:06:49.051021 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:06:49.055978 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:06:49.056119 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.01s]
+04:06:49.056531 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:06:49.058597 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:06:49.059451 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:06:49.060831 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:06:49.061511 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:06:49.062413 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:06:49.063020 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:06:49.063700 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:06:49.064697 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:06:49.071154 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.01s]
+04:06:49.071181 [info ]: Finished parsing [  0.05s]
+04:06:49.074161 [info ]: Cached model count updated: 8 models (estimate)
+04:06:49.074232 [info ]: Cached model count updated: 8 models (accurate)
+04:06:49.074312 [info ]: Started scheduling
+04:06:49.074419 [info ]: Finished scheduling [  0.00s]
+04:06:49.074466 [debug]: Incremental compilation - 0 nodes selected: {}
+04:06:49.074508 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:06:49.074541 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:06:49.075768 [info ]: Started deferring state
+04:06:49.075828 [info ]: Finished deferring state [  0.00s]
+04:06:49.356528 [info ]: Started building task graph
+04:06:49.356665 [info ]: Finished building task graph [  0.00s]
+04:06:49.356794 [info ]: Started on-run-start hooks (1 nodes)
+04:06:49.444578 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:06:49.445305 [info ]: Finished on-run-start hooks [  0.09s] (1 nodes, 0 skipped, 0 errors)
+04:06:49.455728 [info ]: Cached model count updated: 8 models (accurate)
+04:07:47.637305 [info ]: Started loading project
+04:07:47.637905 [info ]: Loading profiles.yml
+04:07:47.643864 [info ]: Started parsing
+04:07:47.672791 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:07:47.673853 [info ]: Finished loading project [  0.04s]
+04:07:47.675837 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:07:47.677630 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:07:47.688502 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:07:47.688915 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.01s]
+04:07:47.689711 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:07:47.692319 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:07:47.693085 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:07:47.693824 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:07:47.694563 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:07:47.695101 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:07:47.695639 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:07:47.696344 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:07:47.697431 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:07:47.702433 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.01s]
+04:07:47.703668 [info ]: Finished parsing [  0.06s]
+04:07:47.706286 [info ]: Cached model count updated: 8 models (estimate)
+04:07:47.706445 [info ]: Cached model count updated: 8 models (accurate)
+04:07:47.706580 [info ]: Started scheduling
+04:07:47.706646 [info ]: Finished scheduling [  0.00s]
+04:07:47.706656 [debug]: Incremental compilation - 0 nodes selected: {}
+04:07:47.706674 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:07:47.706682 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:07:47.707533 [info ]: Started deferring state
+04:07:47.707546 [info ]: Finished deferring state [  0.00s]
+04:07:47.935217 [info ]: Started building task graph
+04:07:47.935335 [info ]: Finished building task graph [  0.00s]
+04:07:47.935452 [info ]: Started on-run-start hooks (1 nodes)
+04:07:48.026484 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:07:48.027294 [info ]: Finished on-run-start hooks [  0.09s] (1 nodes, 0 skipped, 0 errors)
+04:07:48.038595 [info ]: Cached model count updated: 8 models (accurate)
+04:08:02.365111 [info ]: Started loading project
+04:08:02.365513 [info ]: Loading profiles.yml
+04:08:02.371562 [info ]: Started parsing
+04:08:02.393595 [info ]: Finished loading project [  0.03s]
+04:08:02.394267 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:08:02.397468 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:08:02.398322 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:08:02.402337 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:08:02.402414 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:08:02.402696 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value", "quantile"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:65:26
+04:08:02.404249 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:08:02.404706 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:08:02.405196 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:08:02.405654 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:08:02.406133 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:08:02.406548 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:08:02.407000 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:08:02.407623 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:08:02.410731 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:08:02.411450 [info ]: Finished parsing [  0.04s]
+04:08:02.413151 [info ]: Cached model count updated: 8 models (estimate)
+04:08:02.413166 [info ]: Cached model count updated: 8 models (accurate)
+04:08:02.413212 [info ]: Started scheduling
+04:08:02.413272 [info ]: Finished scheduling [  0.00s]
+04:08:02.413281 [debug]: Incremental compilation - 0 nodes selected: {}
+04:08:02.413297 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+04:08:02.413303 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+04:08:02.413885 [info ]: Started deferring state
+04:08:02.413905 [info ]: Finished deferring state [  0.00s]
+04:08:02.632003 [info ]: Started building task graph
+04:08:02.632128 [info ]: Finished building task graph [  0.00s]
+04:08:02.632248 [info ]: Started on-run-start hooks (1 nodes)
+04:08:02.689771 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:08:02.690442 [info ]: Finished on-run-start hooks [  0.06s] (1 nodes, 0 skipped, 0 errors)
+04:08:02.700390 [info ]: Cached model count updated: 8 models (accurate)
+04:08:56.724182 [info ]: Started loading project
+04:08:56.724641 [info ]: Loading profiles.yml
+04:08:56.730623 [info ]: Started parsing
+04:08:56.755107 [info ]: Finished loading project [  0.03s]
+04:08:56.755682 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:08:56.760106 [info ]: Finished parsing [  0.03s]
+04:09:16.059755 [info ]: Started loading project
+04:09:16.060153 [info ]: Loading profiles.yml
+04:09:16.084615 [info ]:    Started resolving packages from packages.yml
+04:09:16.248782 [info ]:   Finished [  0.16s] resolving packages from packages.yml (3 items)
+04:09:16.248945 [debug]:    Started loading packages
+04:09:16.255776 [debug]:     Loaded [  0.01s] packages
+04:09:16.256421 [info ]: Finished loading project [  0.20s]
+04:09:16.256756 [info ]: Started parsing
+04:09:16.300541 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+04:09:16.300794 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+04:09:16.301187 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:09:16.301415 [debug]: Finished parsing models/sources.yaml [  0.00s]
+04:09:16.301561 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+04:09:16.301698 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+04:09:16.301763 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+04:09:16.306503 [info ]: Finished parsing [  0.05s]
+04:09:16.838072 [info ]: Started loading project
+04:09:16.838479 [info ]: Loading profiles.yml
+04:09:16.849538 [info ]:    Started resolving packages from packages.yml
+04:09:16.870734 [info ]:   Finished [  0.02s] resolving packages from packages.yml (3 items)
+04:09:16.870888 [debug]:    Started loading packages
+04:09:16.877851 [debug]:     Loaded [  0.01s] packages
+04:09:16.878512 [info ]: Finished loading project [  0.04s]
+04:09:16.878960 [info ]: Started parsing
+04:09:16.923180 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+04:09:16.923415 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+04:09:16.923726 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:09:16.923901 [debug]: Finished parsing models/sources.yaml [  0.00s]
+04:09:16.923992 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+04:09:16.924158 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+04:09:16.924215 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+04:09:16.929381 [info ]: Finished parsing [  0.05s]
+04:09:17.649903 [info ]: Started loading project
+04:09:17.650292 [info ]: Loading profiles.yml
+04:09:17.660938 [info ]:    Started resolving packages from packages.yml
+04:09:17.679165 [info ]:   Finished [  0.02s] resolving packages from packages.yml (3 items)
+04:09:17.679298 [debug]:    Started loading packages
+04:09:17.685873 [debug]:     Loaded [  0.01s] packages
+04:09:17.686471 [info ]: Finished loading project [  0.04s]
+04:09:17.686792 [info ]: Started parsing
+04:09:17.728674 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+04:09:17.728879 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+04:09:17.729225 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:09:17.729441 [debug]: Finished parsing models/sources.yaml [  0.00s]
+04:09:17.729572 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+04:09:17.729691 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+04:09:17.729746 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+04:09:17.733453 [info ]: Finished parsing [  0.05s]
+04:10:02.741744 [info ]: Started loading project
+04:10:02.742322 [info ]: Loading profiles.yml
+04:10:02.756079 [info ]:    Started resolving packages from packages.yml
+04:10:02.777686 [info ]:   Finished [  0.02s] resolving packages from packages.yml (3 items)
+04:10:02.777851 [debug]:    Started loading packages
+04:10:02.784555 [debug]:     Loaded [  0.01s] packages
+04:10:02.785199 [info ]: Finished loading project [  0.04s]
+04:10:02.785529 [info ]: Started parsing
+04:10:02.831371 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+04:10:02.831615 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+04:10:02.831966 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:10:02.832216 [debug]: Finished parsing models/sources.yaml [  0.00s]
+04:10:02.832355 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+04:10:02.832488 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+04:10:02.832550 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+04:10:02.835088 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+04:10:02.836213 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+04:10:02.837598 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:10:02.838347 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:10:02.838967 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:10:02.840372 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.00s]
+04:10:02.840836 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+04:10:02.841398 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+04:10:02.841934 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+04:10:02.845250 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:10:02.845343 [debug]: Finished parsing models/src/src_reviews.sql [  0.00s]
+04:10:02.850857 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+04:10:02.850979 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+04:10:02.851433 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+04:10:02.852280 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:10:02.853325 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:10:02.853657 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:10:02.854011 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:10:02.854577 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:10:02.855106 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:10:02.855658 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:10:02.856411 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:10:02.860622 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.00s]
+04:10:02.861545 [info ]: Finished parsing [  0.08s]
+04:10:02.861831 [info ]: Cached model count updated: 8 models (estimate)
+04:10:02.861848 [info ]: Cached model count updated: 8 models (accurate)
+04:10:02.861925 [info ]: Started scheduling
+04:10:02.862114 [info ]: Finished scheduling [  0.00s]
+04:10:02.862140 [info ]: Started scheduling
+04:10:02.862310 [info ]: Finished scheduling [  0.00s]
+04:10:02.862397 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_hosts") and interval: None
+04:10:02.862444 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_listings") and interval: None
+04:10:02.862466 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_REVIEWS" }) and interval: None
+04:10:02.862484 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_LISTINGS" }) and interval: None
+04:10:02.862498 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_HOSTS" }) and interval: None
+04:10:02.863472 [info ]: Started deferring state
+04:10:02.863489 [info ]: Finished deferring state [  0.00s]
+04:10:02.864011 [debug]:    Started downloading relations (1 items)
+04:10:03.080024 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "AIRBNB"."DEV" LIMIT 10000
+04:10:03.131457 [debug]:   Finished [  0.27s] downloading relations (1 items)
+04:10:03.131494 [info ]: Started downloading schemas
+04:10:03.582671 [debug]: Query executed on node unknown:
+describe table "AIRBNB"."DEV"."FCT_REVIEWS"
+04:10:04.039345 [info ]: Waiting for lease on 'target' directory
+04:10:04.326836 [info ]: Started loading project
+04:10:04.327351 [info ]: Loading profiles.yml
+04:10:04.345650 [info ]:    Started resolving packages from packages.yml
+04:10:04.613361 [info ]: Finished downloading schemas [  1.48s]
+04:10:04.795743 [info ]:   Finished [  0.45s] resolving packages from packages.yml (3 items)
+04:10:04.795937 [debug]:    Started loading packages
+04:10:04.802715 [debug]:     Loaded [  0.01s] packages
+04:10:04.803377 [info ]: Finished loading project [  0.48s]
+04:10:04.803726 [info ]: Started parsing
+04:10:04.846797 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+04:10:04.847001 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+04:10:04.847345 [debug]: Finished parsing models/schema.yml [  0.00s]
+04:10:04.847564 [debug]: Finished parsing models/sources.yaml [  0.00s]
+04:10:04.847697 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+04:10:04.847824 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+04:10:04.847885 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+04:10:04.850272 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+04:10:04.851327 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+04:10:04.853096 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+04:10:04.854763 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+04:10:04.855343 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+04:10:04.856508 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.00s]
+04:10:04.857290 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+04:10:04.857771 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+04:10:04.858345 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+04:10:04.861831 [error]: dbt0102: Deprecated test arguments: ["compare_model"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/schema.yml:53:26
+04:10:04.861921 [debug]: Finished parsing models/src/src_reviews.sql [  0.00s]
+04:10:04.866611 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+04:10:04.867201 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+04:10:04.867699 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+04:10:04.868516 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+04:10:04.869111 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+04:10:04.869694 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+04:10:04.870286 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:10:04.870878 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+04:10:04.871455 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+04:10:04.872309 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+04:10:04.873373 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+04:10:04.878418 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_40c6ae472ef424d2ff9e6cc57f00b936.sql [  0.01s]
+04:10:04.879381 [info ]: Finished parsing [  0.08s]
+04:10:04.879649 [info ]: Cached model count updated: 8 models (estimate)
+04:10:04.879665 [info ]: Cached model count updated: 8 models (accurate)
+04:10:04.879712 [info ]: Started scheduling
+04:10:04.879884 [info ]: Finished scheduling [  0.00s]
+04:10:04.879913 [info ]: Started scheduling
+04:10:04.880037 [info ]: Finished scheduling [  0.00s]
+04:10:04.880121 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_hosts") and interval: None
+04:10:04.880178 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_listings") and interval: None
+04:10:04.880217 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_REVIEWS" }) and interval: None
+04:10:04.880236 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_HOSTS" }) and interval: None
+04:10:04.880252 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_LISTINGS" }) and interval: None
+04:10:04.881187 [info ]: Started deferring state
+04:10:04.881205 [info ]: Finished deferring state [  0.00s]
+04:10:04.882103 [debug]:    Started downloading relations (1 items)
+04:10:05.094236 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "AIRBNB"."DEV" LIMIT 10000
+04:10:05.124596 [debug]:   Finished [  0.24s] downloading relations (1 items)
+04:10:05.124628 [info ]: Started downloading schemas
+04:10:05.444009 [debug]: Query executed on node unknown:
+describe table "AIRBNB"."DEV"."FCT_REVIEWS"
+04:10:05.656704 [info ]: Downloaded AIRBNB.DEV.fct_reviews (schema)
+04:10:05.865750 [info ]: Started building task graph
+04:10:05.866065 [info ]: Finished building task graph [  0.00s]
+04:10:05.866248 [info ]: Started on-run-start hooks (1 nodes)
+04:10:05.973931 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+04:10:05.974412 [info ]: Finished downloading schemas [  0.85s]
+04:10:05.975114 [info ]: Finished on-run-start hooks [  0.11s] (1 nodes, 0 skipped, 0 errors)
+04:10:05.975257 [info ]: Started rendering (12 nodes)
+04:10:05.975288 [info ]: Started snapshot DEV.scd_raw_listings
+04:10:05.975302 [debug]: Started rendering snapshot DEV.scd_raw_listings
+04:10:05.975334 [info ]: Started snapshot DEV.scd_raw_hosts
+04:10:05.975350 [debug]: Started rendering snapshot DEV.scd_raw_hosts
+04:10:05.975365 [info ]: Started model DEV.dim_listings_with_hosts
+04:10:05.975372 [debug]: Started rendering model DEV.dim_listings_with_hosts
+04:10:05.975385 [info ]: Started model DEV.src_listings
+04:10:05.975401 [debug]: Started rendering model DEV.src_listings
+04:10:05.975415 [info ]: Started model DEV.src_hosts
+04:10:05.975421 [debug]: Started rendering model DEV.src_hosts
+04:10:05.975435 [info ]: Started analysis DEV.full_moon_no_sleep
+04:10:05.975442 [debug]: Started rendering analysis DEV.full_moon_no_sleep
+04:10:05.975456 [info ]: Started model DEV.mart_full_moon_reviews
+04:10:05.975467 [debug]: Started rendering model DEV.mart_full_moon_reviews
+04:10:05.975480 [info ]: Started seed DEV.seed_full_moon_dates
+04:10:05.975488 [debug]: Started rendering seed DEV.seed_full_moon_dates
+04:10:05.975503 [info ]: Started model DEV.src_reviews
+04:10:05.975510 [debug]: Started rendering model DEV.src_reviews
+04:10:05.978297 [debug]: Compiled SQL for node model.airbnb.src_listings at target/.lsp/compiled/models/src/src_listings.sql
+04:10:05.978374 [info ]: Started analyzing (12 nodes)
+04:10:05.978383 [debug]: Started analyzing model DEV.src_listings
+04:10:05.978398 [info ]: Started model DEV.dim_listings_cleansed
+04:10:05.978405 [debug]: Started rendering model DEV.dim_listings_cleansed
+04:10:05.978525 [debug]: Finished rendering [  0.00s] model DEV.src_listings [success]
+04:10:05.979718 [debug]: Finished rendering [  0.00s] seed DEV.seed_full_moon_dates [success]
+04:10:05.979747 [debug]: Started analyzing seed DEV.seed_full_moon_dates
+04:10:05.980636 [debug]: Compiled SQL for node model.airbnb.dim_listings_with_hosts at target/.lsp/compiled/models/dim/dim_listings_with_hosts.sql
+04:10:05.981259 [info ]:  Succeeded [  0.00s] model DEV.src_listings (ephemeral)
+04:10:05.981283 [debug]: Finished analyzing [  0.00s] model DEV.src_listings [success]
+04:10:05.981954 [info ]:  Succeeded [  0.01s] seed  DEV.seed_full_moon_dates (table)
+04:10:05.982019 [debug]: Finished analyzing [  0.00s] seed DEV.seed_full_moon_dates [success]
+04:10:05.982198 [debug]: Finished rendering [  0.01s] model DEV.dim_listings_with_hosts [success]
+04:10:05.982749 [debug]: Compiled SQL for node snapshot.airbnb.scd_raw_listings at target/.lsp/compiled/snapshots/scd_raw_listings.sql
+04:10:05.983183 [debug]: Started analyzing snapshot DEV.scd_raw_listings
+04:10:05.983490 [debug]: Compiled SQL for node analysis.airbnb.full_moon_no_sleep at target/.lsp/compiled/analyses/full_moon_no_sleep.sql
+04:10:05.983525 [debug]: Finished rendering [  0.01s] analysis DEV.full_moon_no_sleep [success]
+04:10:05.983544 [debug]: Compiled SQL for node snapshot.airbnb.scd_raw_hosts at target/.lsp/compiled/snapshots/scd_raw_hosts.sql
+04:10:05.983566 [debug]: Started analyzing snapshot DEV.scd_raw_hosts
+04:10:05.983623 [debug]: Compiled SQL for node model.airbnb.src_hosts at target/.lsp/compiled/models/src/src_hosts.sql
+04:10:05.983649 [info ]: Started model DEV.dim_hosts_cleansed
+04:10:05.983658 [debug]: Started rendering model DEV.dim_hosts_cleansed
+04:10:05.983668 [debug]: Started analyzing model DEV.src_hosts
+04:10:05.983683 [debug]: Compiled SQL for node model.airbnb.src_reviews at target/.lsp/compiled/models/src/src_reviews.sql
+04:10:05.983703 [debug]: Started analyzing model DEV.src_reviews
+04:10:05.983716 [info ]: Started model DEV.fct_reviews
+04:10:05.983724 [debug]: Started rendering model DEV.fct_reviews
+04:10:05.984243 [debug]: Finished rendering [  0.01s] snapshot DEV.scd_raw_hosts [success]
+04:10:05.984281 [debug]: Finished rendering [  0.01s] snapshot DEV.scd_raw_listings [success]
+04:10:05.986329 [info ]:  Succeeded [  0.01s] snapshot DEV.scd_raw_hosts (table)
+04:10:05.986349 [debug]: Finished analyzing [  0.00s] snapshot DEV.scd_raw_hosts [success]
+04:10:05.986369 [debug]: Compiled SQL for node model.airbnb.mart_full_moon_reviews at target/.lsp/compiled/models/mart/mart_full_moon_reviews.sql
+04:10:05.986404 [debug]: Finished rendering [  0.01s] model DEV.mart_full_moon_reviews [success]
+04:10:05.987103 [info ]:  Succeeded [  0.01s] snapshot DEV.scd_raw_listings (table)
+04:10:05.987118 [debug]: Finished analyzing [  0.00s] snapshot DEV.scd_raw_listings [success]
+04:10:05.987141 [debug]: Finished rendering [  0.01s] model DEV.src_reviews [success]
+04:10:05.988108 [info ]:  Succeeded [  0.01s] model DEV.src_hosts (ephemeral)
+04:10:05.988330 [debug]: Finished analyzing [  0.00s] model DEV.src_hosts [success]
+04:10:05.988475 [debug]: Finished rendering [  0.01s] model DEV.src_hosts [success]
+04:10:05.990084 [info ]:  Succeeded [  0.01s] model DEV.src_reviews (ephemeral)
+04:10:05.990210 [debug]: Finished analyzing [  0.01s] model DEV.src_reviews [success]
+04:10:05.991519 [debug]: Compiled SQL for node model.airbnb.dim_listings_cleansed at target/.lsp/compiled/models/dim/dim_listings_cleansed.sql
+04:10:05.991632 [debug]: Started analyzing model DEV.dim_listings_cleansed
+04:10:05.993158 [debug]: Finished rendering [  0.01s] model DEV.dim_listings_cleansed [success]
+04:10:05.997657 [debug]: Compiled SQL for node model.airbnb.dim_hosts_cleansed at target/.lsp/compiled/models/dim/dim_hosts_cleansed.sql
+04:10:05.997697 [debug]: Started analyzing model DEV.dim_hosts_cleansed
+04:10:05.997724 [debug]: Finished rendering [  0.01s] model DEV.dim_hosts_cleansed [success]
+04:10:06.002076 [info ]:  Succeeded [  0.02s] model DEV.dim_hosts_cleansed (view)
+04:10:06.002147 [debug]: Finished analyzing [  0.00s] model DEV.dim_hosts_cleansed [success]
+04:10:06.003102 [debug]: Compiled SQL for node model.airbnb.fct_reviews at target/.lsp/compiled/models/fct/fct_reviews.sql
+04:10:06.003252 [debug]: Started analyzing model DEV.fct_reviews
+04:10:06.004124 [debug]: Finished rendering [  0.02s] model DEV.fct_reviews [success]
+04:10:06.004243 [info ]: Finished rendering [  0.03s] (12 nodes, 0 skipped, 0 errors)
+04:10:06.006282 [info ]:  Succeeded [  0.03s] model DEV.dim_listings_cleansed (view)
+04:10:06.006345 [debug]: Finished analyzing [  0.01s] model DEV.dim_listings_cleansed [success]
+04:10:06.006394 [debug]: Started analyzing model DEV.dim_listings_with_hosts
+04:10:06.026605 [info ]:  Succeeded [  0.03s] model DEV.dim_listings_with_hosts (table)
+04:10:06.026724 [debug]: Finished analyzing [  0.02s] model DEV.dim_listings_with_hosts [success]
+04:10:06.029226 [info ]:  Succeeded [  0.04s] model DEV.fct_reviews (incremental)
+04:10:06.029350 [debug]: Finished analyzing [  0.03s] model DEV.fct_reviews [success]
+04:10:06.029472 [debug]: Started analyzing model DEV.mart_full_moon_reviews
+04:10:06.052227 [info ]:  Succeeded [  0.03s] model DEV.mart_full_moon_reviews (table)
+04:10:06.052413 [debug]: Finished analyzing [  0.02s] model DEV.mart_full_moon_reviews [success]
+04:10:06.052544 [debug]: Started analyzing analysis DEV.full_moon_no_sleep
+04:10:06.056247 [info ]:  Succeeded [  0.01s] analysis DEV.full_moon_no_sleep (analysis)
+04:10:06.056312 [debug]: Finished analyzing [  0.00s] analysis DEV.full_moon_no_sleep [success]
+04:10:06.056354 [info ]: Finished analyzing [  0.08s] (12 nodes, 0 skipped, 0 errors)
+04:10:06.066627 [info ]: Cached model count updated: 8 models (accurate)

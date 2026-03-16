@@ -1,0 +1,1 @@
+{{ dbt_expectations.test_expect_column_quantile_values_to_be_between(column_name="price", model=get_where_subquery(ref('dim_listings_with_hosts')), quantile=0.99) }}
