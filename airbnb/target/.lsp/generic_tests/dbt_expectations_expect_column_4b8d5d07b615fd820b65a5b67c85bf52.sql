@@ -1,0 +1,2 @@
+{{ config({"severity":"Warn","tags":[]}) }}
+{{ dbt_expectations.test_expect_column_max_to_be_between(column_name="price", max_value=5000, min_value=1, model=get_where_subquery(ref('dim_listings_with_hosts'))) }}

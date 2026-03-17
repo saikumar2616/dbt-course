@@ -1,0 +1,1 @@
+{{ dbt_expectations.test_expect_column_distinct_count_to_equal(model=get_where_subquery(source('airbnb', 'listings')), value=4) }}
