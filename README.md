@@ -295,3 +295,31 @@ How to control the error message with the missing dbt variables:
 
 Advanced srategies in dbt production for increment/merge strategies for ensuring new data overwrites old data and doesnt provide any duplicates:
      https://docs.getdbt.com/docs/build/incremental-strategy?version=1.12
+
+
+# Orchestration
+
+Many tools like Airflow, Azure DataFactory, dagster, Prefect, dbt Cloud etc
+
+
+https://docs.getdbt.com/docs/deploy/deployment-tools
+
+Airflow can only launch DBT tasks anddoesnt integrate into models to check the failed/successed status.
+
+Prefect is much modern(Python). Simple integration with dbt. 
+
+ADF for dbt is not tight integration . It can only run/build.
+
+
+dbt cloud is good but paid proprietary.
+
+dagster is a new gen tool with general or dbt orchestration or modern data stack. Moelsfro dbt and assets from dagster are some kind of similar. VERY TIGHT ORCHESTRATION FOR DBT.
+
+ 
+    dagster-dbt project scaffold --project-name my_dbt_dagster_project --dbt-project-dir=airbnb
+
+    cd '/workspaces/dbt-course/my_dbt_dagster_project
+
+    code my_dbt_dagster_project/schedules.py and uncomment the code
+
+    dagster dev ---> Can also be used in Prod
