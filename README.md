@@ -257,3 +257,8 @@ To run a test onthe source directly: (This also runs a row_count match test on t
    
     dbt test --select source:airbnb.listsings
 
+
+Regex to check if that columnmatchs a pattern:(along with debug for universal approach but not best practise)
+
+    dbt --debug test --select source:airbnb.listings
+
