@@ -268,3 +268,25 @@ Regex to check if that columnmatchs a pattern:(along with debug for universal ap
 Create a logging macro and runbelowcommand:
 
     dbt run-operation learn_logging
+
+
+# Variables
+
+2 Typesof variables: 
+Jinja---> defined in jinja language
+dbt ---> are the project variables and can be passed to dbt thru cmd line or project descriptor file
+ 
+    dbt run-operation learn_variables --vars '{"user_name" : "Sai Kumar"}'
+
+
+How to control the error message with the missing dbt variables:
+    1. cmd line arguments
+    2. decalare vars in dbt_project yaml file
+    3. decalre inline in the variable dclaration line 
+
+
+    dbt run --select fct_reviews.sql   -----> Fullincremental
+    dbt run --select fct_reviews  --vars '{start_date: "2024-02-15 00:00:00", end_date: "2024-03-15 23:59:59"}'  ----> Run for seecific date range 
+
+Advanced srategies in dbt production for increment/merge strategies for ensuring new data overwrites old data and doesnt provide any duplicates:
+    https://docs.getdbt.com/docs/build/incremental-strategy?version=1.12

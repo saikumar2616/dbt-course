@@ -26,8 +26,24 @@ md5(cast(coalesce(cast(listing_id as TEXT), '_dbt_utils_surrogate_key_null_') ||
     * FROM src_reviews
 WHERE review_text is not null
 
+--Naive dbtimplementation of incremental logic.
+-- This is fullrefresh if table doesnot exist and is_incremental flag is set only if the table already exists.
+--This will work but it is not the most efficient way to do it. We will learn how to do it better in the next line.
 
   AND review_date > (SELECT MAX(review_date) FROM AIRBNB.DEV.fct_reviews)
+
+
+
+--inproduction, you would want to use a more robust incremental logic that can handle updates and deletes as well bcoz of many unseen cases. 
+-- We will learn how to do that in the next line.
+
+
+
+  
+    
+    AND review_date >= '2024-02-15 00:00:00'
+    AND review_date < '2024-03-15 23:59:59'
+  
 
 --EPHEMERAL-SELECT-WRAPPER-END
 )

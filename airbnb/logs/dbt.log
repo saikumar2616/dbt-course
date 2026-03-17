@@ -37940,3 +37940,589 @@ Summary: 4 total | 4 success
 09:09:32.544912 [info ]: 
 ==================== Execution Summary =====================
 Finished 'run-operation' successfully for target 'dev' [523ms]
+==================== 2026-03-17T09:24:23.124707Z | 019cfb1c-51d3-7b52-b946-0d80f93d0ee6 ====================
+09:24:23.124867 [info ]: dbt-fusion 2.0.0-preview.154
+09:24:23.125118 [info ]: Started loading project
+09:24:23.125979 [info ]: Loading profiles.yml
+09:24:23.139427 [info ]: Loading packages.yml
+09:24:23.139616 [debug]:    Started loading packages
+09:24:23.147711 [debug]:     Loaded [  0.01s] packages
+09:24:23.148614 [info ]: Finished loading project [  0.02s]
+09:24:23.149256 [info ]: Started parsing
+09:24:23.149658 [info ]: Finished parsing [  0.00s]
+09:24:23.149933 [error]: dbt1502: Failed to parse macro SQL syntax error: unknown statement log
+(in macros/variables.sql:3:3)
+  --> macros/variables.sql:3:3
+09:24:23.469975 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 1 error for target 'dev' [345ms]
+==================== 2026-03-17T09:25:07.143075Z | 019cfb1c-fdc5-7983-9061-982f07988dca ====================
+09:25:07.143203 [info ]: dbt-fusion 2.0.0-preview.154
+09:25:07.143858 [info ]: Started loading project
+09:25:07.145135 [info ]: Loading profiles.yml
+09:25:07.163868 [info ]: Loading packages.yml
+09:25:07.164104 [debug]:    Started loading packages
+09:25:07.170955 [debug]:     Loaded [  0.01s] packages
+09:25:07.171860 [info ]: Finished loading project [  0.03s]
+09:25:07.172411 [info ]: Started parsing
+09:25:07.172711 [info ]: Finished parsing [  0.00s]
+09:25:07.172995 [error]: dbt1502: Failed to parse macro SQL syntax error: unknown statement log
+(in macros/variables.sql:3:3)
+  --> macros/variables.sql:3:3
+09:25:07.277638 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 1 error for target 'dev' [134ms]
+==================== 2026-03-17T09:25:29.290354Z | 019cfb1d-5449-7e23-bdd4-b904ff16acc1 ====================
+09:25:29.290485 [info ]: dbt-fusion 2.0.0-preview.154
+09:25:29.290755 [info ]: Started loading project
+09:25:29.291733 [info ]: Loading profiles.yml
+09:25:29.305591 [info ]: Loading packages.yml
+09:25:29.305742 [debug]:    Started loading packages
+09:25:29.312987 [debug]:     Loaded [  0.01s] packages
+09:25:29.313950 [info ]: Finished loading project [  0.02s]
+09:25:29.314432 [info ]: Started parsing
+09:25:29.314757 [info ]: Finished parsing [  0.00s]
+09:25:29.315008 [error]: dbt1502: Failed to parse macro SQL syntax error: unknown statement log
+(in macros/variables.sql:3:3)
+  --> macros/variables.sql:3:3
+09:25:29.446885 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 1 error for target 'dev' [156ms]
+==================== 2026-03-17T09:26:52.013024Z | 019cfb1e-976b-7500-b077-795ae0aa74ca ====================
+09:26:52.013172 [info ]: dbt-fusion 2.0.0-preview.154
+09:26:52.013405 [info ]: Started loading project
+09:26:52.014357 [info ]: Loading profiles.yml
+09:26:52.028068 [info ]: Loading packages.yml
+09:26:52.028277 [debug]:    Started loading packages
+09:26:52.035056 [debug]:     Loaded [  0.01s] packages
+09:26:52.036005 [info ]: Finished loading project [  0.02s]
+09:26:52.036565 [info ]: Started parsing
+09:26:52.036965 [info ]: Finished parsing [  0.00s]
+09:26:52.037270 [error]: dbt1502: Failed to parse macro SQL syntax error: unknown statement log
+(in macros/variables.sql:3:3)
+  --> macros/variables.sql:3:3
+09:26:52.155609 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 1 error for target 'dev' [142ms]
+==================== 2026-03-17T09:28:56.884619Z | 019cfb20-7f33-7890-86a7-a47ec0f22f6f ====================
+09:28:56.884795 [info ]: dbt-fusion 2.0.0-preview.154
+09:28:56.885026 [info ]: Started loading project
+09:28:56.885974 [info ]: Loading profiles.yml
+09:28:56.899758 [info ]: Loading packages.yml
+09:28:56.899950 [debug]:    Started loading packages
+09:28:56.907440 [debug]:     Loaded [  0.01s] packages
+09:28:56.908364 [info ]: Finished loading project [  0.02s]
+09:28:56.908869 [info ]: Started parsing
+09:28:56.909163 [info ]: Finished parsing [  0.00s]
+09:28:56.909396 [error]: dbt1502: Failed to parse macro SQL syntax error: unknown statement log
+(in macros/variables.sql:3:3)
+  --> macros/variables.sql:3:3
+09:28:57.039370 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 1 error for target 'dev' [154ms]
+==================== 2026-03-17T09:31:10.023745Z | 019cfb22-8746-7d31-b0bc-3fc5aae86045 ====================
+09:31:10.023919 [info ]: dbt-fusion 2.0.0-preview.154
+09:31:10.024155 [info ]: Started loading project
+09:31:10.025108 [info ]: Loading profiles.yml
+09:31:10.038966 [info ]: Loading packages.yml
+09:31:10.039218 [debug]:    Started loading packages
+09:31:10.047032 [debug]:     Loaded [  0.01s] packages
+09:31:10.048066 [info ]: Finished loading project [  0.02s]
+09:31:10.048780 [info ]: Started parsing
+09:31:10.049301 [info ]: Finished parsing [  0.00s]
+09:31:10.049741 [error]: dbt1502: Failed to parse macro SQL syntax error: unknown statement log
+(in macros/variables.sql:3:3)
+  --> macros/variables.sql:3:3
+09:31:10.896235 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 1 error for target 'dev' [872ms]
+==================== 2026-03-17T09:34:14.273892Z | 019cfb25-56ff-7392-91a6-62e6c22154b8 ====================
+09:34:14.274043 [info ]: dbt-fusion 2.0.0-preview.154
+09:34:14.274285 [info ]: Started loading project
+09:34:14.275750 [info ]: Loading profiles.yml
+09:34:14.290692 [info ]: Loading packages.yml
+09:34:14.290844 [debug]:    Started loading packages
+09:34:14.297965 [debug]:     Loaded [  0.01s] packages
+09:34:14.298914 [info ]: Finished loading project [  0.02s]
+09:34:14.299344 [info ]: Started parsing
+09:34:14.299508 [info ]: Finished parsing [  0.00s]
+09:34:14.299780 [error]: dbt1502: Failed to parse macro SQL syntax error: unknown statement log
+(in macros/logging.sql:2:3)
+  --> macros/logging.sql:2:3
+09:34:14.703155 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 1 error for target 'dev' [429ms]
+==================== 2026-03-17T09:37:42.198284Z | 019cfb28-8335-7852-92e7-62814f94ff0e ====================
+09:37:42.198421 [info ]: dbt-fusion 2.0.0-preview.154
+09:37:42.198648 [info ]: Started loading project
+09:37:42.199595 [info ]: Loading profiles.yml
+09:37:42.213064 [info ]: Loading packages.yml
+09:37:42.213231 [debug]:    Started loading packages
+09:37:42.219959 [debug]:     Loaded [  0.01s] packages
+09:37:42.220862 [info ]: Finished loading project [  0.02s]
+09:37:42.221381 [info ]: Started parsing
+09:37:42.221552 [info ]: Finished parsing [  0.00s]
+09:37:42.222360 [error]: dbt1502: Failed to parse macro SQL syntax error: unexpected end of comment
+(in macros/logging.sql:6:15)
+  --> macros/logging.sql:6:15
+09:37:43.072971 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 1 error for target 'dev' [874ms]
+==================== 2026-03-17T09:38:32.285847Z | 019cfb29-46dc-7171-b6b5-52935b57c5ea ====================
+09:38:32.286000 [info ]: dbt-fusion 2.0.0-preview.154
+09:38:32.286234 [info ]: Started loading project
+09:38:32.287223 [info ]: Loading profiles.yml
+09:38:32.300675 [info ]: Loading packages.yml
+09:38:32.300836 [debug]:    Started loading packages
+09:38:32.307671 [debug]:     Loaded [  0.01s] packages
+09:38:32.308594 [info ]: Finished loading project [  0.02s]
+09:38:32.309106 [info ]: Started parsing
+09:38:32.309443 [info ]: Finished parsing [  0.00s]
+09:38:32.309672 [error]: dbt1502: Failed to parse macro SQL syntax error: unknown statement log
+(in macros/variables.sql:3:3)
+  --> macros/variables.sql:3:3
+09:38:32.420750 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 1 error for target 'dev' [134ms]
+==================== 2026-03-17T09:38:55.996171Z | 019cfb29-a37a-72e2-bb3c-7144f8b266c0 ====================
+09:38:55.996410 [info ]: dbt-fusion 2.0.0-preview.154
+09:38:55.996669 [info ]: Started loading project
+09:38:55.997638 [info ]: Loading profiles.yml
+09:38:56.010850 [info ]: Loading packages.yml
+09:38:56.010998 [debug]:    Started loading packages
+09:38:56.018188 [debug]:     Loaded [  0.01s] packages
+09:38:56.019056 [info ]: Finished loading project [  0.02s]
+09:38:56.019478 [info ]: Started parsing
+09:38:56.019793 [info ]: Finished parsing [  0.00s]
+09:38:56.020025 [error]: dbt1502: Failed to parse macro SQL syntax error: unknown statement log
+(in macros/variables.sql:3:3)
+  --> macros/variables.sql:3:3
+09:38:56.269874 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 1 error for target 'dev' [273ms]
+==================== 2026-03-17T09:39:37.361417Z | 019cfb2a-450f-7ad3-8485-699e7fa51ba5 ====================
+09:39:37.361553 [info ]: dbt-fusion 2.0.0-preview.154
+09:39:37.362264 [info ]: Started loading project
+09:39:37.363514 [info ]: Loading profiles.yml
+09:39:37.377504 [info ]: Loading packages.yml
+09:39:37.377679 [debug]:    Started loading packages
+09:39:37.384275 [debug]:     Loaded [  0.01s] packages
+09:39:37.384947 [info ]: Finished loading project [  0.02s]
+09:39:37.385561 [info ]: Started parsing
+09:39:37.454937 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+09:39:37.455190 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+09:39:37.455576 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:39:37.455878 [debug]: Finished parsing models/sources.yaml [  0.00s]
+09:39:37.456030 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+09:39:37.456171 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+09:39:37.456263 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+09:39:37.460473 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+09:39:37.461004 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+09:39:37.463871 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+09:39:37.464815 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+09:39:37.466357 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+09:39:37.468241 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.00s]
+09:39:37.469126 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+09:39:37.469892 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+09:39:37.470535 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+09:39:37.471229 [debug]: Finished parsing models/src/src_reviews.sql [  0.00s]
+09:39:37.484995 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+09:39:37.487111 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+09:39:37.487634 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+09:39:37.489441 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_a60b59a84fbc4577a11df360c50013bb.sql [  0.00s]
+09:39:37.490260 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_d9770018e28873e7be74335902d9e4e5.sql [  0.00s]
+09:39:37.491071 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+09:39:37.491768 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+09:39:37.492465 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+09:39:37.493141 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+09:39:37.493824 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+09:39:37.494430 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+09:39:37.495138 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+09:39:37.496039 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+09:39:37.497014 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.sql [  0.00s]
+09:39:37.497896 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.sql [  0.00s]
+09:39:37.498640 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.sql [  0.00s]
+09:39:37.507069 [info ]: Finished parsing [  0.12s]
+09:39:37.507942 [info ]: Started scheduling
+09:39:37.508391 [info ]: Finished scheduling [  0.00s]
+09:39:37.510570 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_hosts") and interval: None
+09:39:37.510785 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_listings") and interval: None
+09:39:37.510944 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_LISTINGS" }) and interval: None
+09:39:37.511122 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_HOSTS" }) and interval: None
+09:39:37.511271 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_REVIEWS" }) and interval: None
+09:39:37.517008 [info ]: This is a log message from the learn_logging macro!
+09:39:37.517205 [debug]: This is a warning message from the learn_logging macro!
+09:39:37.517301 [debug]: This is an error message from the learn_logging macro!
+09:39:37.598427 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' successfully for target 'dev' [237ms]
+==================== 2026-03-17T09:45:13.926287Z | 019cfb2f-67c5-7192-bd86-9f166ae9a51e ====================
+09:45:13.926422 [info ]: dbt-fusion 2.0.0-preview.154
+09:45:13.926766 [info ]: Started loading project
+09:45:13.927635 [info ]: Loading profiles.yml
+09:45:13.941380 [info ]: Loading packages.yml
+09:45:13.941578 [debug]:    Started loading packages
+09:45:13.953233 [debug]:     Loaded [  0.01s] packages
+09:45:13.954362 [info ]: Finished loading project [  0.03s]
+09:45:13.956334 [info ]: Started parsing
+09:45:14.032483 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+09:45:14.032690 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+09:45:14.033135 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:45:14.033370 [debug]: Finished parsing models/sources.yaml [  0.00s]
+09:45:14.033464 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+09:45:14.033547 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+09:45:14.033588 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+09:45:14.037826 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+09:45:14.038330 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+09:45:14.040441 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+09:45:14.041350 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+09:45:14.042114 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+09:45:14.043502 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.00s]
+09:45:14.044229 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+09:45:14.044885 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+09:45:14.046394 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+09:45:14.047055 [debug]: Finished parsing models/src/src_reviews.sql [  0.00s]
+09:45:14.055368 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+09:45:14.057401 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+09:45:14.057911 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+09:45:14.058853 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_a60b59a84fbc4577a11df360c50013bb.sql [  0.00s]
+09:45:14.059534 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_d9770018e28873e7be74335902d9e4e5.sql [  0.00s]
+09:45:14.060228 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+09:45:14.060865 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+09:45:14.061472 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+09:45:14.062082 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+09:45:14.062632 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+09:45:14.063170 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+09:45:14.063794 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+09:45:14.064616 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+09:45:14.065412 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.sql [  0.00s]
+09:45:14.066260 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.sql [  0.00s]
+09:45:14.066974 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.sql [  0.00s]
+09:45:14.073702 [info ]: Finished parsing [  0.12s]
+09:45:14.074116 [info ]: Started scheduling
+09:45:14.074711 [info ]: Finished scheduling [  0.00s]
+09:45:14.075743 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_hosts") and interval: None
+09:45:14.075779 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_listings") and interval: None
+09:45:14.075805 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_HOSTS" }) and interval: None
+09:45:14.075824 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_LISTINGS" }) and interval: None
+09:45:14.075838 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_REVIEWS" }) and interval: None
+09:45:14.079698 [info ]: This is a variable!
+09:45:14.079825 [info ]: Hello userSai Kumar, welcome to dbt!
+09:45:14.256396 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' successfully for target 'dev' [330ms]
+==================== 2026-03-17T09:45:31.198442Z | 019cfb2f-ab3d-7f71-b323-3fa7b74926c9 ====================
+09:45:31.198578 [info ]: dbt-fusion 2.0.0-preview.154
+09:45:31.198914 [info ]: Started loading project
+09:45:31.199804 [info ]: Loading profiles.yml
+09:45:31.212955 [info ]: Loading packages.yml
+09:45:31.213079 [debug]:    Started loading packages
+09:45:31.219785 [debug]:     Loaded [  0.01s] packages
+09:45:31.220657 [info ]: Finished loading project [  0.02s]
+09:45:31.221198 [info ]: Started parsing
+09:45:31.300675 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+09:45:31.300889 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+09:45:31.301269 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:45:31.301506 [debug]: Finished parsing models/sources.yaml [  0.00s]
+09:45:31.301599 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+09:45:31.301683 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+09:45:31.301744 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+09:45:31.305781 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+09:45:31.306238 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+09:45:31.308240 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+09:45:31.309106 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+09:45:31.309830 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+09:45:31.311169 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.00s]
+09:45:31.311904 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+09:45:31.312509 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+09:45:31.313505 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+09:45:31.314240 [debug]: Finished parsing models/src/src_reviews.sql [  0.00s]
+09:45:31.321691 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+09:45:31.323738 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+09:45:31.324191 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+09:45:31.325008 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_a60b59a84fbc4577a11df360c50013bb.sql [  0.00s]
+09:45:31.325710 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_d9770018e28873e7be74335902d9e4e5.sql [  0.00s]
+09:45:31.326416 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+09:45:31.327037 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+09:45:31.327628 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+09:45:31.328244 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+09:45:31.328822 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+09:45:31.329351 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+09:45:31.329954 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+09:45:31.330774 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+09:45:31.331563 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.sql [  0.00s]
+09:45:31.332415 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.sql [  0.00s]
+09:45:31.333122 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.sql [  0.00s]
+09:45:31.340954 [info ]: Finished parsing [  0.12s]
+09:45:31.341531 [info ]: Started scheduling
+09:45:31.342000 [info ]: Finished scheduling [  0.00s]
+09:45:31.343376 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_listings") and interval: None
+09:45:31.343458 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_hosts") and interval: None
+09:45:31.343528 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_LISTINGS" }) and interval: None
+09:45:31.343583 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_HOSTS" }) and interval: None
+09:45:31.343639 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_REVIEWS" }) and interval: None
+09:45:31.347439 [info ]: This is a variable!
+09:45:31.347760 [info ]: Hello  Sai Kumar, welcome to dbt!
+09:45:31.429203 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' successfully for target 'dev' [230ms]
+==================== 2026-03-17T10:30:22.329145Z | 019cfb58-bb76-7122-ae7e-62746097e74c ====================
+10:30:22.572937 [info ]: dbt-fusion 2.0.0-preview.154
+10:30:23.039019 [info ]: Started loading project
+10:30:23.713988 [info ]: Loading profiles.yml
+10:30:25.304540 [info ]: Loading packages.yml
+10:30:25.339255 [debug]:    Started loading packages
+10:30:25.620671 [debug]:     Loaded [  0.28s] packages
+10:30:25.810941 [info ]: Finished loading project [  2.77s]
+10:30:26.189208 [info ]: Started parsing
+10:30:26.758013 [debug]: Finished parsing models/dashboards.yml [  0.16s]
+10:30:26.759632 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+10:30:26.759975 [debug]: Finished parsing models/schema.yml [  0.00s]
+10:30:26.760206 [debug]: Finished parsing models/sources.yaml [  0.00s]
+10:30:26.760323 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+10:30:26.760430 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+10:30:26.760490 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+10:30:27.003740 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+10:30:27.004170 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+10:30:27.006028 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+10:30:27.006773 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+10:30:27.007342 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+10:30:27.008351 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.00s]
+10:30:27.008910 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+10:30:27.009384 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+10:30:27.009836 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+10:30:27.010289 [debug]: Finished parsing models/src/src_reviews.sql [  0.00s]
+10:30:27.018048 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+10:30:27.126651 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+10:30:27.127365 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+10:30:27.128443 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_a60b59a84fbc4577a11df360c50013bb.sql [  0.00s]
+10:30:27.129145 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_d9770018e28873e7be74335902d9e4e5.sql [  0.00s]
+10:30:27.129816 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+10:30:27.130671 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+10:30:27.131318 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+10:30:27.131946 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+10:30:27.132538 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+10:30:27.132934 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+10:30:27.133394 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+10:30:27.134041 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+10:30:27.134691 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.sql [  0.00s]
+10:30:27.135308 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.sql [  0.00s]
+10:30:27.135840 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.sql [  0.00s]
+10:30:27.147908 [info ]: Finished parsing [  0.96s]
+10:30:27.335554 [info ]: Started scheduling
+10:30:27.442669 [info ]: Finished scheduling [  0.11s]
+10:30:27.839208 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_hosts") and interval: None
+10:30:27.839267 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_listings") and interval: None
+10:30:27.902580 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_REVIEWS" }) and interval: None
+10:30:27.902642 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_HOSTS" }) and interval: None
+10:30:27.902664 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_LISTINGS" }) and interval: None
+10:30:29.687139 [info ]: This is a variable!
+10:30:29.687209 [info ]: Hello  dbt Learnerset in dbt_project.yml, welcome to dbt!
+10:30:29.687228 [info ]: Hello  dbt Learnerset in dbt_project.yml, welcome to dbt!
+10:30:29.794274 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' successfully for target 'dev' [7.5s]
+==================== 2026-03-17T10:45:19.273913Z | 019cfb66-6b28-7091-9479-989da124480b ====================
+10:45:19.274041 [info ]: dbt-fusion 2.0.0-preview.154
+10:45:19.274348 [info ]: Started loading project
+10:45:19.275177 [info ]: Loading profiles.yml
+10:45:19.289065 [info ]: Loading packages.yml
+10:45:19.289209 [debug]:    Started loading packages
+10:45:19.295928 [debug]:     Loaded [  0.01s] packages
+10:45:19.296785 [info ]: Finished loading project [  0.02s]
+10:45:19.297309 [info ]: Started parsing
+10:45:19.390186 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+10:45:19.390579 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+10:45:19.391088 [debug]: Finished parsing models/schema.yml [  0.00s]
+10:45:19.391448 [debug]: Finished parsing models/sources.yaml [  0.00s]
+10:45:19.391690 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+10:45:19.391912 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+10:45:19.391961 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+10:45:19.397319 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+10:45:19.397913 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+10:45:19.400038 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+10:45:19.402926 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+10:45:19.405492 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+10:45:19.409161 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.00s]
+10:45:19.413306 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+10:45:19.414369 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+10:45:19.415350 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+10:45:19.416073 [debug]: Finished parsing models/src/src_reviews.sql [  0.00s]
+10:45:19.425091 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+10:45:19.427060 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+10:45:19.427751 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+10:45:19.428662 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_a60b59a84fbc4577a11df360c50013bb.sql [  0.00s]
+10:45:19.429229 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_d9770018e28873e7be74335902d9e4e5.sql [  0.00s]
+10:45:19.429783 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+10:45:19.430257 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+10:45:19.430711 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+10:45:19.431185 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+10:45:19.431632 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+10:45:19.432073 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+10:45:19.432628 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+10:45:19.433308 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+10:45:19.433927 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.sql [  0.00s]
+10:45:19.434554 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.sql [  0.00s]
+10:45:19.435204 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.sql [  0.00s]
+10:45:19.441298 [info ]: Finished parsing [  0.14s]
+10:45:19.441785 [info ]: Started scheduling
+10:45:19.443223 [info ]: Finished scheduling [  0.00s]
+10:45:19.444241 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_REVIEWS" }) and interval: None
+10:45:19.447472 [debug]:    Started downloading relations (1 items)
+10:45:20.292845 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "AIRBNB"."DEV" LIMIT 10000
+10:45:20.322473 [debug]:   Finished [  0.88s] downloading relations (1 items)
+10:45:20.322574 [info ]: Started downloading schemas
+10:45:20.576927 [debug]: Query executed on node unknown:
+describe table "AIRBNB"."DEV"."FCT_REVIEWS"
+10:45:21.963992 [info ]: Downloaded AIRBNB.DEV.fct_reviews (schema)
+10:45:22.030463 [info ]: Finished downloading schemas [  1.71s]
+10:45:22.309841 [info ]: Started building task graph
+10:45:22.312277 [info ]: Finished building task graph [  0.00s]
+10:45:23.393002 [debug]: Query executed on node unknown:
+show terse schemas in database AIRBNB
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:23.393542 [info ]: Started on-run-start hooks (1 nodes)
+10:45:23.459045 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:23.460781 [info ]: Finished on-run-start hooks [  0.07s] (1 nodes, 0 skipped, 0 errors)
+10:45:23.552528 [info ]: Started rendering (2 nodes)
+10:45:23.552687 [info ]: Started model DEV.src_reviews
+10:45:23.552708 [debug]: Started rendering model DEV.src_reviews
+10:45:23.557295 [debug]: Compiled SQL for node model.airbnb.src_reviews at target/compiled/models/src/src_reviews.sql
+10:45:23.558347 [debug]: Finished rendering [  0.01s] model DEV.src_reviews [success]
+10:45:23.558428 [info ]: Started analyzing (2 nodes)
+10:45:23.558471 [debug]: Started analyzing model DEV.src_reviews
+10:45:23.558526 [info ]: Started model DEV.fct_reviews
+10:45:23.558538 [debug]: Started rendering model DEV.fct_reviews
+10:45:23.588595 [info ]: Loading AIRBNB.DEV.fct_reviews incrementally (start_date: 2024-02-15 00:00:00, end_date: 2024-03-15 23:59:59)
+10:45:23.594000 [debug]: Compiled SQL for node model.airbnb.fct_reviews at target/compiled/models/fct/fct_reviews.sql
+10:45:23.594071 [debug]: Finished rendering [  0.04s] model DEV.fct_reviews [success]
+10:45:23.594403 [info ]: Finished rendering [  0.04s] (2 nodes, 0 skipped, 0 errors)
+10:45:23.971157 [debug]: Finished analyzing [  0.41s] model DEV.src_reviews [success]
+10:45:23.971260 [info ]: Started running (2 nodes)
+10:45:23.971321 [debug]: Started running model DEV.src_reviews
+10:45:23.971352 [debug]: Started analyzing model DEV.fct_reviews
+10:45:23.972228 [info ]:    Skipped [-------] model DEV.src_reviews (ephemeral)
+10:45:23.972378 [debug]: Finished running [  0.00s] model DEV.src_reviews [no-op]
+10:45:24.620409 [debug]: Finished analyzing [  0.65s] model DEV.fct_reviews [success]
+10:45:24.620582 [info ]: Finished analyzing [  1.06s] (2 nodes, 0 skipped, 0 errors)
+10:45:24.620737 [debug]: Started running model DEV.fct_reviews
+10:45:24.996976 [debug]: Query executed on node model.airbnb.fct_reviews:
+create or replace  temporary view AIRBNB.DEV.fct_reviews__dbt_tmp
+  
+  
+  
+  
+  as (
+    with __dbt__cte__src_reviews as (
+WITH raw_reviews AS (
+    SELECT
+        *
+    FROM
+       AIRBNB.raw.raw_reviews
+)
+SELECT
+    COMMENTS as REVIEW_text,
+    DATE as REVIEW_DATE,
+    LISTING_ID,
+    REVIEWER_NAME,
+    SENTIMENT as review_sentiment
+FROM
+    raw_reviews
+)
+--EPHEMERAL-SELECT-WRAPPER-START
+select * from (
+
+WITH src_reviews AS (
+  SELECT * FROM __dbt__cte__src_reviews
+)
+SELECT 
+md5(cast(coalesce(cast(listing_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(review_date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(reviewer_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(review_text as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT))
+    AS review_id,
+    * FROM src_reviews
+WHERE review_text is not null
+
+--Naive dbtimplementation of incremental logic.
+-- This is fullrefresh if table doesnot exist and is_incremental flag is set only if the table already exists.
+--This will work but it is not the most efficient way to do it. We will learn how to do it better in the next line.
+
+  AND review_date > (SELECT MAX(review_date) FROM AIRBNB.DEV.fct_reviews)
+
+
+
+--inproduction, you would want to use a more robust incremental logic that can handle updates and deletes as well bcoz of many unseen cases. 
+-- We will learn how to do that in the next line.
+
+
+
+  
+    
+    AND review_date >= '2024-02-15 00:00:00'
+    AND review_date < '2024-03-15 23:59:59'
+  
+
+--EPHEMERAL-SELECT-WRAPPER-END
+)
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:25.058490 [debug]: Query executed on node model.airbnb.fct_reviews:
+describe table AIRBNB.DEV.fct_reviews__dbt_tmp
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:25.115802 [debug]: Query executed on node model.airbnb.fct_reviews:
+describe table AIRBNB.DEV.fct_reviews
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:25.220227 [debug]: Query executed on node model.airbnb.fct_reviews:
+describe table AIRBNB.DEV.fct_reviews__dbt_tmp
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:25.276209 [debug]: Query executed on node model.airbnb.fct_reviews:
+describe table "AIRBNB"."DEV"."FCT_REVIEWS"
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:25.277069 [debug]: 
+    In "AIRBNB"."DEV"."FCT_REVIEWS":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+10:45:25.279536 [debug]: Writing runtime sql for node "model.airbnb.fct_reviews"
+10:45:25.357555 [debug]: Query executed on node model.airbnb.fct_reviews:
+-- back compat for old kwarg name
+  
+  begin
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:26.188640 [debug]: Query executed on node model.airbnb.fct_reviews:
+
+    
+
+        insert into AIRBNB.DEV.fct_reviews ("REVIEW_ID", "REVIEW_TEXT", "REVIEW_DATE", "LISTING_ID", "REVIEWER_NAME", "REVIEW_SENTIMENT")
+        (
+            select "REVIEW_ID", "REVIEW_TEXT", "REVIEW_DATE", "LISTING_ID", "REVIEWER_NAME", "REVIEW_SENTIMENT"
+            from AIRBNB.DEV.fct_reviews__dbt_tmp
+        )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:26.311439 [debug]: Query executed on node model.airbnb.fct_reviews:
+
+    commit
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:26.313128 [debug]: Applying DROP to: AIRBNB.DEV.fct_reviews__dbt_tmp
+10:45:26.438770 [debug]: Query executed on node model.airbnb.fct_reviews:
+drop view if exists AIRBNB.DEV.fct_reviews__dbt_tmp cascade
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:26.943753 [debug]: Query executed on node model.airbnb.fct_reviews:
+INSERT INTO DEV.audit_log VALUES ('AIRBNB.DEV.fct_reviews', CURRENT_TIMESTAMP)
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:27.010738 [debug]: Query executed on node model.airbnb.fct_reviews:
+show grants on AIRBNB.DEV.fct_reviews
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.airbnb.fct_reviews", "profile_name": "airbnb", "target_name": "dev"} */
+10:45:27.011374 [debug]: On AIRBNB.DEV.fct_reviews: All grants are in place, no revocation or granting needed.
+10:45:27.017689 [info ]:  Succeeded [  3.08s] model DEV.fct_reviews (incremental)
+10:45:27.017803 [debug]: Finished running [  2.40s] model DEV.fct_reviews [success]
+10:45:27.017841 [info ]: Finished running [  3.05s] (2 nodes, 1 skipped, 0 errors)
+10:45:27.134897 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' successfully for target 'dev' [7.9s]
+Processed: 1 hook | 2 models
+Summary: 3 total | 2 success | 1 no-op

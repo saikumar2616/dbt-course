@@ -48,3 +48,8 @@ data_tests:
   +schema: test_audit  # Schema where failing rows are stored by explicitly mentioning schema
 flags:
   require_generic_test_arguments_property: true
+
+
+
+vars:
+  user_name: "dbt Learnerset in dbt_project.yml"  # This is how you set a variable in dbt_project.yml. You can access this variable in your models and macros using {{ var('user_name') }}.
