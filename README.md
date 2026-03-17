@@ -280,8 +280,11 @@ dbt ---> are the project variables and can be passed to dbt thru cmd line or pro
 
 
 How to control the error message with the missing dbt variables:
+    
     1. cmd line arguments
+    
     2. decalare vars in dbt_project yaml file
+    
     3. decalre inline in the variable dclaration line 
 
 
