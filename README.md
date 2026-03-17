@@ -252,3 +252,7 @@ https://github.com/metaplane/dbt-expectations#available-tests
 
 
 dbt test --select dim_listings_w_hosts
+
+To run a test onthe source directly: (This also runs a row_count match test on thefinal dim table which uses this table)
+    dbt test --select source:airbnb.listsings
+
