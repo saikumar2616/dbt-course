@@ -36982,3 +36982,433 @@ select
 Finished 'test' with 1 warning for target 'dev' [2.2s]
 Processed: 1 hook | 4 tests
 Summary: 5 total | 4 success | 1 warn
+==================== 2026-03-17T06:57:15.465304Z | 019cfa95-9ec8-7cf3-b1a2-0285a1221d00 ====================
+06:57:15.465436 [info ]: dbt-fusion 2.0.0-preview.154
+06:57:15.465668 [info ]: Started loading project
+06:57:15.466506 [info ]: Loading profiles.yml
+06:57:15.481633 [info ]: Loading packages.yml
+06:57:15.481936 [debug]:    Started loading packages
+06:57:15.490899 [debug]:     Loaded [  0.01s] packages
+06:57:15.491807 [info ]: Finished loading project [  0.03s]
+06:57:15.492419 [info ]: Started parsing
+06:57:15.557375 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+06:57:15.557557 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+06:57:15.558110 [debug]: Finished parsing models/schema.yml [  0.00s]
+06:57:15.558454 [debug]: Finished parsing models/sources.yaml [  0.00s]
+06:57:15.558668 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+06:57:15.558901 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+06:57:15.559071 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+06:57:15.563006 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+06:57:15.564640 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+06:57:15.569925 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+06:57:15.571279 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+06:57:15.572167 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+06:57:15.573653 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.00s]
+06:57:15.574851 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+06:57:15.575823 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+06:57:15.576543 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+06:57:15.577510 [debug]: Finished parsing models/src/src_reviews.sql [  0.00s]
+06:57:15.585405 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+06:57:15.587535 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+06:57:15.588043 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+06:57:15.588820 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_d9770018e28873e7be74335902d9e4e5.sql [  0.00s]
+06:57:15.589509 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+06:57:15.590172 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+06:57:15.590847 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+06:57:15.591457 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+06:57:15.592080 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+06:57:15.592659 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+06:57:15.593300 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+06:57:15.594148 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+06:57:15.594923 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.sql [  0.00s]
+06:57:15.595719 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.sql [  0.00s]
+06:57:15.596485 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.sql [  0.00s]
+06:57:15.601891 [info ]: Finished parsing [  0.11s]
+06:57:15.602265 [info ]: Started scheduling
+06:57:15.602512 [info ]: Finished scheduling [  0.00s]
+06:57:15.603294 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "DEV", table: "DIM_LISTINGS_WITH_HOSTS" }) and interval: None
+06:57:15.603331 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_LISTINGS" }) and interval: None
+06:57:15.869093 [info ]: Started building task graph
+06:57:15.869278 [info ]: Finished building task graph [  0.00s]
+06:57:16.142248 [debug]: Query executed on node unknown:
+show terse schemas in database AIRBNB
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:16.142649 [info ]: Started on-run-start hooks (1 nodes)
+06:57:16.232064 [debug]: Query executed on node operation.airbnb.airbnb-on_run_start-0:
+CREATE TABLE IF NOT EXISTS DEV.audit_log ( model_name STRING, run_timestamp TIMESTAMP )
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:16.232970 [info ]: Finished on-run-start hooks [  0.09s] (1 nodes, 0 skipped, 0 errors)
+06:57:16.233666 [info ]: Started rendering (4 nodes)
+06:57:16.233736 [info ]: Started test DEV_test_audit.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_
+06:57:16.233790 [debug]: Started rendering test DEV_test_audit.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_
+06:57:16.233828 [info ]: Started test DEV_test_audit.dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1
+06:57:16.233837 [debug]: Started rendering test DEV_test_audit.dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1
+06:57:16.233852 [info ]: Started test DEV_test_audit.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__1000__1__0_99
+06:57:16.233859 [debug]: Started rendering test DEV_test_audit.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__1000__1__0_99
+06:57:16.233872 [info ]: Started test DEV_test_audit.dbt_expectations_expect_column_values_to_be_of_type_dim_listings_with_hosts_price__number
+06:57:16.233879 [debug]: Started rendering test DEV_test_audit.dbt_expectations_expect_column_values_to_be_of_type_dim_listings_with_hosts_price__number
+06:57:16.240270 [debug]: Compiled SQL for node test.airbnb.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.636ac951cc at target/compiled/generic_tests/dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.sql
+06:57:16.240354 [debug]: Finished rendering [  0.01s] test DEV_test_audit.dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1 [success]
+06:57:16.241379 [info ]: Started analyzing (4 nodes)
+06:57:16.241434 [debug]: Started analyzing test DEV_test_audit.dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1
+06:57:16.245976 [debug]: Compiled SQL for node test.airbnb.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.56669c0158 at target/compiled/generic_tests/dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.sql
+06:57:16.246010 [debug]: Finished rendering [  0.01s] test DEV_test_audit.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__1000__1__0_99 [success]
+06:57:16.246070 [debug]: Started analyzing test DEV_test_audit.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__1000__1__0_99
+06:57:16.345048 [debug]: Finished analyzing [  0.10s] test DEV_test_audit.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__1000__1__0_99 [success]
+06:57:16.345165 [info ]: Started running (4 nodes)
+06:57:16.345214 [debug]: Started running test DEV_test_audit.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__1000__1__0_99
+06:57:16.345250 [debug]: Compiled SQL for node test.airbnb.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.a19f4572a7 at target/compiled/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql
+06:57:16.345297 [debug]: Finished rendering [  0.11s] test DEV_test_audit.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_ [success]
+06:57:16.345371 [debug]: Started analyzing test DEV_test_audit.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_
+06:57:16.359938 [debug]: Finished analyzing [  0.12s] test DEV_test_audit.dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1 [success]
+06:57:16.360545 [debug]: Started running test DEV_test_audit.dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1
+06:57:16.364178 [debug]: Compiled SQL for node test.airbnb.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.f8a7797f7e at target/compiled/generic_tests/dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.sql
+06:57:16.364217 [debug]: Finished rendering [  0.13s] test DEV_test_audit.dbt_expectations_expect_column_values_to_be_of_type_dim_listings_with_hosts_price__number [success]
+06:57:16.364401 [info ]: Finished rendering [  0.13s] (4 nodes, 0 skipped, 0 errors)
+06:57:16.364605 [debug]: Started analyzing test DEV_test_audit.dbt_expectations_expect_column_values_to_be_of_type_dim_listings_with_hosts_price__number
+06:57:16.384532 [debug]: Finished analyzing [  0.02s] test DEV_test_audit.dbt_expectations_expect_column_values_to_be_of_type_dim_listings_with_hosts_price__number [success]
+06:57:16.384971 [debug]: Started running test DEV_test_audit.dbt_expectations_expect_column_values_to_be_of_type_dim_listings_with_hosts_price__number
+06:57:16.440768 [debug]: Finished analyzing [  0.10s] test DEV_test_audit.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_ [success]
+06:57:16.441252 [info ]: Finished analyzing [  0.20s] (4 nodes, 0 skipped, 0 errors)
+06:57:16.441445 [debug]: Started running test DEV_test_audit.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_
+06:57:16.608711 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.56669c0158:
+SHOW OBJECTS IN SCHEMA "AIRBNB"."DEV_TEST_AUDIT" LIMIT 10000
+06:57:16.610182 [debug]: Applying DROP to: "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_COLUMN_1A0AC0CCE6D17E538E5FA02BEBD23D4F"
+06:57:16.618968 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.f8a7797f7e:
+SHOW OBJECTS IN SCHEMA "AIRBNB"."DEV_TEST_AUDIT" LIMIT 10000
+06:57:16.622203 [debug]: Applying DROP to: "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_COLUMN_195C26AD485E7DF4F2484C541AB30C07"
+06:57:16.624141 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.636ac951cc:
+SHOW OBJECTS IN SCHEMA "AIRBNB"."DEV_TEST_AUDIT" LIMIT 10000
+06:57:16.626560 [debug]: Applying DROP to: "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_COLUMN_4B8D5D07B615FD820B65A5B67C85BF52"
+06:57:16.700019 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.a19f4572a7:
+SHOW OBJECTS IN SCHEMA "AIRBNB"."DEV_TEST_AUDIT" LIMIT 10000
+06:57:16.701179 [debug]: Applying DROP to: "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_TABLE__7A4A6E23A5BE67B48DC8BEC7D8738D1F"
+06:57:16.752671 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.636ac951cc:
+drop table if exists "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_COLUMN_4B8D5D07B615FD820B65A5B67C85BF52" cascade
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.636ac951cc", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:16.753177 [debug]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52
+06:57:16.776898 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.56669c0158:
+drop table if exists "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_COLUMN_1A0AC0CCE6D17E538E5FA02BEBD23D4F" cascade
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.56669c0158", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:16.777536 [debug]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f
+06:57:16.812793 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.f8a7797f7e:
+drop table if exists "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_COLUMN_195C26AD485E7DF4F2484C541AB30C07" cascade
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.f8a7797f7e", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:16.813517 [debug]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07
+06:57:16.868327 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.a19f4572a7:
+drop table if exists "AIRBNB"."DEV_TEST_AUDIT"."DBT_EXPECTATIONS_EXPECT_TABLE__7A4A6E23A5BE67B48DC8BEC7D8738D1F" cascade
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.a19f4572a7", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:16.868971 [debug]: Applying CREATE to: AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+06:57:17.738157 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.f8a7797f7e:
+create or replace transient  table AIRBNB.DEV_test_audit.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07
+    
+    
+    
+    as (
+    
+  
+with relation_columns as (
+
+        
+        select
+            cast('LISTING_ID' as TEXT) as relation_column,
+            cast('NUMBER' as TEXT) as relation_column_type
+        union all
+        
+        select
+            cast('LISTING_NAME' as TEXT) as relation_column,
+            cast('VARCHAR' as TEXT) as relation_column_type
+        union all
+        
+        select
+            cast('ROOM_TYPE' as TEXT) as relation_column,
+            cast('VARCHAR' as TEXT) as relation_column_type
+        union all
+        
+        select
+            cast('MINIMUM_NIGHTS' as TEXT) as relation_column,
+            cast('NUMBER' as TEXT) as relation_column_type
+        union all
+        
+        select
+            cast('PRICE' as TEXT) as relation_column,
+            cast('NUMBER' as TEXT) as relation_column_type
+        union all
+        
+        select
+            cast('HOST_ID' as TEXT) as relation_column,
+            cast('NUMBER' as TEXT) as relation_column_type
+        union all
+        
+        select
+            cast('HOST_NAME' as TEXT) as relation_column,
+            cast('VARCHAR' as TEXT) as relation_column_type
+        union all
+        
+        select
+            cast('HOST_IS_SUPERHOST' as TEXT) as relation_column,
+            cast('VARCHAR' as TEXT) as relation_column_type
+        union all
+        
+        select
+            cast('CREATED_AT' as TEXT) as relation_column,
+            cast('TIMESTAMP_NTZ' as TEXT) as relation_column_type
+        union all
+        
+        select
+            cast('UPDATED_AT' as TEXT) as relation_column,
+            cast('TIMESTAMP_NTZ' as TEXT) as relation_column_type
+        
+        
+    ),
+    test_data as (
+
+        select
+            *
+        from
+            relation_columns
+        where
+            relation_column = 'PRICE'
+            and
+            relation_column_type not in ('NUMBER')
+
+    )
+    select *
+    from test_data
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.f8a7797f7e", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:17.738670 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.a19f4572a7:
+create or replace transient  table AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+    
+    
+    as (
+    
+  
+    with a as (
+        
+    select
+        
+        count(*) as expression
+    from
+        AIRBNB.DEV.dim_listings_with_hosts
+    
+
+    ),
+    b as (
+        
+    select
+        
+        count(*) * 1 as expression
+    from
+        AIRBNB.raw.raw_listings
+    
+
+    ),
+    final as (
+
+        select
+            
+            a.expression,
+            b.expression as compare_expression,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0)) as expression_difference,
+            abs(coalesce(a.expression, 0) - coalesce(b.expression, 0))/
+                nullif(a.expression * 1.0, 0) as expression_difference_percent
+        from
+        
+            a cross join b
+        
+    )
+    -- DEBUG:
+    -- select * from final
+    select
+        *
+    from final
+    where
+        
+        expression_difference > 0.0
+        
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.a19f4572a7", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:17.742222 [debug]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.f8a7797f7e"
+06:57:17.743151 [debug]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.a19f4572a7"
+06:57:17.811846 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.56669c0158:
+create or replace transient  table AIRBNB.DEV_test_audit.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f
+    
+    
+    
+    as (
+    
+  
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and percentile_cont(0.99) within group (order by price) >= 1 and percentile_cont(0.99) within group (order by price) <= 1000
+)
+ as expression
+
+
+    from AIRBNB.DEV.dim_listings_with_hosts
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.56669c0158", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:17.813834 [debug]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.56669c0158"
+06:57:17.842427 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.f8a7797f7e:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.f8a7797f7e", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:17.843298 [info ]:     Passed [  1.61s] test  DEV_test_audit.dbt_expectations_expect_column_values_to_be_of_type_dim_listings_with_hosts_price__number
+06:57:17.843502 [debug]: Finished running [  1.46s] test DEV_test_audit.dbt_expectations_expect_column_values_to_be_of_type_dim_listings_with_hosts_price__number [pass]
+06:57:17.857599 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.a19f4572a7:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.a19f4572a7", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:17.858779 [info ]:     Passed [  1.62s] test  DEV_test_audit.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_
+06:57:17.859000 [debug]: Finished running [  1.42s] test DEV_test_audit.dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_ [pass]
+06:57:17.892249 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.636ac951cc:
+create or replace transient  table AIRBNB.DEV_test_audit.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52
+    
+    
+    
+    as (
+    
+  
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and max(price) >= 1 and max(price) <= 5000
+)
+ as expression
+
+
+    from AIRBNB.DEV.dim_listings_with_hosts
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+  
+  
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.636ac951cc", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:17.894589 [debug]: Writing runtime sql for node "test.airbnb.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.636ac951cc"
+06:57:17.926514 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.56669c0158:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.56669c0158", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:17.927491 [info ]:     Passed [  1.69s] test  DEV_test_audit.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__1000__1__0_99
+06:57:17.927587 [debug]: Finished running [  1.58s] test DEV_test_audit.dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__1000__1__0_99 [pass]
+06:57:18.044972 [debug]: Query executed on node test.airbnb.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.636ac951cc:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52
+    
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.airbnb.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.636ac951cc", "profile_name": "airbnb", "target_name": "dev"} */
+06:57:18.045854 [info ]:     Warned [  1.81s] test  DEV_test_audit.dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1 (models/schema.yml:68:13)
+06:57:18.045944 [debug]: Finished running [  1.69s] test DEV_test_audit.dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1 [warn]
+06:57:18.045981 [info ]: Finished running [  1.70s] (4 nodes, 0 skipped, 0 errors)
+06:57:18.097098 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 1 warning for target 'dev' [2.6s]
+Processed: 1 hook | 4 tests
+Summary: 5 total | 4 success | 1 warn
