@@ -262,3 +262,9 @@ Regex to check if that columnmatchs a pattern:(along with debug for universal ap
 
     dbt --debug test --select source:airbnb.listings
 
+
+# Debugging and Logging
+
+Create a logging macro and runbelowcommand:
+
+    dbt run-operation learn_logging

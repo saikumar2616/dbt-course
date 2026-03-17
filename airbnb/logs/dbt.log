@@ -37884,3 +37884,59 @@ select
 Finished 'test' successfully for target 'dev' [7.9s]
 Processed: 1 hook | 3 tests
 Summary: 4 total | 4 success
+==================== 2026-03-17T09:09:32.021772Z | 019cfb0e-b8f3-7cc0-8a86-55906111b060 ====================
+09:09:32.021917 [info ]: dbt-fusion 2.0.0-preview.154
+09:09:32.022146 [info ]: Started loading project
+09:09:32.023353 [info ]: Loading profiles.yml
+09:09:32.042681 [info ]: Loading packages.yml
+09:09:32.043058 [debug]:    Started loading packages
+09:09:32.052466 [debug]:     Loaded [  0.01s] packages
+09:09:32.053751 [info ]: Finished loading project [  0.03s]
+09:09:32.057504 [info ]: Started parsing
+09:09:32.194796 [debug]: Finished parsing models/dashboards.yml [  0.00s]
+09:09:32.195010 [debug]: Finished parsing models/mart/unit_tests.yaml [  0.00s]
+09:09:32.195438 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:09:32.195821 [debug]: Finished parsing models/sources.yaml [  0.00s]
+09:09:32.197846 [debug]: Finished parsing snapshots/raw_hosts_snapshot.yml [  0.00s]
+09:09:32.197936 [debug]: Finished parsing snapshots/raw_listings_snapshot.yml [  0.00s]
+09:09:32.197977 [debug]: Finished parsing snapshots/raw_reviews_snapshot.yml [  0.00s]
+09:09:32.205468 [debug]: Finished parsing target/snapshots/scd_raw_hosts.sql [  0.00s]
+09:09:32.207374 [debug]: Finished parsing target/snapshots/scd_raw_listings.sql [  0.00s]
+09:09:32.214130 [debug]: Finished parsing models/dim/dim_hosts_cleansed.sql [  0.00s]
+09:09:32.218137 [debug]: Finished parsing models/dim/dim_listings_cleansed.sql [  0.00s]
+09:09:32.220956 [debug]: Finished parsing models/dim/dim_listings_with_hosts.sql [  0.00s]
+09:09:32.228780 [debug]: Finished parsing models/fct/fct_reviews.sql [  0.01s]
+09:09:32.229932 [debug]: Finished parsing models/mart/mart_full_moon_reviews.sql [  0.00s]
+09:09:32.230672 [debug]: Finished parsing models/src/src_hosts.sql [  0.00s]
+09:09:32.231350 [debug]: Finished parsing models/src/src_listings.sql [  0.00s]
+09:09:32.232010 [debug]: Finished parsing models/src/src_reviews.sql [  0.00s]
+09:09:32.254351 [debug]: Finished parsing analyses/full_moon_no_sleep.sql [  0.00s]
+09:09:32.260233 [debug]: Finished parsing tests/consistent_created_at.sql [  0.00s]
+09:09:32.261648 [debug]: Finished parsing tests/dim_listings_minimum_nights.sql [  0.00s]
+09:09:32.265483 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_a60b59a84fbc4577a11df360c50013bb.sql [  0.00s]
+09:09:32.266272 [debug]: Finished parsing target/generic_tests/dbt_expectations_source_expect_d9770018e28873e7be74335902d9e4e5.sql [  0.00s]
+09:09:32.267035 [debug]: Finished parsing target/generic_tests/minimum_row_count_dim_listings_cleansed_1000000.sql [  0.00s]
+09:09:32.268086 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_host_id.sql [  0.00s]
+09:09:32.268863 [debug]: Finished parsing target/generic_tests/relationships_dim_listings_cle_05e2397b186a7b9306fc747b3cc4ef83.sql [  0.00s]
+09:09:32.269473 [debug]: Finished parsing target/generic_tests/not_null_dim_listings_cleansed_listing_id.sql [  0.00s]
+09:09:32.272568 [debug]: Finished parsing target/generic_tests/unique_dim_listings_cleansed_listing_id.sql [  0.00s]
+09:09:32.273445 [debug]: Finished parsing target/generic_tests/positive_values_dim_listings_cleansed_minimum_nights.sql [  0.00s]
+09:09:32.274074 [debug]: Finished parsing target/generic_tests/accepted_values_dim_listings_c_1ca6148a08c62a5218f2a162f9d2a9a6.sql [  0.00s]
+09:09:32.274963 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_table__7a4a6e23a5be67b48dc8bec7d8738d1f.sql [  0.00s]
+09:09:32.275854 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_1a0ac0cce6d17e538e5fa02bebd23d4f.sql [  0.00s]
+09:09:32.276751 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.sql [  0.00s]
+09:09:32.277468 [debug]: Finished parsing target/generic_tests/dbt_expectations_expect_column_195c26ad485e7df4f2484c541ab30c07.sql [  0.00s]
+09:09:32.286325 [info ]: Finished parsing [  0.23s]
+09:09:32.286875 [info ]: Started scheduling
+09:09:32.287276 [info ]: Finished scheduling [  0.00s]
+09:09:32.289628 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_listings") and interval: None
+09:09:32.289930 [debug]: Initializing schema store with entry: Selected("snapshot.airbnb.scd_raw_hosts") and interval: None
+09:09:32.290070 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_HOSTS" }) and interval: None
+09:09:32.290095 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_REVIEWS" }) and interval: None
+09:09:32.290113 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "AIRBNB", schema: "RAW", table: "RAW_LISTINGS" }) and interval: None
+09:09:32.299833 [info ]: This is a log message from the learn_logging macro!
+09:09:32.300126 [debug]: This is a warning message from the learn_logging macro!
+09:09:32.300251 [debug]: This is an error message from the learn_logging macro!
+09:09:32.544912 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' successfully for target 'dev' [523ms]
