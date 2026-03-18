@@ -323,3 +323,14 @@ dagster is a new gen tool with general or dbt orchestration or modern data stack
     code my_dbt_dagster_project/schedules.py and uncomment the code
 
     dagster dev ---> Can also be used in Prod
+
+
+setup.py willbe usedif we wantto releasethe developed projct as a python package.
+
+assets.py--> core ofdagster where we definewhat we are building.Takes heavy lifting in building assets(lot more functionalities than Airflow).
+
+projects.py--> How to execute dbt andwheredbt copiesthe files.
+
+schedules.py-->execute all/specific models on regular scheduler with cron.
+
+definitions.py--> All above components are glued together which ismain function mentioning the assets being used, schedule and resource dependencies.
