@@ -1,0 +1,67 @@
+Running with dbt=1.11.2
+Registered adapter: snowflake=1.11.1
+Found 8 models, 1 analysis, 15 data tests, 1 operation, 2 snapshots, 1 seed, 3 sources, 1 exposure, 920 macros, 1 unit test
+
+Concurrency: 1 threads (target='dev')
+
+1 of 1 START hook: airbnb.on-run-start.0 ....................................... [RUN]
+1 of 1 OK hook: airbnb.on-run-start.0 .......................................... [[32mOK[0m in 0.37s]
+
+1 of 16 START sql view model DEV.dim_hosts_cleansed ............................ [RUN]
+1 of 16 OK created sql view model DEV.dim_hosts_cleansed ....................... [[32mSUCCESS 1[0m in 1.64s]
+2 of 16 START sql view model DEV.dim_listings_cleansed ......................... [RUN]
+2 of 16 OK created sql view model DEV.dim_listings_cleansed .................... [[32mSUCCESS 1[0m in 0.96s]
+3 of 16 START test accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room  [RUN]
+3 of 16 PASS accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room  [[32mPASS[0m in 1.00s]
+4 of 16 START test consistent_created_at ....................................... [RUN]
+4 of 16 PASS consistent_created_at ............................................. [[32mPASS[0m in 1.21s]
+5 of 16 START test dim_listings_minimum_nights ................................. [RUN]
+5 of 16 PASS dim_listings_minimum_nights ....................................... [[32mPASS[0m in 0.69s]
+6 of 16 START test minimum_row_count_dim_listings_cleansed_1000000 ............. [RUN]
+6 of 16 WARN 1 minimum_row_count_dim_listings_cleansed_1000000 ................. [[33mWARN 1[0m in 0.80s]
+7 of 16 START test not_null_dim_listings_cleansed_host_id ...................... [RUN]
+7 of 16 PASS not_null_dim_listings_cleansed_host_id ............................ [[32mPASS[0m in 0.66s]
+8 of 16 START test not_null_dim_listings_cleansed_listing_id ................... [RUN]
+8 of 16 PASS not_null_dim_listings_cleansed_listing_id ......................... [[32mPASS[0m in 0.59s]
+9 of 16 START test positive_values_dim_listings_cleansed_minimum_nights ........ [RUN]
+9 of 16 PASS positive_values_dim_listings_cleansed_minimum_nights .............. [[32mPASS[0m in 0.64s]
+10 of 16 START test relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_  [RUN]
+10 of 16 PASS relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_  [[32mPASS[0m in 0.80s]
+11 of 16 START test unique_dim_listings_cleansed_listing_id .................... [RUN]
+11 of 16 PASS unique_dim_listings_cleansed_listing_id .......................... [[32mPASS[0m in 0.60s]
+12 of 16 START sql table model DEV.dim_listings_with_hosts ..................... [RUN]
+12 of 16 OK created sql table model DEV.dim_listings_with_hosts ................ [[32mSUCCESS 1[0m in 1.30s]
+13 of 16 START test dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1  [RUN]
+13 of 16 WARN 1 dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1  [[33mWARN 1[0m in 0.81s]
+14 of 16 START test dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__1000__1__0_99  [RUN]
+14 of 16 PASS dbt_expectations_expect_column_quantile_values_to_be_between_dim_listings_with_hosts_price__1000__1__0_99  [[32mPASS[0m in 0.68s]
+15 of 16 START test dbt_expectations_expect_column_values_to_be_of_type_dim_listings_with_hosts_price__number  [RUN]
+15 of 16 PASS dbt_expectations_expect_column_values_to_be_of_type_dim_listings_with_hosts_price__number  [[32mPASS[0m in 0.68s]
+16 of 16 START test dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [RUN]
+16 of 16 PASS dbt_expectations_expect_table_row_count_to_equal_other_table_dim_listings_with_hosts_source_airbnb_listings_  [[32mPASS[0m in 0.61s]
+
+Finished running 1 project hook, 1 table model, 13 data tests, 2 view models in 0 hours 0 minutes and 15.39 seconds (15.39s).
+
+[33mCompleted with 2 warnings:[0m
+
+[33mWarning in test minimum_row_count_dim_listings_cleansed_1000000 (models/schema.yml)[0m
+Got 1 result, configured to warn if != 0
+
+  compiled code at target/airbnb_dbt_assets-2efebca-eedc690/compiled/airbnb/models/schema.yml/minimum_row_count_dim_listings_cleansed_1000000.sql
+
+  See test failures:
+  -----------------------------------------------------------------------------------
+  select * from AIRBNB.DEV_test_audit.minimum_row_count_dim_listings_cleansed_1000000
+  -----------------------------------------------------------------------------------
+
+[33mWarning in test dbt_expectations_expect_column_max_to_be_between_dim_listings_with_hosts_price__5000__1 (models/schema.yml)[0m
+Got 1 result, configured to warn if != 0
+
+  compiled code at target/airbnb_dbt_assets-2efebca-eedc690/compiled/airbnb/models/schema.yml/dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52.sql
+
+  See test failures:
+  ---------------------------------------------------------------------------------------------------
+  select * from AIRBNB.DEV_test_audit.dbt_expectations_expect_column_4b8d5d07b615fd820b65a5b67c85bf52
+  ---------------------------------------------------------------------------------------------------
+
+Done. PASS=15 WARN=2 ERROR=0 SKIP=0 NO-OP=0 TOTAL=17

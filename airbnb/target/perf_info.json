@@ -1,87 +1,56 @@
 {
     "path_count": 355,
-    "parsed_path_count": 355,
-    "static_analysis_path_count": 8,
-    "static_analysis_parsed_path_count": 7,
+    "parsed_path_count": 1,
+    "static_analysis_path_count": 0,
+    "static_analysis_parsed_path_count": 0,
     "is_partial_parse_enabled": true,
     "is_static_analysis_enabled": true,
-    "read_files_elapsed": 0.24908037499972124,
-    "load_macros_elapsed": 1.8934057959995698,
-    "parse_project_elapsed": 2.1612262729995564,
-    "patch_sources_elapsed": 0.05164269900069485,
-    "process_manifest_elapsed": 0.2235289019999982,
-    "load_all_elapsed": 5.2630880700007765,
+    "read_files_elapsed": 0.03134513599979982,
+    "load_macros_elapsed": 0.0006749790009052958,
+    "parse_project_elapsed": 0.2517022869997163,
+    "patch_sources_elapsed": 2.193000000261236e-05,
+    "process_manifest_elapsed": 0.00041167800009134226,
+    "load_all_elapsed": 0.7690594200012129,
     "projects": [
         {
             "project_name": "airbnb",
-            "elapsed": 2.1339115549999406,
+            "elapsed": 0.2515782339996804,
             "parsers": [
-                {
-                    "parser": "model",
-                    "elapsed": 0.5018591739999465,
-                    "parsed_path_count": 8
-                },
-                {
-                    "parser": "analysis",
-                    "elapsed": 0.22408533999987412,
-                    "parsed_path_count": 1
-                },
-                {
-                    "parser": "test",
-                    "elapsed": 0.14543767000031949,
-                    "parsed_path_count": 2
-                },
                 {
                     "parser": "seed",
-                    "elapsed": 0.20579102900046564,
-                    "parsed_path_count": 1
-                },
-                {
-                    "parser": "doc",
-                    "elapsed": 0.00019186800000170479,
-                    "parsed_path_count": 2
-                },
-                {
-                    "parser": "test",
-                    "elapsed": 0.9301255199998195,
-                    "parsed_path_count": 7
-                }
-            ],
-            "parsed_path_count": 21
-        },
-        {
-            "project_name": "dbt_snowflake",
-            "elapsed": 0.004715781000413699,
-            "parsers": [],
-            "parsed_path_count": 0
-        },
-        {
-            "project_name": "dbt",
-            "elapsed": 0.004246456999680959,
-            "parsers": [
-                {
-                    "parser": "doc",
-                    "elapsed": 0.00021590300002571894,
+                    "elapsed": 0.25156741400132887,
                     "parsed_path_count": 1
                 }
             ],
             "parsed_path_count": 1
         },
         {
+            "project_name": "dbt_snowflake",
+            "elapsed": 0,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
             "project_name": "dbt_expectations",
-            "elapsed": 0.004085617999407987,
+            "elapsed": 0,
             "parsers": [],
             "parsed_path_count": 0
         },
         {
             "project_name": "dbt_date",
-            "elapsed": 0.008551566000278399,
+            "elapsed": 0,
             "parsers": [],
             "parsed_path_count": 0
         },
         {
             "project_name": "dbt_utils",
-            "elapsed": 0.005422479999651841,
+            "elapsed": 0,
             "parsers": [],
             "parsed_path_count": 0
         }

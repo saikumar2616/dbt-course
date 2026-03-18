@@ -318,7 +318,7 @@ dagster is a new gen tool with general or dbt orchestration or modern data stack
  
     dagster-dbt project scaffold --project-name my_dbt_dagster_project --dbt-project-dir=airbnb
 
-    cd '/workspaces/dbt-course/my_dbt_dagster_project
+    cd /workspaces/dbt-course/my_dbt_dagster_project
 
     code my_dbt_dagster_project/schedules.py and uncomment the code
 
@@ -334,3 +334,18 @@ projects.py--> How to execute dbt andwheredbt copiesthe files.
 schedules.py-->execute all/specific models on regular scheduler with cron.
 
 definitions.py--> All above components are glued together which ismain function mentioning the assets being used, schedule and resource dependencies.
+
+
+Learning portal: https://courses.dagster.io/?utm_source=local-nux
+
+
+Docs : https://docs.dagster.io/?utm_source=local-nux
+
+
+Click "Materialize all" torun the dbt from the DagsterUI.
+
+
+Dagster Project:   https://github.com/nordquant/complete-dbt-bootcamp-zero-to-hero/tree/main/dbt_dagster_project
+
+
+Good Read : https://georgheiler.com/2023/12/11/dagster-dbt-duckdb-as-new-local-mds/
