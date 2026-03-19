@@ -349,3 +349,16 @@ Dagster Project:   https://github.com/nordquant/complete-dbt-bootcamp-zero-to-he
 
 
 Good Read : https://georgheiler.com/2023/12/11/dagster-dbt-duckdb-as-new-local-mds/
+
+
+
+
+
+Power Userfordbt extension is very powerfuland has lot of functionality to ease the developments of dbt projects.
+
+You canregister and add api key and account details in the extensionto get multiple extra functionalities as well.
+
+
+https://www.altimate.ai/
+
+
