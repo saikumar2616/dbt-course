@@ -352,6 +352,7 @@ Good Read : https://georgheiler.com/2023/12/11/dagster-dbt-duckdb-as-new-local-m
 
 
 
+# Extension
 
 
 Power Userfordbt extension is very powerfuland has lot of functionality to ease the developments of dbt projects.
